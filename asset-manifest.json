@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/kkando/static/js/main.462d46b9.chunk.js",
-    "main.js.map": "/kkando/static/js/main.462d46b9.chunk.js.map",
+    "main.js": "/kkando/static/js/main.9d07ac58.chunk.js",
+    "main.js.map": "/kkando/static/js/main.9d07ac58.chunk.js.map",
     "runtime-main.js": "/kkando/static/js/runtime-main.d0f3f99f.js",
     "runtime-main.js.map": "/kkando/static/js/runtime-main.d0f3f99f.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/kkando/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.4e606779.chunk.js": "/kkando/static/js/2.4e606779.chunk.js",
     "static/js/2.4e606779.chunk.js.map": "/kkando/static/js/2.4e606779.chunk.js.map",
     "index.html": "/kkando/index.html",
-    "precache-manifest.213e22cdb55fc00c10fad85523ee011a.js": "/kkando/precache-manifest.213e22cdb55fc00c10fad85523ee011a.js",
+    "precache-manifest.343428bc2093ee2b66199db5c1c88b42.js": "/kkando/precache-manifest.343428bc2093ee2b66199db5c1c88b42.js",
     "service-worker.js": "/kkando/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/kkando/static/css/2.d9ad5f5c.chunk.css.map",
     "static/js/2.4e606779.chunk.js.LICENSE.txt": "/kkando/static/js/2.4e606779.chunk.js.LICENSE.txt"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.d0f3f99f.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.4e606779.chunk.js",
-    "static/js/main.462d46b9.chunk.js"
+    "static/js/main.9d07ac58.chunk.js"
   ]
 }
