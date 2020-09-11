@@ -36,3 +36,33 @@
     transform: rotate(360deg);
   }
 }
+
+/* UNSORTED */
+#welcome-image-logo{
+    width:17%;
+    height:auto;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.parallax-panel{
+    width: 100vw;
+    height: 100vh;
+}
+.fade-in{
+    animation-name: fadeIn;
+    animation-duration: 2.5s;
+}
+@keyframes fadeIn {
+    0%{
+        opacity:0.0;
+    }
+    40%{
+        opacity:0.0;
+    }
+    100%{
+        opacity:1.0;
+    }
+}
+/* UNSORTED */
