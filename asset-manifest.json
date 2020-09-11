@@ -1,22 +1,32 @@
 {
   "files": {
-    "main.js": "/kkando/static/js/main.9d07ac58.chunk.js",
-    "main.js.map": "/kkando/static/js/main.9d07ac58.chunk.js.map",
+    "main.js": "/kkando/static/js/main.f35c5ad7.chunk.js",
+    "main.js.map": "/kkando/static/js/main.f35c5ad7.chunk.js.map",
     "runtime-main.js": "/kkando/static/js/runtime-main.d0f3f99f.js",
     "runtime-main.js.map": "/kkando/static/js/runtime-main.d0f3f99f.js.map",
-    "static/css/2.d9ad5f5c.chunk.css": "/kkando/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.4e606779.chunk.js": "/kkando/static/js/2.4e606779.chunk.js",
-    "static/js/2.4e606779.chunk.js.map": "/kkando/static/js/2.4e606779.chunk.js.map",
+    "static/css/2.ada51479.chunk.css": "/kkando/static/css/2.ada51479.chunk.css",
+    "static/js/2.1f272a9f.chunk.js": "/kkando/static/js/2.1f272a9f.chunk.js",
+    "static/js/2.1f272a9f.chunk.js.map": "/kkando/static/js/2.1f272a9f.chunk.js.map",
     "index.html": "/kkando/index.html",
-    "precache-manifest.343428bc2093ee2b66199db5c1c88b42.js": "/kkando/precache-manifest.343428bc2093ee2b66199db5c1c88b42.js",
+    "precache-manifest.441a5355d45a5972951a908e09b7eb99.js": "/kkando/precache-manifest.441a5355d45a5972951a908e09b7eb99.js",
     "service-worker.js": "/kkando/service-worker.js",
-    "static/css/2.d9ad5f5c.chunk.css.map": "/kkando/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/js/2.4e606779.chunk.js.LICENSE.txt": "/kkando/static/js/2.4e606779.chunk.js.LICENSE.txt"
+    "static/css/2.ada51479.chunk.css.map": "/kkando/static/css/2.ada51479.chunk.css.map",
+    "static/js/2.1f272a9f.chunk.js.LICENSE.txt": "/kkando/static/js/2.1f272a9f.chunk.js.LICENSE.txt",
+    "static/media/1.jpg": "/kkando/static/media/1.f1db0751.jpg",
+    "static/media/2.jpg": "/kkando/static/media/2.a327171d.jpg",
+    "static/media/3.jpg": "/kkando/static/media/3.ace9699f.jpg",
+    "static/media/4.jpg": "/kkando/static/media/4.93a1a747.jpg",
+    "static/media/5.jpg": "/kkando/static/media/5.d8845ebd.jpg",
+    "static/media/6.jpg": "/kkando/static/media/6.5e95016b.jpg",
+    "static/media/eszt.png": "/kkando/static/media/eszt.15dce6bd.png",
+    "static/media/eszt2.jpg": "/kkando/static/media/eszt2.1ea094f5.jpg",
+    "static/media/ikon.ico": "/kkando/static/media/ikon.15336a07.ico",
+    "static/media/logo.png": "/kkando/static/media/logo.099ab748.png"
   },
   "entrypoints": [
     "static/js/runtime-main.d0f3f99f.js",
-    "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.4e606779.chunk.js",
-    "static/js/main.9d07ac58.chunk.js"
+    "static/css/2.ada51479.chunk.css",
+    "static/js/2.1f272a9f.chunk.js",
+    "static/js/main.f35c5ad7.chunk.js"
   ]
 }
