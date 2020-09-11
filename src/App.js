@@ -11,6 +11,8 @@ import img1 from './eszt.png'
 import img2 from './eszt2.jpg'
 import logo from './logo.png'
 
+import { MyCarousel } from './components/MyCarousel';   
+
 export const App=()=>{
     return(
         <div> {/* itt egyelőre csak felrakom az eddigi parallaxot */}
@@ -56,6 +58,10 @@ export const App=()=>{
                 ></ParallaxBanner>
                 {/*<div style={{backgroundColor:'rgba(255,0,0,0.2)',height:'1000px'}}></div>*/}
             </ParallaxProvider>
+
+            <div className="row justify-content-center"><div className="col-md-6 m-2"><MyCarousel/></div></div>
+
+
         </div>
     )
 }
