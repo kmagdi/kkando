@@ -6,8 +6,7 @@ import {Szak3} from "./components/Szak3"
 import {Home} from "./components/Home"
 import {Navbar} from "./components/Navbar"
 import {MyParallax} from "./components/MyParallax"
-
-
+import CollectData from "./components/CollectData"
 import { MyCarousel } from './components/MyCarousel';   
 
 export const App=()=>{
@@ -23,9 +22,9 @@ export const App=()=>{
                 </Switch>
             </BrowserRouter>
          
-            <MyParallax/>
+         {/*    <MyParallax/>*/}
             <div className="row justify-content-center"><div className="col-md-6 m-2"><MyCarousel/></div></div>
-
+            <CollectData/>
 
         </div>
     )
