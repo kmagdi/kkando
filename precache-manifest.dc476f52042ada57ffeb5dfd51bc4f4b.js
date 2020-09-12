@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "163c6719c96f73caa7944fcb6e59cebd",
+    "revision": "63e634fa236ed38402735314bd613f52",
     "url": "/kkando/index.html"
   },
   {
-    "revision": "47b7ca246ea5bdd37d56",
+    "revision": "d07467f33e95bf72145f",
     "url": "/kkando/static/css/2.ada51479.chunk.css"
   },
   {
-    "revision": "47b7ca246ea5bdd37d56",
-    "url": "/kkando/static/js/2.1f272a9f.chunk.js"
+    "revision": "d07467f33e95bf72145f",
+    "url": "/kkando/static/js/2.3dafc695.chunk.js"
   },
   {
     "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/kkando/static/js/2.1f272a9f.chunk.js.LICENSE.txt"
+    "url": "/kkando/static/js/2.3dafc695.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "25fbcf0f47bd62b65f42",
-    "url": "/kkando/static/js/main.4d830bf0.chunk.js"
+    "revision": "5fd5eb977fab1fba538a",
+    "url": "/kkando/static/js/main.0bf4b9c5.chunk.js"
   },
   {
     "revision": "e7e8333ae4ae7d8462f5",
