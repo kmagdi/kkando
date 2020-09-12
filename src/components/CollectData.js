@@ -11,7 +11,7 @@ class CollectData extends Component{
         }
     }
     componentDidMount(){  
-        const urlContacts="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/elerhetosegek.csv"    
+        const urlContacts="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/contactDataKando.csv"    
         fetch(urlContacts)           
             .then(resp=>resp.text())
             .then(text=>{
