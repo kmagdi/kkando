@@ -1,16 +1,18 @@
 import React from 'react'
 import {MyParallax} from './MyParallax';
-import img1 from './assets/eszt.png'
-import logo from './assets/logo.png'
 
 export const FullscreenBanner = ()=>{
     return (
         <MyParallax
             div="top-banner-container"
-            img={img1}
-            amount="0.15"
+            img={require('./assets/eszt.png')}
+            amount={0.15}
+            height="100vh"
         >
-            <img src={logo} id="welcome-image-logo" alt="logo" className="fade-in"></img>
+            <div class="kozep">
+                <img src={require('./assets/logo.png')} id="welcome-image-logo" alt="logo" className="fade-in-img"></img>
+                <p id="welcome-text" className="fade-in-p">Lorem ipsum dolor sit amet.</p>
+            </div>
         </MyParallax>
     );
 };
