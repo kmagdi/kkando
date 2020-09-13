@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
+import {Link} from 'react-router-dom';
 
 export const MyNavbar = () => {
 
@@ -31,25 +32,26 @@ export const MyNavbar = () => {
     }
 
     return (
-        <Navbar style={{opacity: navbarState}} className={navbarState==0?".d-none":null} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-            <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar style={{
+            textDecoration: 'none',
+            opacity: navbarState,
+            display: navbarState===0?"none":"flex"
+                }} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
+            <Navbar.Brand><Link to="/">Kandópage</Link></Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
-                <Nav.Link href="#features">Features</Nav.Link>
-                <Nav.Link href="#pricing">Pricing</Nav.Link>
-                <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+                <Nav.Link><Link to="/rolunk">Rólunk</Link></Nav.Link>
+                <NavDropdown title="Szakok" id="collasible-nav-dropdown">
+                    <NavDropdown.Item><Link to="/szak1">Szak1</Link></NavDropdown.Item>
+                    <NavDropdown.Item><Link to="/szak2">Szak2</Link></NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                    <NavDropdown.Item><Link to="/szak3">Szak3</Link></NavDropdown.Item>
                 </NavDropdown>
                 </Nav>
                 <Nav>
-                <Nav.Link href="#deets">More deets</Nav.Link>
-                <Nav.Link eventKey={2} href="#memes">
-                    Dank memes
+                <Nav.Link eventKey={2}>
+                    <Link to="/something">Something</Link>
                 </Nav.Link>
                 </Nav>
             </Navbar.Collapse>
