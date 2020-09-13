@@ -37,22 +37,23 @@ export const MyNavbar = () => {
             opacity: navbarState,
             display: navbarState===0?"none":"flex"
                 }} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-            <Navbar.Brand><Link to="/">Kandópage</Link></Navbar.Brand>
+            <Navbar.Brand>
+                {/*<Link to="/">Kandópage</Link>*/}
+                <img src={require('./assets/logo.png')} height="30px" />
+            </Navbar.Brand>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
-                <Nav.Link><Link to="/rolunk">Rólunk</Link></Nav.Link>
+                <Link to="/rolunk" className="nav-link" role="button">Rólunk</Link>
                 <NavDropdown title="Szakok" id="collasible-nav-dropdown">
-                    <NavDropdown.Item><Link to="/szak1">Szak1</Link></NavDropdown.Item>
-                    <NavDropdown.Item><Link to="/szak2">Szak2</Link></NavDropdown.Item>
+                    <Link to="/szak1" className="dropdown-item" role="button">Szak1</Link>
+                    <Link to="/szak2" className="dropdown-item" role="button">Szak2</Link>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item><Link to="/szak3">Szak3</Link></NavDropdown.Item>
+                    <Link to="/szak3" className="dropdown-item" role="button">Szak3</Link>
                 </NavDropdown>
                 </Nav>
                 <Nav>
-                <Nav.Link eventKey={2}>
-                    <Link to="/something">Something</Link>
-                </Nav.Link>
+                <Link to="/something" className="nav-link" role="button">Something</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
