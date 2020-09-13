@@ -1,6 +1,7 @@
+import React, { useState,useEffect } from 'react';     
 
 export const Box=({ word })=> {
-    const color = colors[Math.floor(Math.random() * 9)];
+    //const color = colors[Math.floor(Math.random() * 9)];
     const [visible, setVisible] = useState(true);
   
     function hideMe(){
@@ -10,14 +11,14 @@ export const Box=({ word })=> {
         setVisible(true)
     }
   
-    let style = { borderColor: color, backgroundColor: color };
-    if (!visible) style.display = "none";
+    let style ={  border: "solid 1px black"};
+if (!visible) style.display = "none";
   
     return (
-      <div className="box" {/*style={style}*/}>
-        <div className="center">{word},fmdkgfdjkgkldfjgkldfgkldfklhjfklhfkljghklf</div>
-        <button className="button top-corner" onClick={hideMe}><i className="fas fa-angle-right" /></button>
-        <button className="button top-corner" onClick={showMe}><i className="fas fa-angle-left" /></button>
+      <div className="box" style={style}>
+         <div className="center">a szak azonositoja: {word}</div>
+        <button className="button top-corner" onClick={hideMe}>-</button>
+        <button className="button bottom-corner" onClick={showMe}>+</button>
       </div>
     );
   }

@@ -1,12 +1,12 @@
 import React from 'react';
 import {Box} from "./Box"
 
-export const Detail=(match)=>{
+export const Detail=(props)=>{
     return(
         <React.Fragment>
-            <div>ide kell a reszletes leiras a szakrol, melynek az azonositoja={match.params.id}</div>
-            {console.log(match.params)}
-            <Box key={match.params.id} word={match.params} />
+            <div>ide kell a reszletes leiras a szakrol, melynek az azonositoja...</div>
+            {console.log(props)}
+            <Box key={props} word={props.szak} />
         </React.Fragment>
         
     )
