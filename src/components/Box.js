@@ -16,7 +16,7 @@ if (!visible) style.display = "none";
   
     return (
       <div className="box" style={style}>
-         <div className="center">a szak azonositoja: {word}</div>
+         <div className="center">ez a Box.js: ide kerulnenek a reszletesebb informaciok az excel tablazatba bevezetett adatok alapjan, szak azonositoja: {word}</div>
         <button className="button top-corner" onClick={hideMe}>-</button>
         <button className="button bottom-corner" onClick={showMe}>+</button>
       </div>

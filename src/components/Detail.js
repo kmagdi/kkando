@@ -4,9 +4,8 @@ import {Box} from "./Box"
 export const Detail=(props)=>{
     return(
         <React.Fragment>
-            <div>ide kell a reszletes leiras a szakrol, melynek az azonositoja...</div>
-            {console.log(props)}
-            <Box key={props} word={props.szak} />
+            <div> ide kerul egy altalanos leiras a szakrol, melynek az azonositoja:{props.szakId}</div>
+             <Box key={props} word={props.szakId} />
         </React.Fragment>
         
     )

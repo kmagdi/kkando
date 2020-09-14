@@ -2,11 +2,11 @@ import React from 'react';
 import {Detail} from "./Detail"
 
 
-export const Szak1=()=>{
+export const Szak=(props)=>{
+    
     return(
         <React.Fragment>
-            <div>a reszletes adatok helye: Szak1</div>
-            <Detail key={{id:1}} szak={"1"}/>
+            <Detail key={props.id} szakId={props.id}/>
         </React.Fragment>
        )  
 }
