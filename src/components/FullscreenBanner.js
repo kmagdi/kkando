@@ -7,7 +7,7 @@ export const FullscreenBanner = ()=>{
             div="top-banner-container"
             img={require('./assets/eszt.png')}
             amount={0.15}
-            height={'var(--fullh)'}
+            height={'100vh'}
         >
             <div className="kozep">
                 <img src={require('./assets/logo.png')} id="welcome-image-logo" alt="logo" className="fade-in-img"></img>

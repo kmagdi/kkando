@@ -8,11 +8,15 @@ export const MyNavbar = () => {
     const getNavbarOpacity = () => {
         const topBanner = document.getElementById('top-banner-container');
         if(topBanner == null || topBanner.getBoundingClientRect() == null){
-            return 0;
+            return 0.0;
         }else{
             const _value =  (window.innerHeight - document.getElementById('top-banner-container').getBoundingClientRect().bottom) / window.innerHeight;
             if(_value < 1.0){
-                return Math.round((_value + Number.EPSILON) * 1000) / 1000;
+                if(_value > 0.05){
+                    return Math.round((_value + Number.EPSILON) * 1000) / 1000;
+                }else{
+                    return 0.0;
+                }
             }else{
                 return 1.0;
             }

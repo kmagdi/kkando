@@ -1,9 +1,12 @@
+:root{
+    --carouselHeight: 75vh;
+}
 .carousel{
-    height:38rem;
+    height:var(--carouselHeight);
     overflow:hidden;
 }
 .carousel-item img{
-    height:38rem;
+    height:var(--carouselHeight);
     object-fit: cover;
 }
 .carousel-caption{
