@@ -14,9 +14,7 @@ export const App=()=>{
                 <Switch>
                     <Route  exact path="/" component={Home}/> 
                     <Route  exact path="/kkando" component={Home}/> 
-                    <Route exact path="/szak1"><Szak id={"1"}/></Route>    
-                    <Route exact path="/szak2"><Szak id={"2"}/></Route>    
-                    <Route path="/szak3" ><Szak id={"3"}/></Route>    
+                    <Route path="/szak/:id" exact component={Szak} />   
                 </Switch>
             </BrowserRouter>
         </ParallaxProvider>

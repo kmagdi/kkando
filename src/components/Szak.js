@@ -1,12 +1,12 @@
 import React from 'react';
-import {Detail} from "./Detail"
+import CollectDataSpec from "./CollectDataSpec"
 
 
-export const Szak=(props)=>{
-    
+export const Szak=({match})=>{
+    console.log("match.params="+match.params)
     return(
         <React.Fragment>
-            <Detail key={props.id} szakId={props.id}/>
+            <CollectDataSpec id={match.params.id}/>
         </React.Fragment>
        )  
 }
