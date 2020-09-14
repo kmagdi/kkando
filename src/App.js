@@ -8,17 +8,15 @@ import './App.css'
 
 export const App=()=>{
     return(
-        <ParallaxProvider>
-            <BrowserRouter>
-                <MyNavbar/>
-                <Switch>
-                    <Route  exact path="/" component={Home}/> 
-                    <Route  exact path="/kkando" component={Home}/> 
-                    <Route exact path="/szak1"><Szak id={"1"}/></Route>    
-                    <Route exact path="/szak2"><Szak id={"2"}/></Route>    
-                    <Route path="/szak3" ><Szak id={"3"}/></Route>    
-                </Switch>
-            </BrowserRouter>
-        </ParallaxProvider>
+        <BrowserRouter>
+            <MyNavbar/>
+            <Switch>
+                <Route  exact path="/" component={Home}/> 
+                <Route  exact path="/kkando" component={Home}/> 
+                <Route exact path="/szak1"><Szak id={"1"}/></Route>    
+                <Route exact path="/szak2"><Szak id={"2"}/></Route>    
+                <Route path="/szak3" ><Szak id={"3"}/></Route>    
+            </Switch>
+        </BrowserRouter>
     )
 }

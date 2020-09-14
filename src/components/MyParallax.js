@@ -20,13 +20,10 @@ export const MyParallax=(props)=>{
         </ParallaxBanner>
     );
     return (
-        /*{<ParallaxProvider>
-            {*/props.div === undefined
-            ?
-                <>{_banner}</>
-            :
-                <div id={props.div}>{_banner}</div>
-            //}
-        //{/*</ParallaxProvider>*/}
+        props.div === undefined
+        ?
+            <>{_banner}</>
+        :
+            <div id={props.div}>{_banner}</div>
     )
 }
