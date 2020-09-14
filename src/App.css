@@ -1,12 +1,23 @@
-body{
+html{
+    scroll-behavior: smooth;
+}
+body,html{
     overflow-x: hidden;
+}
+a{
+    color: #eee !important;
+    text-decoration: none !important;
+    transition:color 0.2s;
+}
+a:hover{
+    color:#ccc !important;
 }
 .kozep{
     position:absolute;
     text-align:center;
     left:50%;
     top:50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%,-50%);
 }
 #welcome-image-logo{
     width:8rem;
@@ -17,10 +28,10 @@ body{
     color:white;
     font-size:1.25rem;
 }
-.parallax-panel{
+/*.parallax-panel{
     width: 100vw;
     height: 100vh;
-}
+}*/
 .fade-in-img{
     animation-delay: 0.75s;
 }
