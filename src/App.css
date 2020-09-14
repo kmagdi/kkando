@@ -31,13 +31,19 @@ a:hover{
     color:white;
     font-size:1.25rem;
 }
+#welcome-title{
+    color:white;
+}
 .fade-in-img{
     animation-delay: 0.75s;
 }
 .fade-in-p{
     animation-delay: 1.5s;
 }
-.fade-in-img, .fade-in-p{
+.fade-in-h{
+    animation-delay: 0.4s;
+}
+.fade-in-img, .fade-in-p, .fade-in-h{
     opacity: 0.0;
     animation-name: fadeIn;
     animation-duration: 1.5s;

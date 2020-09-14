@@ -54,7 +54,7 @@ export const MyNavbar = () => {
                     <NavDropdown.Divider />
                     <Link to="/szak3" className="dropdown-item" role="button">Szak3</Link>
                 </NavDropdown>*/}
-                <a href="#szakok" className="nav-link" role="button">Szakok</a>
+                <a href="/#szakok" className="nav-link" role="button">Szakok</a>
                 </Nav>
                 <Nav>
                 <Link to="/something" className="nav-link" role="button">Something</Link>

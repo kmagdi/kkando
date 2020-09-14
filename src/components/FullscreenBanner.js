@@ -1,7 +1,9 @@
 import React from 'react'
 import {MyParallax} from './MyParallax';
 
-export const FullscreenBanner = ()=>{
+export const FullscreenBanner = (props)=>{
+    const imageExists = props.image!==undefined;
+    const titleExists = props.title!==undefined;
     return (
         <MyParallax
             div="top-banner-container"
@@ -10,8 +12,15 @@ export const FullscreenBanner = ()=>{
             height={'100vh'}
         >
             <div className="kozep">
-                <img src={require('./assets/logo.png')} id="welcome-image-logo" alt="logo" className="fade-in-img"></img>
-                <p id="welcome-text" className="fade-in-p">Lorem ipsum dolor sit amet.</p>
+                {imageExists?
+                    <img src={props.image} id="welcome-image-logo" alt="logo" className="fade-in-img"></img>
+                : null}
+                {titleExists?
+                    imageExists?
+                        <p id="welcome-text" className="fade-in-p">{props.title}</p>
+                    :
+                        <h1 id="welcome-title" className="fade-in-h">{props.title}</h1>
+                : null}
             </div>
         </MyParallax>
     );
