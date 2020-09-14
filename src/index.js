@@ -9,6 +9,6 @@ ReactDOM.render(<ParallaxProvider><App /></ParallaxProvider>, document.getElemen
 
 function initScript(){
     //let vh = window.innerHeight * 0.01;
-    let vh = document.documentElement.clientHeight * 0.01;
+    let vh = window.screen.availHeight * 0.01;
     document.documentElement.style.setProperty('--vh', vh + 'px');
 }
