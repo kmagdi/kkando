@@ -1,9 +1,9 @@
 import React, {useState, useEffect} from 'react';
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
 import {Link} from 'react-router-dom';
+import './MyNavbar.css'
 
 export const MyNavbar = () => {
-
     // lekéri milyen közel van a navbar a megadott elem aljához (0-1 közötti szám)
     const getNavbarOpacity = () => {
         const topBanner = document.getElementById('top-banner-container');
@@ -12,13 +12,12 @@ export const MyNavbar = () => {
         }else{
             const _value =  (window.innerHeight - document.getElementById('top-banner-container').getBoundingClientRect().bottom) / window.innerHeight;
             if(_value < 1.0){
-                return Math.round((_value + Number.EPSILON) * 1000) / 1000;;
+                return Math.round((_value + Number.EPSILON) * 1000) / 1000;
             }else{
                 return 1.0;
             }
         }
     };
-
     // state az átlátszóságra
     const [navbarState, setNavbarOpacity] = useState(0);
     // az oldal betöltésekor rábindolja a scrollra az onAppScroll függvényt
@@ -37,20 +36,21 @@ export const MyNavbar = () => {
             opacity: navbarState,
             display: navbarState===0?"none":"flex"
                 }} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-            <Navbar.Brand>
+            <Link to="/"><Navbar.Brand>
                 {/*<Link to="/">Kandópage</Link>*/}
                 <img src={require('./assets/logo.png')} height="30px" />
-            </Navbar.Brand>
+            </Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
                 <Link to="/rolunk" className="nav-link" role="button">Rólunk</Link>
-                <NavDropdown title="Szakok" id="collasible-nav-dropdown">
+                {/*<NavDropdown title="Szakok" id="collasible-nav-dropdown">
                     <Link to="/szak1" className="dropdown-item" role="button">Szak1</Link>
                     <Link to="/szak2" className="dropdown-item" role="button">Szak2</Link>
                     <NavDropdown.Divider />
                     <Link to="/szak3" className="dropdown-item" role="button">Szak3</Link>
-                </NavDropdown>
+                </NavDropdown>*/}
+                <a href="#szakok" className="nav-link" role="button">Szakok</a>
                 </Nav>
                 <Nav>
                 <Link to="/something" className="nav-link" role="button">Something</Link>

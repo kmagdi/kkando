@@ -4,7 +4,7 @@ import {Szak1} from "./components/Szak1"
 import {Szak2} from "./components/Szak2"
 import {Szak3} from "./components/Szak3"
 import {Home} from "./components/Home"
-import {Navbar} from "./components/Navbar"
+import {MyNavbar} from "./components/MyNavbar"
 import { ParallaxProvider } from 'react-scroll-parallax'
 import './App.css'
 
@@ -12,7 +12,7 @@ export const App=()=>{
     return(
         <ParallaxProvider>
             <BrowserRouter>
-                <Navbar/>
+                <MyNavbar/>
                 <Switch>
                     <Route  exact path="/" component={Home}/> 
                     <Route  exact path="/kkando" component={Home}/> 
