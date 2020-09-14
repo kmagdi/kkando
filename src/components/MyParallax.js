@@ -1,6 +1,5 @@
-   
 import React from 'react';
-import {ParallaxProvider,ParallaxBanner} from 'react-scroll-parallax'
+import {ParallaxBanner} from 'react-scroll-parallax'
 
 export const MyParallax=(props)=>{
     const _banner = (

@@ -1,5 +1,11 @@
+:root{
+    --fullh:calc(var(--vh) * 100);
+}
 html{
     scroll-behavior: smooth;
+    height:calc(var(--vh) * 100);
+}
+body{
 }
 body,html{
     overflow-x: hidden;
@@ -11,6 +17,9 @@ a{
 }
 a:hover{
     color:#ccc !important;
+}
+#top-banner-container{
+    height:var(--fullh);
 }
 .kozep{
     position:absolute;

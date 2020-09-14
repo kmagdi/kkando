@@ -28,8 +28,10 @@
 }
 .carousel-control-prev:hover, .carousel-control-next:hover{
     background-color:rgba(0,0,0,0.3);
-    /box-shadow:-10px 0 10px rgba(0,0,0,0.3);
     transform:scale(1.25);
+}
+.carousel-control-prev:active, .carousel-control-next:active{
+    transform:scale(1.15);
 }
 .carousel-indicators{
     height:30px;

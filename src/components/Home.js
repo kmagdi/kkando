@@ -9,7 +9,7 @@ export const Home=()=>{
         <div>
             <FullscreenBanner />
             <div style={{backgroundColor:'#eee',height:'200px'}}></div>
-            <MyParallax img={require('./assets/eszt2.jpg')} amount={0.25} height={'100vh'} />
+            <MyParallax img={require('./assets/eszt2.jpg')} amount={0.25} height={'var(--fullh)'} />
             <div id="szakok" className="row justify-content-center"><div className="col-md-8 m-2"><MyCarousel/></div></div>
             <CollectData/>
         </div>
