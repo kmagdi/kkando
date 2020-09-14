@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter,Route,Switch} from "react-router-dom"
 import {Szak} from "./components/Szak"
 import {Home} from "./components/Home"
-import {Navbar} from "./components/Navbar"
+import {MyNavbar} from "./components/MyNavbar"
 import { ParallaxProvider } from 'react-scroll-parallax'
 import './App.css'
 
@@ -10,7 +10,7 @@ export const App=()=>{
     return(
         <ParallaxProvider>
             <BrowserRouter>
-                <Navbar/>
+                <MyNavbar/>
                 <Switch>
                     <Route  exact path="/" component={Home}/> 
                     <Route  exact path="/kkando" component={Home}/> 

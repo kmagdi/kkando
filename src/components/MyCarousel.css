@@ -1,0 +1,37 @@
+.carousel{
+    overflow:hidden;
+}
+.carousel-caption{
+    padding:0.5rem !important;
+    background-color:rgba(0,0,0,0.6);
+    border-radius: 1rem;
+    backdrop-filter: blur(4px);
+    left:50%;
+    right:auto;
+    bottom:50% !important;
+    transform:translate(0,50%);
+}
+.carousel-caption h3{
+    margin-bottom:0.125rem;
+}
+.carousel-caption p{
+    margin:0;
+}
+.carousel-control-prev, .carousel-control-next{
+    transition:transform 0.2s !important;
+}
+.carousel-control-prev:hover, .carousel-control-next:hover{
+    transform:scale(1.25);
+}
+.carousel-indicators{
+    height:30px;
+}
+.carousel-indicators li{
+    transition:height 0.2s !important;
+}
+.carousel-indicators li:hover{
+    height:6px;
+}
+.carousel-indicators li.active{
+    height:12px;
+}
