@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/kkando/static/css/main.7c52abef.chunk.css",
-    "main.js": "/kkando/static/js/main.f3630c6f.chunk.js",
-    "main.js.map": "/kkando/static/js/main.f3630c6f.chunk.js.map",
+    "main.css": "/kkando/static/css/main.600dcec1.chunk.css",
+    "main.js": "/kkando/static/js/main.4d03ef35.chunk.js",
+    "main.js.map": "/kkando/static/js/main.4d03ef35.chunk.js.map",
     "runtime-main.js": "/kkando/static/js/runtime-main.d0f3f99f.js",
     "runtime-main.js.map": "/kkando/static/js/runtime-main.d0f3f99f.js.map",
     "static/css/2.ada51479.chunk.css": "/kkando/static/css/2.ada51479.chunk.css",
     "static/js/2.589e9514.chunk.js": "/kkando/static/js/2.589e9514.chunk.js",
     "static/js/2.589e9514.chunk.js.map": "/kkando/static/js/2.589e9514.chunk.js.map",
     "index.html": "/kkando/index.html",
-    "precache-manifest.b76c455b95e90f6b4206875bdc8b9f5e.js": "/kkando/precache-manifest.b76c455b95e90f6b4206875bdc8b9f5e.js",
+    "precache-manifest.e1f078250287ca1f09ee111baa0457d1.js": "/kkando/precache-manifest.e1f078250287ca1f09ee111baa0457d1.js",
     "service-worker.js": "/kkando/service-worker.js",
     "static/css/2.ada51479.chunk.css.map": "/kkando/static/css/2.ada51479.chunk.css.map",
-    "static/css/main.7c52abef.chunk.css.map": "/kkando/static/css/main.7c52abef.chunk.css.map",
+    "static/css/main.600dcec1.chunk.css.map": "/kkando/static/css/main.600dcec1.chunk.css.map",
     "static/js/2.589e9514.chunk.js.LICENSE.txt": "/kkando/static/js/2.589e9514.chunk.js.LICENSE.txt",
     "static/media/G1.jpg": "/kkando/static/media/G1.9c6eaf72.jpg",
     "static/media/SZ1.jpg": "/kkando/static/media/SZ1.93a1a747.jpg",
@@ -30,7 +30,7 @@
     "static/js/runtime-main.d0f3f99f.js",
     "static/css/2.ada51479.chunk.css",
     "static/js/2.589e9514.chunk.js",
-    "static/css/main.7c52abef.chunk.css",
-    "static/js/main.f3630c6f.chunk.js"
+    "static/css/main.600dcec1.chunk.css",
+    "static/js/main.4d03ef35.chunk.js"
   ]
 }
