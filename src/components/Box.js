@@ -1,24 +1,27 @@
-import React, { useState,useEffect } from 'react';     
+import React, { useState,useEffect } from 'react';    
+import ReactCardFlip from 'react-card-flip'; 
 
 export const Box=(props)=> {
     //const color = colors[Math.floor(Math.random() * 9)];
-    const [visible, setVisible] = useState(true);
+    const [isFlipped, setisFlipped] = useState(false);
   
-    function hideMe(){
-      setVisible(false);
+   const handleClick=()=>{
+      setisFlipped(!isFlipped)
     }
-    function showMe(){
-        setVisible(true)
-    }
-  
-    let style ={  border: "solid 1px black"};
-if (!visible) style.display = "none";
-  
+   
     return (
-     <div>
-       <button className="btn btn-info m-2" onClick={showMe}><b>+</b>{props.tema+" " +props.id}</button>
-       <div >{props.adatok[props.id]}</div>
-     </div>
-     
+      <ReactCardFlip isFlipped={isFlipped} flipDirection="vertical">
+          <div className="card col-md-3">
+            {/*This is the front of the card.*/}
+            {props.tema+" " +props.id}
+            <button onClick={handleClick}>nézd meg</button>
+          </div>
+  
+          <div className="card col-md-3">
+            {/*This is the back of the card.*/}
+            {props.adatok[props.id]}
+            <button onClick={handleClick}>-</button>
+          </div>
+        </ReactCardFlip>
     );
   }
