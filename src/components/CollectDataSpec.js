@@ -9,7 +9,8 @@ class CollectDataSpec extends Component{
         super()
         this.state = {
             temaKorok:[],
-            adatok:{}
+            adatok:{},
+            fotok:[]
         }
     }
     componentDidMount(){  
@@ -26,18 +27,26 @@ class CollectDataSpec extends Component{
                     console.log(adatokJSON[0][i])*/
             this.setState({temaKorok:adatokJSON[0]})
             //console.log("filtered type:"+typeof(filtered))
-            //console.log("obj keys:"+Object.keys(filtered[0]))
+            console.log("obj keys:"+Object.keys(filtered[0]))
             this.setState({adatok:filtered[0]})
-       
+            let db=parseInt(this.state.adatok.fotok)
+            //console.log("db="+db)
+            let urlImg=[]
+             while(db>0){
+               urlImg.push("https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/"+this.props.id+"img"+(db-1)+".jpg")
+                 db--;
+             }
+              this.setState({fotok:urlImg})
+            //console.log(this.state.fotok.length)
             })
-       
+            
     }
    
 render(){
     console.log("kod="+this.state.adatok.kod)
      return(
         <div>
-            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok}/>
+            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok} fotok={this.state.fotok}/>
         </div>
     )}   
 }
