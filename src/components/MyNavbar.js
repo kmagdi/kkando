@@ -8,7 +8,7 @@ export const MyNavbar = () => {
     const getNavbarOpacity = () => {
         const topBanner = document.getElementById('top-banner-container');
         if(topBanner == null || topBanner.getBoundingClientRect() == null){
-            return 0.0;
+            return 1.0;
         }else{
             const _value =  (window.innerHeight - document.getElementById('top-banner-container').getBoundingClientRect().bottom) / window.innerHeight;
             if(_value < 1.0){
@@ -32,7 +32,19 @@ export const MyNavbar = () => {
     const onAppScroll = () => {
         const opacity = getNavbarOpacity();
         setNavbarOpacity(opacity);
-    }
+    };
+    const scrollToId = (path, id) => {
+        /*if(window.location.pathname == '/'){
+            const el = document.getElementById(id);
+            if(el != null){
+                //el.scrollIntoView();
+                window.location = path + '#' + id;
+            }
+        }else{
+            window.location = path + '#' + id;
+        }*/
+        window.location = path + '#' + id;
+    };
 
     return (
         <Navbar style={{
@@ -47,14 +59,8 @@ export const MyNavbar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
-                <Link to="/rolunk" className="nav-link" role="button">Rólunk</Link>
-                {/*<NavDropdown title="Szakok" id="collasible-nav-dropdown">
-                    <Link to="/szak1" className="dropdown-item" role="button">Szak1</Link>
-                    <Link to="/szak2" className="dropdown-item" role="button">Szak2</Link>
-                    <NavDropdown.Divider />
-                    <Link to="/szak3" className="dropdown-item" role="button">Szak3</Link>
-                </NavDropdown>*/}
-                <a href="/#szakok" className="nav-link" role="button">Szakok</a>
+                <p href="javascript:void(0);" onClick={()=>scrollToId('/','rolunk')} className="nav-link link" role="button">Rólunk</p>
+                <p onClick={()=>scrollToId('/','szakok')} className="nav-link" role="button">Szakok</p>
                 </Nav>
                 <Nav>
                 <Link to="/something" className="nav-link" role="button">Something</Link>

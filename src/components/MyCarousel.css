@@ -2,6 +2,7 @@
     --carouselHeight: 75vh;
 }
 .carousel{
+    width:100vw;
     height:var(--carouselHeight);
     overflow:hidden;
 }
@@ -9,6 +10,7 @@
     background-color:black;
 }
 .carousel-item img{
+    width:100%;
     height:var(--carouselHeight);
     object-fit: cover;
 }
@@ -25,13 +27,11 @@
 @media (max-width: 991px) {
     .carousel-item h2{
         font-size:2.5rem;
-        margin-bottom:0.125rem;
     }
 }
 @media (max-width: 767px) {
     .carousel-item h2{
         font-size:2rem;
-        margin-bottom:0.125rem;
     }
 }
 .carousel-caption{
