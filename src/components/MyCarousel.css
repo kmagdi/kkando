@@ -16,10 +16,23 @@
     transition:transform .6s ease-in-out, opacity 0.2s !important;
 }
 .carousel-item:hover{
-    opacity:0.8;
+    /*opacity:0.8;*/
 }
 .carousel-item h2{
     font-size:3rem;
+    margin-bottom:0.125rem;
+}
+@media (max-width: 991px) {
+    .carousel-item h2{
+        font-size:2.5rem;
+        margin-bottom:0.125rem;
+    }
+}
+@media (max-width: 767px) {
+    .carousel-item h2{
+        font-size:2rem;
+        margin-bottom:0.125rem;
+    }
 }
 .carousel-caption{
     padding:0.75rem 1.5rem !important;
@@ -31,9 +44,6 @@
     top:50% !important;
     bottom:auto !important;
     transform:translate(-50%,-50%);
-}
-.carousel-caption h3{
-    margin-bottom:0.125rem;
 }
 .carousel-caption p{
     margin:0;
