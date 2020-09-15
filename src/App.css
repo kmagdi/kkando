@@ -1,7 +1,7 @@
 /*:root{
     --fullh:calc(var(--vh) * 100);
 }*/
-html{
+html[smooth=true]{
     scroll-behavior: smooth;
 }
 body,html{
@@ -57,3 +57,21 @@ a:hover{
         opacity:1.0;
     }
 }
+
+/* CUSTOM SCROLLBAR */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.725); 
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.25); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.375); 
+}
+::-webkit-scrollbar-thumb:active {
+    background: rgba(0,0,0,0.5); 
+}
+/* CUSTOM SCROLLBAR */

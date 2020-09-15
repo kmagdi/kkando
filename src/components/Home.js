@@ -5,12 +5,16 @@ import { MyParallax } from './MyParallax';
 import { FullscreenBanner } from './FullscreenBanner';
 
 export const Home=()=>{
+    const tempSeparator = <div style={{backgroundColor:'#eee',height:'200px'}}></div>;
     return(
         <div>
             <FullscreenBanner image={require('./assets/logo.png')} title={'Lorem ipsum dolor sit amet.'} />
-            <div style={{backgroundColor:'#eee',height:'200px'}}></div>
+            {tempSeparator}
             <MyParallax img={require('./assets/eszt2.jpg')} amount={0.25} height={'100vh'} />
-            <div id="szakok" className="row justify-content-center"><div className="col-md-8 m-2"><MyCarousel/></div></div>
+            {tempSeparator}
+            <div id="szakok" className="row justify-content-center">
+                    <MyCarousel/>
+            </div>
             <CollectData/>
         </div>
 
