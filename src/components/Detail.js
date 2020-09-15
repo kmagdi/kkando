@@ -11,7 +11,7 @@ export const Detail=(props)=>{
         <React.Fragment>
             <FullscreenBanner title={props.adatok.leiras} />
             <h1>{props.adatok.leiras}</h1>
-            {Object.keys(props.temaKorok).filter(obj=>props.temaKorok[obj].length>5).map((obj, i) => <Box key={obj} tema={props.temaKorok[obj]}/>)}
+            {Object.keys(props.temaKorok).filter(obj=>props.temaKorok[obj].length>5).map((obj, i) => <Box key={obj} tema={props.temaKorok[obj]} id={obj} adatok={props.adatok}/>)}
         </React.Fragment>
         
     )

@@ -25,8 +25,8 @@ class CollectDataSpec extends Component{
             /*for(const i in adatokJSON[0])
                     console.log(adatokJSON[0][i])*/
             this.setState({temaKorok:adatokJSON[0]})
-            console.log("filtered type:"+typeof(filtered))
-            console.log("obj keys:"+Object.keys(filtered[0]))
+            //console.log("filtered type:"+typeof(filtered))
+            //console.log("obj keys:"+Object.keys(filtered[0]))
             this.setState({adatok:filtered[0]})
        
             })
