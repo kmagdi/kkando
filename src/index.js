@@ -8,7 +8,7 @@ initScript();
 ReactDOM.render(<App />, document.getElementById('root'));
 
 function initScript(){
-    window.addEventListener('resize',()=>window.location.reload());
+    //window.addEventListener('resize',()=>window.location.reload());
     window.addEventListener('beforeunload', () => {
         // scroll to top
         document.getElementsByTagName('html')[0].setAttribute('smooth','false');
