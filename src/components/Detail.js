@@ -1,6 +1,7 @@
 import React from 'react';
 import {Box} from "./Box"
 import { FullscreenBanner } from './FullscreenBanner';
+import './Details.css'
 
 export const Detail=(props)=>{
     return(
