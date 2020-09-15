@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/kkando/static/css/main.c30209bd.chunk.css",
-    "main.js": "/kkando/static/js/main.bae43a00.chunk.js",
-    "main.js.map": "/kkando/static/js/main.bae43a00.chunk.js.map",
+    "main.css": "/kkando/static/css/main.7c52abef.chunk.css",
+    "main.js": "/kkando/static/js/main.f3630c6f.chunk.js",
+    "main.js.map": "/kkando/static/js/main.f3630c6f.chunk.js.map",
     "runtime-main.js": "/kkando/static/js/runtime-main.d0f3f99f.js",
     "runtime-main.js.map": "/kkando/static/js/runtime-main.d0f3f99f.js.map",
     "static/css/2.ada51479.chunk.css": "/kkando/static/css/2.ada51479.chunk.css",
     "static/js/2.589e9514.chunk.js": "/kkando/static/js/2.589e9514.chunk.js",
     "static/js/2.589e9514.chunk.js.map": "/kkando/static/js/2.589e9514.chunk.js.map",
     "index.html": "/kkando/index.html",
-    "precache-manifest.2cf2b0e48d28bcef4525bb7cceb830b5.js": "/kkando/precache-manifest.2cf2b0e48d28bcef4525bb7cceb830b5.js",
+    "precache-manifest.b76c455b95e90f6b4206875bdc8b9f5e.js": "/kkando/precache-manifest.b76c455b95e90f6b4206875bdc8b9f5e.js",
     "service-worker.js": "/kkando/service-worker.js",
     "static/css/2.ada51479.chunk.css.map": "/kkando/static/css/2.ada51479.chunk.css.map",
-    "static/css/main.c30209bd.chunk.css.map": "/kkando/static/css/main.c30209bd.chunk.css.map",
+    "static/css/main.7c52abef.chunk.css.map": "/kkando/static/css/main.7c52abef.chunk.css.map",
     "static/js/2.589e9514.chunk.js.LICENSE.txt": "/kkando/static/js/2.589e9514.chunk.js.LICENSE.txt",
     "static/media/G1.jpg": "/kkando/static/media/G1.9c6eaf72.jpg",
     "static/media/SZ1.jpg": "/kkando/static/media/SZ1.93a1a747.jpg",
     "static/media/SZ2.jpg": "/kkando/static/media/SZ2.5e95016b.jpg",
     "static/media/SZ3.jpg": "/kkando/static/media/SZ3.caa4ac49.jpg",
-    "static/media/T1.jpg": "/kkando/static/media/T1.f1db0751.jpg",
+    "static/media/T1.jpg": "/kkando/static/media/T1.908ec899.jpg",
     "static/media/T2.jpg": "/kkando/static/media/T2.ace9699f.jpg",
     "static/media/T3.jpg": "/kkando/static/media/T3.a327171d.jpg",
     "static/media/T4.jpg": "/kkando/static/media/T4.d8845ebd.jpg",
@@ -30,7 +30,7 @@
     "static/js/runtime-main.d0f3f99f.js",
     "static/css/2.ada51479.chunk.css",
     "static/js/2.589e9514.chunk.js",
-    "static/css/main.c30209bd.chunk.css",
-    "static/js/main.bae43a00.chunk.js"
+    "static/css/main.7c52abef.chunk.css",
+    "static/js/main.f3630c6f.chunk.js"
   ]
 }
