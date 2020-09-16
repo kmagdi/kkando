@@ -1,7 +1,12 @@
 import React from 'react';
-import {ParallaxBanner} from 'react-scroll-parallax'
+import {ParallaxBanner, useController} from 'react-scroll-parallax'
 
 export const MyParallax=(props)=>{
+    const { parallaxController } = useController();
+    const onResize = () => {
+        parallaxController.update();
+    }
+    window.addEventListener('resize',onResize);
     const _banner = (
         <ParallaxBanner
             className={"parallax-panel "+props.className}
