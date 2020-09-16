@@ -5,6 +5,7 @@ import {Home} from "./components/Home"
 import {MyNavbar} from "./components/MyNavbar"
 import { ParallaxProvider, withController } from 'react-scroll-parallax'
 import './App.css'
+import { MyCarousel } from './components/MyCarousel';
 
 export const App=()=>{
     const parallaxController = (parallaxController) => {
@@ -16,7 +17,8 @@ export const App=()=>{
                 <MyNavbar/>
                 <Switch>
                     <Route   exact path="/" component={Home}/> 
-                    <Route exact  path="/kkando/" component={Home}/> 
+                    <Route   exact path="/home" component={Home}/> 
+                    <Route exact  path="/kkando" component={Home}/> 
                     <Route exact path="/szak/:id" component={Szak} />   
                 </Switch>
             </BrowserRouter>

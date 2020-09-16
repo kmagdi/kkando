@@ -8,7 +8,7 @@ export const Home=()=>{
     const tempSeparator = <div style={{backgroundColor:'#eee',height:'200px'}}></div>;
     return(
         <div>
-            <FullscreenBanner image={require('./assets/logo.png')} title={'Lorem ipsum dolor sit amet.'} />
+            <FullscreenBanner id="home" image={require('./assets/logo.png')} title={'Lorem ipsum dolor sit amet.'} />
             {tempSeparator}
             <MyParallax img={require('./assets/eszt2.jpg')} amount={0.25} height={'100vh'} />
             {tempSeparator}

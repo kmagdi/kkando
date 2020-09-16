@@ -8,7 +8,7 @@ import './MyCarousel.css'
 export const MyCarousel=()=>{
     
     return (
-        <Carousel className="justify-content-center" interval={null} prevLabel="Következő szak" nextLabel="Következő szak">
+        <Carousel id="szakok" className="justify-content-center" interval={null} prevLabel="Következő szak" nextLabel="Következő szak">
             <Carousel.Item>
                 <img src={require('./assets/T1.jpg')} alt="kep1" />
                 <Carousel.Caption>

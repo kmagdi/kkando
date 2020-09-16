@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
+import {NavHashLink as Link} from "react-router-hash-link"
 import './MyNavbar.css'
 
 export const MyNavbar = () => {
@@ -33,7 +34,7 @@ export const MyNavbar = () => {
         const opacity = getNavbarOpacity();
         setNavbarOpacity(opacity);
     };
-    const scrollToId = (path, id) => {
+  //  const scrollToId = (path, id) => {
         /*if(window.location.pathname == '/'){
             const el = document.getElementById(id);
             if(el != null){
@@ -43,8 +44,8 @@ export const MyNavbar = () => {
         }else{
             window.location = path + '#' + id;
         }*/
-        window.location = path + '#' + id;
-    };
+ //       window.location = path + '#' + id;
+ //   };
 
     return (
         <Navbar style={{
@@ -52,18 +53,18 @@ export const MyNavbar = () => {
             opacity: navbarState,
             display: navbarState===0?"none":"flex"
                 }} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-            <Link to="/"><Navbar.Brand>
+            <Link to="/#home"><Navbar.Brand>
                 {/*<Link to="/">Kandópage</Link>*/}
                 <img src={require('./assets/logo.png')} height="30px" />
             </Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
-                <p href="javascript:void(0);" onClick={()=>scrollToId('/','rolunk')} className="nav-link link" role="button">Rólunk</p>
-                <p onClick={()=>scrollToId('/','szakok')} className="nav-link" role="button">Szakok</p>
+                <Link to="/#rolunk"><p  className="nav-link link" role="button">Rólunk</p></Link>
+                <Link to="/#szakok"><p  className="nav-link" role="button">Szakok</p></Link>
                 </Nav>
                 <Nav>
-                <Link to="/something" className="nav-link" role="button">Something</Link>
+                <Link to="/#something" className="nav-link" role="button">Something</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
