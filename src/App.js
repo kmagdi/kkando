@@ -16,8 +16,8 @@ export const App=()=>{
                 <MyNavbar/>
                 <Switch>
                     <Route   exact path="/" component={Home}/> 
-                    <Route exact  path="/kkando" component={Home}/> 
-                    <Route path="/szak/:id" exact component={Szak} />   
+                    <Route exact  path="/kkando/" component={Home}/> 
+                    <Route exact path="/szak/:id" component={Szak} />   
                 </Switch>
             </BrowserRouter>
         </ParallaxProvider>
