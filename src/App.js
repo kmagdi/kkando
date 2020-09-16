@@ -15,8 +15,8 @@ export const App=()=>{
             <BrowserRouter>
                 <MyNavbar/>
                 <Switch>
-                    <Route  exact path="/" component={Home}/> 
-                    <Route  exact path="/kkando" component={Home}/> 
+                    <Route   exact path="/" component={Home}/> 
+                    <Route exact  path="/kkando" component={Home}/> 
                     <Route path="/szak/:id" exact component={Szak} />   
                 </Switch>
             </BrowserRouter>
