@@ -3,10 +3,13 @@ import {BrowserRouter,Route,Switch} from "react-router-dom"
 import {Szak} from "./components/Szak"
 import {Home} from "./components/Home"
 import {MyNavbar} from "./components/MyNavbar"
-import { ParallaxProvider } from 'react-scroll-parallax'
+import { ParallaxProvider, withController } from 'react-scroll-parallax'
 import './App.css'
 
 export const App=()=>{
+    const parallaxController = (parallaxController) => {
+        parallaxController.update();
+    }
     return(
         <ParallaxProvider>
             <BrowserRouter>
