@@ -1,23 +1,24 @@
 {
   "files": {
     "main.css": "/kkando/static/css/main.81c2f633.chunk.css",
-    "main.js": "/kkando/static/js/main.29ea8f28.chunk.js",
-    "main.js.map": "/kkando/static/js/main.29ea8f28.chunk.js.map",
+    "main.js": "/kkando/static/js/main.a0c7d6fa.chunk.js",
+    "main.js.map": "/kkando/static/js/main.a0c7d6fa.chunk.js.map",
     "runtime-main.js": "/kkando/static/js/runtime-main.d0f3f99f.js",
     "runtime-main.js.map": "/kkando/static/js/runtime-main.d0f3f99f.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/kkando/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.94472e45.chunk.js": "/kkando/static/js/2.94472e45.chunk.js",
-    "static/js/2.94472e45.chunk.js.map": "/kkando/static/js/2.94472e45.chunk.js.map",
+    "static/js/2.c46b25ba.chunk.js": "/kkando/static/js/2.c46b25ba.chunk.js",
+    "static/js/2.c46b25ba.chunk.js.map": "/kkando/static/js/2.c46b25ba.chunk.js.map",
     "index.html": "/kkando/index.html",
-    "precache-manifest.73d319fb5c512911e862bc4ecae9735a.js": "/kkando/precache-manifest.73d319fb5c512911e862bc4ecae9735a.js",
+    "precache-manifest.644e8cdbb076b8e912162fac2cfc32e0.js": "/kkando/precache-manifest.644e8cdbb076b8e912162fac2cfc32e0.js",
     "service-worker.js": "/kkando/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/kkando/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.81c2f633.chunk.css.map": "/kkando/static/css/main.81c2f633.chunk.css.map",
-    "static/js/2.94472e45.chunk.js.LICENSE.txt": "/kkando/static/js/2.94472e45.chunk.js.LICENSE.txt",
+    "static/js/2.c46b25ba.chunk.js.LICENSE.txt": "/kkando/static/js/2.c46b25ba.chunk.js.LICENSE.txt",
     "static/media/G1.jpg": "/kkando/static/media/G1.9c6eaf72.jpg",
     "static/media/SZ1.jpg": "/kkando/static/media/SZ1.93a1a747.jpg",
     "static/media/SZ2.jpg": "/kkando/static/media/SZ2.5e95016b.jpg",
     "static/media/SZ3.jpg": "/kkando/static/media/SZ3.caa4ac49.jpg",
+    "static/media/T1.mp3": "/kkando/static/media/T1.15626718.mp3",
     "static/media/T1.jpg": "/kkando/static/media/T1.908ec899.jpg",
     "static/media/T2.jpg": "/kkando/static/media/T2.ace9699f.jpg",
     "static/media/T3.jpg": "/kkando/static/media/T3.a327171d.jpg",
@@ -29,8 +30,8 @@
   "entrypoints": [
     "static/js/runtime-main.d0f3f99f.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.94472e45.chunk.js",
+    "static/js/2.c46b25ba.chunk.js",
     "static/css/main.81c2f633.chunk.css",
-    "static/js/main.29ea8f28.chunk.js"
+    "static/js/main.a0c7d6fa.chunk.js"
   ]
 }
