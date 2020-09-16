@@ -1,0 +1,35 @@
+:root{
+    --footer-padding:0.75rem;
+}
+#footer{
+    color:#ebebeb;
+    color:#dedede;
+    background-color:#343a40;
+    padding:var(--footer-padding) 2rem 0 2rem;
+}
+.footer-col{
+    padding:0 !important;
+}
+.footer-col p{
+    margin:0 0 var(--footer-padding) 0;
+}
+@media (max-width: 991px) {
+    .footer-col{
+        padding-left:0;
+        padding-right:0;
+    }
+    .footer-col p{
+        text-align:center;
+        margin-left:0;
+        margin-right:0;
+    }
+    .footer-col-second{
+        order:1;
+    }
+    .footer-col-first{
+        order:2;
+    }
+    .tab{
+        display:none;
+    }
+}
