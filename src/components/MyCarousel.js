@@ -6,13 +6,13 @@ import {Link,BrowserRouter} from "react-router-dom"
 import './MyCarousel.css'    
 
 export const MyCarousel=()=>{
-
+    
     return (
             <Carousel className="justify-content-center" interval={null} prevLabel="Következő szak" nextLabel="Következő szak">
                 <Carousel.Item>
                     <img src={require('./assets/T1.jpg')} alt="kep1" />
                     <Carousel.Caption>
-                        <Link to={"/szak/T1"}><h2>Szoftverfejlesztő</h2></Link>
+                        <Link to={"/szak/T1"}><h2 >Szoftverfejlesztő</h2></Link>
                         <p>description</p>
                     </Carousel.Caption>
                 </Carousel.Item>
