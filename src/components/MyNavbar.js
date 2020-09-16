@@ -60,7 +60,7 @@ export const MyNavbar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
-                <Link to="/#rolunk"><p  className="nav-link link" role="button">Rólunk</p></Link>
+                <Link to="/kkando/#rolunk"><p  className="nav-link link" role="button">Rólunk</p></Link>
                 <Link to="/kkando/#szakok"><p  className="nav-link" role="button">Szakok</p></Link>
                 </Nav>
                 <Nav>

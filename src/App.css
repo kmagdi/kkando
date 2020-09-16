@@ -7,6 +7,11 @@ html[smooth=true]{
 body,html{
     overflow-x: hidden;
 }
+@media (min-width: 992px) {
+    html{
+        overflow-y:scroll;
+    }
+}
 a{
     color: #eee !important;
     text-decoration: none !important;

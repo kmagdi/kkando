@@ -1,24 +1,20 @@
 import React from 'react';
+import './Footer.css';
 
 export const Footer=(props)=> {
     return(
         <div>
-            <div className="card-group ">
-                <div className="card ">
-                    <div  className="card-footer text-muted"><small className="text-muted"><b>Székhely:</b>{props.contactData.location}</small></div>
-                 </div>
-                <div className="card">
-                    <div className="card-footer text-muted lpc"><small className="text-muted"><b>Levelezési cím:</b>{props.contactData.adress}</small></div>
+            <div id="footer" className="row">
+                <div className="col-lg-6 footer-col footer-col-first">
+                    <p><b>Székhely:</b><br/>{props.contactData.location}</p>
+                    <p><b>Levelezési cím:</b><br/>{props.contactData.adress}</p>
+                    <p><b>Telefon:</b><br/>{props.contactData.tel}</p>
+                    <p><b>E-mail:</b><br/>{props.contactData.email}</p>
+                    <p><b>OM azonosító:</b><br/>{props.contactData.omid}</p>        
                 </div>
-                <div className="card">
-                    <div className="card-footer text-muted lpc"><small className="text-muted"><b>Telefon:</b>{props.contactData.tel}</small></div>
+                <div className="col-lg-6 footer-col footer-col-second" style={{textAlign:'center',fontSize:'125%'}}>
+                    <p>Valami "középre" igazított szöveg</p>
                 </div>
-                <div className="card">
-                    <div className="card-footer text-muted lpc"><small className="text-muted"><b>E-mail:</b>{props.contactData.email}</small></div>
-                </div>
-                <div className="card">
-                    <div className="card-footer text-muted lpc"><small className="text-muted"><b>OM azonosító:</b>{props.contactData.omid}</small></div>
-                </div>                
             </div>
         </div>
        )}
