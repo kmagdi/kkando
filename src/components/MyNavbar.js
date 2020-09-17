@@ -56,7 +56,7 @@ export const MyNavbar = () => {
             opacity: navbarState,
             display: navbarState===0?"none":"flex"
                 }} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-            <Link to="/#home"><Navbar.Brand>
+            <Link to="/kkando/#home"><Navbar.Brand>
                 {/*<Link to="/">Kandópage</Link>*/}
                 <img src={require('./assets/logo.png')} height="30px" alt="Kandó logo" />
             </Navbar.Brand></Link>
