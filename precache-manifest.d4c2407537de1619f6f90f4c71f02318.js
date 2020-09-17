@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6ac3084f79ed272d0ac447db813866e6",
+    "revision": "3cdc320c980fd8e4d71c2383aa0481f0",
     "url": "/kkando/index.html"
   },
   {
-    "revision": "0ddde03c3201500d2b16",
+    "revision": "ec3f83693c69352959d0",
     "url": "/kkando/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "d4308a9bb3dcb5a24831",
+    "revision": "5f66c492c6c53ce1ee8e",
     "url": "/kkando/static/css/main.81c2f633.chunk.css"
   },
   {
-    "revision": "0ddde03c3201500d2b16",
-    "url": "/kkando/static/js/2.88ec87cf.chunk.js"
+    "revision": "ec3f83693c69352959d0",
+    "url": "/kkando/static/js/2.d8a09152.chunk.js"
   },
   {
     "revision": "f828ba3f58479656d16ef621c409174d",
-    "url": "/kkando/static/js/2.88ec87cf.chunk.js.LICENSE.txt"
+    "url": "/kkando/static/js/2.d8a09152.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "d4308a9bb3dcb5a24831",
-    "url": "/kkando/static/js/main.94292386.chunk.js"
+    "revision": "5f66c492c6c53ce1ee8e",
+    "url": "/kkando/static/js/main.e068687d.chunk.js"
   },
   {
     "revision": "e7e8333ae4ae7d8462f5",
