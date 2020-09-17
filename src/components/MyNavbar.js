@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import {Navbar,Nav,NavDropdown} from 'react-bootstrap';
+import {Navbar,Nav} from 'react-bootstrap';
 //import {Link} from 'react-router-dom';
 import {NavHashLink as Link} from "react-router-hash-link"
 import './MyNavbar.css'
@@ -27,15 +27,18 @@ export const MyNavbar = () => {
     const [navbarState, setNavbarOpacity] = useState(0);
     // az oldal betöltésekor rábindolja a scrollra az onAppScroll függvényt
     useEffect(()=>{
-        window.addEventListener('scroll',onAppScroll);
+        window.addEventListener('scroll',()=>{
+            // a navbar opacity statejét átállítja getNavbarOpacity()-re
+            const opacity = getNavbarOpacity();
+            setNavbarOpacity(opacity);
+        });
     },[]);
-    // a navbar opacity statejét átállítja getNavbarOpacity()-re
-    const onAppScroll = () => {
+    /*const onAppScroll = () => {
         const opacity = getNavbarOpacity();
         setNavbarOpacity(opacity);
-    };
-  //  const scrollToId = (path, id) => {
-        /*if(window.location.pathname == '/'){
+    };*/
+    /*const scrollToId = (path, id) => {
+        if(window.location.pathname == '/'){
             const el = document.getElementById(id);
             if(el != null){
                 //el.scrollIntoView();
@@ -43,9 +46,9 @@ export const MyNavbar = () => {
             }
         }else{
             window.location = path + '#' + id;
-        }*/
- //       window.location = path + '#' + id;
- //   };
+        }
+        window.location = path + '#' + id;
+    };*/
 
     return (
         <Navbar style={{
@@ -55,7 +58,7 @@ export const MyNavbar = () => {
                 }} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
             <Link to="/#home"><Navbar.Brand>
                 {/*<Link to="/">Kandópage</Link>*/}
-                <img src={require('./assets/logo.png')} height="30px" />
+                <img src={require('./assets/logo.png')} height="30px" alt="Kandó logo" />
             </Navbar.Brand></Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">

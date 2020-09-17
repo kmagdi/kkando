@@ -2,7 +2,7 @@ import React from 'react';
 //import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 //import { Carousel,Item,Caption } from 'react-responsive-carousel';
 import { Carousel } from 'react-bootstrap';
-import {Link,BrowserRouter} from "react-router-dom"  
+import {Link} from "react-router-dom"  
 import './MyCarousel.css'    
 
 export const MyCarousel=()=>{
