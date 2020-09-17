@@ -5,7 +5,6 @@ import {Home} from "./components/Home"
 import {MyNavbar} from "./components/MyNavbar"
 import { ParallaxProvider } from 'react-scroll-parallax'
 import './App.css'
-import { MyCarousel } from './components/MyCarousel';
 
 export const App=()=>{
     return(

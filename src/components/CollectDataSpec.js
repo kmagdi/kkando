@@ -22,7 +22,7 @@ class CollectDataSpec extends Component{
             //console.log("adatokJSON 0:"+adatokJSON[0].leiras)
             //console.log("adatokJSON 1:"+adatokJSON[1].leiras)
             //console.log("props="+this.props.id)
-            const filtered=adatokJSON.filter(obj=>obj.kod==this.props.id) 
+            const filtered=adatokJSON.filter(obj=>obj.kod===this.props.id) 
             /*for(const i in adatokJSON[0])
                     console.log(adatokJSON[0][i])*/
             this.setState({temaKorok:adatokJSON[0]})
