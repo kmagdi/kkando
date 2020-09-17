@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter,Route,Switch} from "react-router-dom"
+import {BrowserRouter,Route,Switch,Redirect} from "react-router-dom"
 import {Szak} from "./components/Szak"
 import {Home} from "./components/Home"
 import {MyNavbar} from "./components/MyNavbar"
@@ -17,6 +17,8 @@ export const App=()=>{
                     <Route exact path="/kkando" component={Home}/>
                     <Route exact path="/szak/:id" component={Szak} />
                     <Route path="/kkando/szak/:id" component={Szak} />
+
+                    <Redirect to="/" />
                 </Switch>
             </BrowserRouter>
         </ParallaxProvider>
