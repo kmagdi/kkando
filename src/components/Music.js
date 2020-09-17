@@ -27,7 +27,7 @@ class Music extends React.Component {
 
   render () {
     return (
-      <div>
+      <div onLoad={this.handlePlay}>
         <ReactHowler
           src={[zene]}
           playing={this.state.playing}
