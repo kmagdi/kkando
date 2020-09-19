@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/kkando/static/css/main.34f33308.chunk.css",
-    "main.js": "/kkando/static/js/main.9f316bf8.chunk.js",
-    "main.js.map": "/kkando/static/js/main.9f316bf8.chunk.js.map",
+    "main.js": "/kkando/static/js/main.e8126d89.chunk.js",
+    "main.js.map": "/kkando/static/js/main.e8126d89.chunk.js.map",
     "runtime-main.js": "/kkando/static/js/runtime-main.d0f3f99f.js",
     "runtime-main.js.map": "/kkando/static/js/runtime-main.d0f3f99f.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/kkando/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.71efac27.chunk.js": "/kkando/static/js/2.71efac27.chunk.js",
     "static/js/2.71efac27.chunk.js.map": "/kkando/static/js/2.71efac27.chunk.js.map",
     "index.html": "/kkando/index.html",
-    "precache-manifest.b0f97b0d4e3b8c90aafc2bfa79efd3c2.js": "/kkando/precache-manifest.b0f97b0d4e3b8c90aafc2bfa79efd3c2.js",
+    "precache-manifest.4de0a7322e8d53dcfa70f9356a6e8101.js": "/kkando/precache-manifest.4de0a7322e8d53dcfa70f9356a6e8101.js",
     "service-worker.js": "/kkando/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/kkando/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.34f33308.chunk.css.map": "/kkando/static/css/main.34f33308.chunk.css.map",
@@ -41,6 +41,6 @@
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.71efac27.chunk.js",
     "static/css/main.34f33308.chunk.css",
-    "static/js/main.9f316bf8.chunk.js"
+    "static/js/main.e8126d89.chunk.js"
   ]
 }
