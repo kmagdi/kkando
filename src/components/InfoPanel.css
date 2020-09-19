@@ -1,0 +1,16 @@
+.info-row-szoveg{
+    margin:0.5rem 2rem !important;
+    text-align:justify;
+}
+.info-row-szoveg p{
+    margin:0;
+}
+.info-row-kep{
+	background-repeat: no-repeat;
+	background-size:cover;
+	background-position: center;
+    min-height:40vh;
+}
+.info-row-kozep{
+    text-align:center;
+}
