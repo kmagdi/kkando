@@ -8,7 +8,7 @@
     transition:transform 0.25s;
 }
 .react-card-flip-container:hover{
-    transform:scale(1.05) rotateZ(1deg);
+    transform:scale(1.05)/* rotateZ(1deg)*/;
 }
 .react-card-flip{
     height:100%;

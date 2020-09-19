@@ -7,6 +7,7 @@ export const MyParallax=(props)=>{
         parallaxController.update();
     }
     window.addEventListener('resize',onResize);
+    window.addEventListener('scroll',onResize);
     const _banner = (
         <ParallaxBanner
             className={"parallax-panel "+props.className}

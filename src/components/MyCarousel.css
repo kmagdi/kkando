@@ -47,6 +47,9 @@
 }
 .carousel-caption p{
     margin:0;
+    text-align:justify;
+    text-align-last:center;
+    font-size:1.15rem;
 }
 .carousel-control-prev, .carousel-control-next{
     transition:transform 0.2s, background-color 0.2s !important;
