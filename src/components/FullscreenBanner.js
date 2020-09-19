@@ -7,7 +7,7 @@ export const FullscreenBanner = (props)=>{
     return (
         <MyParallax
             div="top-banner-container"
-            img={props.image===undefined?require('./assets/eszt.png'):props.image}
+            img={props.bgimage===undefined?require('./assets/eszt.png'):props.bgimage}
             amount={0.15}
             height={'100vh'}
         >
