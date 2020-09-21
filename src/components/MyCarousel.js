@@ -1,40 +1,42 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Carousel } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import './MyCarousel.css';
 import Truncate from 'react-truncate';
+import csvToJSON from "./csvToJSON" 
+
 
 export const MyCarousel=()=>{
-    let request = new XMLHttpRequest();  
-    request.open("GET", 'https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/reszletekKK.csv', false);   
-    let csvData = [];
-    try{
-        request.send(null);
-        //let kerdesekSor = [];
-        let jsonObject = request.responseText.split(/\r?\n|\r/);
-        for(let i=0;i<jsonObject.length;i++){
-            if(i>0 && jsonObject[i]!==''){
-                if(i == 1){
-                    //kerdesekSor = [...jsonObject[i]];
-                }else{
-                    csvData.push(jsonObject[i].split(';'));
-                }
-            }
-        }
-    }catch(Exception){
-        csvData.push('0;0;0;asdasdasd;A szakok adatai nem elérhetők;Ha ezt látod, akkor baj van;0;0;0;0;0'.split(';'));
-    }
+    const [csvData,setcsvData]=useState([])
+    const[loaded,setLoaded]=useState(false)
+   
+    useEffect(()=>{
+    if(!loaded){
+        const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/reszletekKK.csv"
+    fetch(url)           
+        .then(resp=>resp.text())
+        .then(text=>{
+            const adatokJSON=csvToJSON(text, ';')
+            console.log(adatokJSON)
+            const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
+            setcsvData(filtered)
+        },[])
+        setLoaded(true)
+      }
+    })
+
     return (
+      
         <Carousel id="szakok" className="justify-content-center" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
         {
             csvData.map(i=>{
                 return (
-                    <Carousel.Item key={i[0]}>
-                        <img src={require('./assets/' + i[0] + '.jpg')} alt="kep1" />
+                    <Carousel.Item key={i.kod}>
+                        <img src={require('./assets/' + i.kod + '.jpg')} alt="kep1" />
                         <Carousel.Caption>
-                            <Link to={"/kkando/szak/" + i[0]}><h2>{i[4]}</h2></Link>
+                            <Link to={"/kkando/szak/" + i.kod}><h2>{i.leiras}</h2></Link>
                             <Truncate lines={1} ellipsis={<> <Link to={"/kkando/szak/" + i[0]}><span className="read-more">...&nbsp;Tovább</span></Link></>}>
-                                <p>{i[5]}</p>
+                                <p>{i.kinek}</p>
                             </Truncate>
                         </Carousel.Caption>
                     </Carousel.Item>
