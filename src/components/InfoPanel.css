@@ -35,6 +35,10 @@
     order:1;
 }
 @media (max-width: 991px) {
+    .info-row-kozep{
+        text-align:center;
+        margin:2rem 3rem !important;
+    }
     .reverse-order .info-row-szoveg{
         order:1;
     }

@@ -38,7 +38,7 @@ export const InfoPanel = (props) => {
             break;
         case 'centerInfo':
             element = (
-                <Row className={rowClass}>
+                <Row id={props.id} className={rowClass}>
                     <Col></Col>
                     <Col lg={5} className="info-row-szoveg info-row-kozep">
                         <h2>{props.title}</h2>
