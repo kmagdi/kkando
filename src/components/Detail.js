@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { FullscreenBanner } from './FullscreenBanner';
 import './Details.css';
 import {Helper} from '../Helper'
@@ -7,7 +7,9 @@ import CollectData from './CollectData';
 
 export const Detail=(props)=>{
     //console.log("./assets/"+props.adatok.kod+".mp3")
-    Helper.scrollToTop();
+    useEffect(()=>{
+        Helper.scrollToTop();
+    },[]);
     let element = null;
     const getAnswer = (question) => {
         return [props.temaKorok[question],props.adatok[question]];

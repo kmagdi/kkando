@@ -27,7 +27,7 @@ export const InfoPanel = (props) => {
         });
     };
     if(intersection && intersection.isIntersecting && !played){
-        console.log(intersection.intersectionRatio);
+        //console.log(intersection.intersectionRatio);
         animIn('.'+props.id);
         setPlayed(true);
     }
