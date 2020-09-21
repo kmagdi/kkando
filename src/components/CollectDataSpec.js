@@ -10,7 +10,6 @@ class CollectDataSpec extends Component{
         this.state = {
             temaKorok:[],
             adatok:{},
-            fotok:[],
             failed:false
         }
     }
@@ -27,22 +26,14 @@ class CollectDataSpec extends Component{
                     this.setState({failed:false});
                     this.setState({temaKorok:adatokJSON[0]})
                     this.setState({adatok:filtered[0]})
-                    let db=parseInt(this.state.adatok.fotok)
-                    let urlImg=[]
-                    while(db>0){
-                    urlImg.push("https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/"+this.props.id+"img"+(db-1)+".jpg")
-                        db--;
-                    }
-                    this.setState({fotok:urlImg})
                 }
-            })
-            
+        }) 
     }
    
 render(){
     return(
         <div>
-            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok} fotok={this.state.fotok} failed={this.state.failed} />
+            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok} failed={this.state.failed} />
         </div>
     )}   
 }

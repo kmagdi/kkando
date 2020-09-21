@@ -1,10 +1,13 @@
+.info-row{
+    overflow:hidden;
+}
 .info-row-szoveg{
     margin:0.5rem 2rem !important;
     margin:0.5rem 2rem !important;
-    text-align:justify;
 }
 .info-row-szoveg p{
     margin:0;
+    text-align:justify;
 }
 .info-row-kep{
     margin:1rem;
@@ -21,4 +24,7 @@
 .sidebyside{
     max-width: 1500px;
     margin:0 auto !important;
+}
+.fade-int{
+    opacity:0;
 }

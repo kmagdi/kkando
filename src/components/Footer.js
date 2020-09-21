@@ -5,7 +5,7 @@ export const Footer=(props)=> {
     return(
         <div>
             <div id="pre-footer">
-                <p>Talán valami szöveg a footer előtt</p>
+                {/*<p>Talán valami szöveg a footer előtt</p>*/}
                 <img src={require('./assets/footer.png')} />
             </div>
             <div id="footer" className="row">
