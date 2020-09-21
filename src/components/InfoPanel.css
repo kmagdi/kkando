@@ -28,3 +28,23 @@
 .fade-int{
     opacity:0;
 }
+.reverse-order .info-row-szoveg{
+    order:2;
+}
+.reverse-order .info-row-kep{
+    order:1;
+}
+@media (max-width: 991px) {
+    .reverse-order .info-row-szoveg{
+        order:1;
+    }
+    .reverse-order .info-row-kep{
+        order:2;
+    }
+    .info-row-szoveg h2{
+        text-align:center;
+    }
+    .info-row-szoveg p{
+        text-align-last:center;
+    }
+}

@@ -12,19 +12,10 @@ export const InfoPanel = (props) => {
         rootMargin:'0px',
         threshold:0.75
     });
+    const animFrom = props.from===undefined?{opacity:0,y:50,ease:'power4.out'}:props.from;
+    const animTo = props.to===undefined?{opacity:1,y:0,ease:'power4.out',stagger:{amount:0.2}}:props.to;
     const animIn = (e)=>{
-        gsap.fromTo(e,1,{
-            opacity:0,
-            y:50,
-            ease:'power4.out'
-        },{
-            opacity:1,
-            y:0,
-            ease:'power4.out',
-            stagger:{
-                amount:0.2
-            }
-        });
+        gsap.fromTo(e,1,animFrom,animTo);
     };
     if(intersection && intersection.isIntersecting && !played){
         //console.log(intersection.intersectionRatio);
@@ -36,7 +27,7 @@ export const InfoPanel = (props) => {
     switch(props.type){
         case 'sideBySide':
             element = (
-                <Row ref={sectionRef} className={rowClass + " sidebyside"}>
+                <Row ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")}>
                     <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
                         <h2>{props.title}</h2>
                         <p>{props.text}</p>

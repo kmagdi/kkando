@@ -19,10 +19,10 @@ export const Detail=(props)=>{
             <>
                 <FullscreenBanner title={props.adatok.nev} />
                 <InfoPanel id="kinek" type="sideBySide" title={getAnswer('kinek')[0]} text={getAnswer('kinek')[1]} image={require('./assets/eszt2.jpg')} />
-                <InfoPanel id="mitcsinal" type="sideBySide" title={getAnswer('mitcsinal')[0]} text={getAnswer('mitcsinal')[1]} image={require('./assets/eszt.png')} />
-                <InfoPanel id="munkakor" type="sideBySide" title={getAnswer('munkakor')[0]} text={getAnswer('munkakor')[1]} image={require('./assets/eszt2.jpg')} />
-                <InfoPanel id="ismeretek" type="sideBySide" title={getAnswer('ismeretek')[0]} text={getAnswer('ismeretek')[1]} image={require('./assets/eszt.png')} />
-                <InfoPanel id="gyakorlat" type="sideBySide" title={getAnswer('gyakorlat')[0]} text={getAnswer('gyakorlat')[1]} image={require('./assets/eszt2.jpg')} />
+                <InfoPanel id="mitcsinal" type="sideBySide" title={getAnswer('mitcsinal')[0]} text={getAnswer('mitcsinal')[1]} image={require('./assets/eszt.png')} from={{opacity:0,transform:'scale(0.8)',ease:'power4.out'}} to={{opacity:1,transform:'scale(1.0)',ease:'power4.out',stagger:{amount:0.2}}} reverse={true} />
+                <InfoPanel id="munkakor" type="sideBySide" title={getAnswer('munkakor')[0]} text={getAnswer('munkakor')[1]} image={require('./assets/eszt2.jpg')} from={{opacity:0,transform:'rotate(8deg)',ease:'power4.out'}} to={{opacity:1,transform:'rotate(0deg)',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="ismeretek" type="sideBySide" title={getAnswer('ismeretek')[0]} text={getAnswer('ismeretek')[1]} image={require('./assets/eszt.png')} from={{opacity:0,transform:'scale(1.2)',ease:'power4.out'}} to={{opacity:1,transform:'scale(1.0)',ease:'power4.out',stagger:{amount:0.2}}} reverse={true} />
+                <InfoPanel id="gyakorlat" type="sideBySide" title={getAnswer('gyakorlat')[0]} text={getAnswer('gyakorlat')[1]} image={require('./assets/eszt2.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
                 <CollectData />
             </>
         )
