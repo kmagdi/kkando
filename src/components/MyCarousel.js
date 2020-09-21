@@ -10,12 +10,12 @@ export const MyCarousel=()=>{
     let csvData = [];
     try{
         request.send(null);
-        let kerdesekSor = [];
+        //let kerdesekSor = [];
         let jsonObject = request.responseText.split(/\r?\n|\r/);
         for(let i=0;i<jsonObject.length;i++){
             if(i>0 && jsonObject[i]!==''){
                 if(i == 1){
-                    kerdesekSor = [...jsonObject[i]];
+                    //kerdesekSor = [...jsonObject[i]];
                 }else{
                     csvData.push(jsonObject[i].split(';'));
                 }
@@ -26,21 +26,21 @@ export const MyCarousel=()=>{
     }
     return (
         <Carousel id="szakok" className="justify-content-center" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
-            {
-                csvData.map(i=>{
-                    return (
-                        <Carousel.Item key={i[0]}>
-                            <img src={require('./assets/' + i[0] + '.jpg')} alt="kep1" />
-                            <Carousel.Caption>
-                                <Link to={"/kkando/szak/" + i[0]}><h2>{i[4]}</h2></Link>
-                                <Truncate lines={1} ellipsis={<> <Link to={"/kkando/szak/" + i[0]}><span className="read-more">...&nbsp;Tovább</span></Link></>}>
-                                    <p>{i[5]}</p>
-                                </Truncate>
-                            </Carousel.Caption>
-                        </Carousel.Item>
-                    );
-                })
-            }
+        {
+            csvData.map(i=>{
+                return (
+                    <Carousel.Item key={i[0]}>
+                        <img src={require('./assets/' + i[0] + '.jpg')} alt="kep1" />
+                        <Carousel.Caption>
+                            <Link to={"/kkando/szak/" + i[0]}><h2>{i[4]}</h2></Link>
+                            <Truncate lines={1} ellipsis={<> <Link to={"/kkando/szak/" + i[0]}><span className="read-more">...&nbsp;Tovább</span></Link></>}>
+                                <p>{i[5]}</p>
+                            </Truncate>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+                );
+            })
+        }
         </Carousel>
     );
 }

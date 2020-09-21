@@ -1,11 +1,14 @@
 .info-row-szoveg{
     margin:0.5rem 2rem !important;
+    margin:0.5rem 2rem !important;
     text-align:justify;
 }
 .info-row-szoveg p{
     margin:0;
 }
 .info-row-kep{
+    margin:1rem;
+    border-radius:0.5rem;
 	background-repeat: no-repeat;
 	background-size:cover;
 	background-position: center;
@@ -14,4 +17,8 @@
 .info-row-kozep{
     text-align:center;
     margin:2rem 0.5rem !important;
+}
+.sidebyside{
+    max-width: 1500px;
+    margin:0 auto !important;
 }
