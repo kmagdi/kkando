@@ -64,7 +64,7 @@ export const MyNavbar = () => {
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
                 <Link to="/kkando/#rolunk"><p  className="nav-link link" role="button">Rólunk</p></Link>
-                <Link to="/kkando/#szakok"><p  className="nav-link" role="button">Szakok...</p></Link>
+                <Link to="/kkando/#szakok"><p  className="nav-link link" role="button">Szakok...</p></Link>
                 </Nav>
                 <Nav>
                 <Link to="/kkando/#something" className="nav-link" role="button">Something</Link>

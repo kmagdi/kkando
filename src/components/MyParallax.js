@@ -10,7 +10,7 @@ export const MyParallax=(props)=>{
     window.addEventListener('scroll',onResize);
     const _banner = (
         <ParallaxBanner
-            className={"parallax-panel "+props.className}
+            className={"parallax-panel" + (props.className===undefined?'':' '+props.className)}
             layers={[
                 {
                     image: props.img,

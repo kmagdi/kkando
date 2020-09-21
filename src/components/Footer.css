@@ -1,6 +1,16 @@
 :root{
     --footer-padding:0.75rem;
 }
+#pre-footer{
+    position:relative;
+    min-height:50vh;
+}
+#pre-footer img{
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+}
 #footer{
     color:#ebebeb;
     color:#dedede;

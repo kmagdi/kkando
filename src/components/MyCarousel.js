@@ -33,7 +33,7 @@ export const MyCarousel=()=>{
                             <img src={require('./assets/' + i[0] + '.jpg')} alt="kep1" />
                             <Carousel.Caption>
                                 <Link to={"/kkando/szak/" + i[0]}><h2>{i[4]}</h2></Link>
-                                <Truncate lines={1} ellipsis={<span>... <Link to={"/kkando/szak/" + i[0]}>Tovább</Link></span>}>
+                                <Truncate lines={1} ellipsis={<> <Link to={"/kkando/szak/" + i[0]}><span className="read-more">...&nbsp;Tovább</span></Link></>}>
                                     <p>{i[5]}</p>
                                 </Truncate>
                             </Carousel.Caption>

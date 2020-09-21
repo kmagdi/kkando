@@ -4,6 +4,10 @@ import './Footer.css';
 export const Footer=(props)=> {
     return(
         <div>
+            <div id="pre-footer">
+                <p>Talán valami szöveg a footer előtt</p>
+                <img src={require('./assets/footer.png')} />
+            </div>
             <div id="footer" className="row">
                 <div className="col-lg-6 footer-col footer-col-first">
                     <p><b>Székhely:</b><br/>{props.contactData.location}</p>

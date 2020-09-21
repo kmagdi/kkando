@@ -11,7 +11,7 @@ class CollectDataSpec extends Component{
             temaKorok:[],
             adatok:{},
             fotok:[],
-            success:false
+            failed:false
         }
     }
     componentDidMount(){  
@@ -25,8 +25,9 @@ class CollectDataSpec extends Component{
                 //console.log("props="+this.props.id)
                 const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod===this.props.id)
                 if(filtered.length === 0){
-                    this.setState({success:false});
+                    this.setState({failed:true});
                 }else{
+                    this.setState({failed:false});
                     this.setState({temaKorok:adatokJSON[0]})
                     //console.log("filtered type:"+typeof(filtered))
                     //console.log("obj keys:"+Object.keys(filtered[0]))
@@ -41,7 +42,6 @@ class CollectDataSpec extends Component{
                     }
                     this.setState({fotok:urlImg})
                     //console.log(this.state.fotok.length)
-                    this.setState({success:true});
                 }
             })
             
@@ -51,7 +51,7 @@ render(){
    // console.log("kod="+this.state.adatok.kod)
      return(
         <div>
-            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok} fotok={this.state.fotok} success={this.state.success} />
+            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok} fotok={this.state.fotok} failed={this.state.failed} />
         </div>
     )}   
 }
