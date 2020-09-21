@@ -17,9 +17,6 @@
 .carousel-item{
     transition:transform .6s ease-in-out, opacity 0.2s !important;
 }
-.carousel-item:hover{
-    /*opacity:0.8;*/
-}
 .carousel-item h2{
     font-size:3rem;
     margin-bottom:0.125rem;

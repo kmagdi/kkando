@@ -1,5 +1,4 @@
 import React from 'react';
-import {Row,Col} from 'react-bootstrap';
 import {Box} from './Box';
 import { FullscreenBanner } from './FullscreenBanner';
 import './Details.css';
