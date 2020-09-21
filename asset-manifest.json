@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.bd740841.chunk.css",
-    "main.js": "/static/js/main.ec01e5d1.chunk.js",
-    "main.js.map": "/static/js/main.ec01e5d1.chunk.js.map",
+    "main.css": "/static/css/main.ef778027.chunk.css",
+    "main.js": "/static/js/main.6b22ffc7.chunk.js",
+    "main.js.map": "/static/js/main.6b22ffc7.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.8a221ca7.chunk.js": "/static/js/2.8a221ca7.chunk.js",
-    "static/js/2.8a221ca7.chunk.js.map": "/static/js/2.8a221ca7.chunk.js.map",
+    "static/js/2.1e46a51d.chunk.js": "/static/js/2.1e46a51d.chunk.js",
+    "static/js/2.1e46a51d.chunk.js.map": "/static/js/2.1e46a51d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.35c28689a01102a447a1bf14f686d012.js": "/precache-manifest.35c28689a01102a447a1bf14f686d012.js",
+    "precache-manifest.70aa5febbf929fecad2cae3fd45aba50.js": "/precache-manifest.70aa5febbf929fecad2cae3fd45aba50.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.bd740841.chunk.css.map": "/static/css/main.bd740841.chunk.css.map",
-    "static/js/2.8a221ca7.chunk.js.LICENSE.txt": "/static/js/2.8a221ca7.chunk.js.LICENSE.txt",
+    "static/css/main.ef778027.chunk.css.map": "/static/css/main.ef778027.chunk.css.map",
+    "static/js/2.1e46a51d.chunk.js.LICENSE.txt": "/static/js/2.1e46a51d.chunk.js.LICENSE.txt",
     "static/media/G1.jpg": "/static/media/G1.9c6eaf72.jpg",
     "static/media/SZ2.jpg": "/static/media/SZ2.5e95016b.jpg",
     "static/media/SZ3.jpg": "/static/media/SZ3.caa4ac49.jpg",
@@ -39,14 +39,14 @@
     "static/media/T9.jpg": "/static/media/T9.908ec899.jpg",
     "static/media/eszt.png": "/static/media/eszt.15dce6bd.png",
     "static/media/eszt2.jpg": "/static/media/eszt2.1ea094f5.jpg",
-    "static/media/footer.png": "/static/media/footer.071751fa.png",
+    "static/media/footer.png": "/static/media/footer.5c87cbcd.png",
     "static/media/logo.png": "/static/media/logo.099ab748.png"
   },
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.8a221ca7.chunk.js",
-    "static/css/main.bd740841.chunk.css",
-    "static/js/main.ec01e5d1.chunk.js"
+    "static/js/2.1e46a51d.chunk.js",
+    "static/css/main.ef778027.chunk.css",
+    "static/js/main.6b22ffc7.chunk.js"
   ]
 }
