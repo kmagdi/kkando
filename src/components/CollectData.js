@@ -23,7 +23,7 @@ class CollectData extends Component{
 render(){
      return(
         <div>
-            <Footer contactData={this.state.contactData} />
+            <Footer bgimage={this.props.bgimage} contactData={this.state.contactData} />
         </div>
     )}   
 }

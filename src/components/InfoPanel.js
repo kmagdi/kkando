@@ -65,8 +65,11 @@ export const InfoPanel = (props) => {
                 <Row ref={sectionRef} id={props.id} className={rowClass} style={{minHeight:handleUndef('height','auto',props.height)}}>
                     <Col className={"mobile-hidden"} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}></Col>
                     <Col lg={handleUndef('size',5,props.size)} className={"info-row-szoveg info-row-kozep row "+handleUndef('nomargin','',' m-0 p-4')} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}>
+
                         <div className={"col align-self-center"}>
-                            <h2 className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.title}</b>):props.title)}</h2>
+                            {props.title===undefined?null:
+                                <h2 className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.title}</b>):props.title)}</h2>
+                            }
                             <p className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.text}</b>):props.text)}</p>
                         </div>
                     </Col>

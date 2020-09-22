@@ -18,6 +18,8 @@
 }
 .info-row-kozep{
     text-align:center;
+}
+.info-row-kozep:not(.m-0){
     margin:2rem 0.5rem !important;
 }
 .sidebyside{
@@ -41,8 +43,7 @@
     .sidebyside .info-row-szoveg{
         margin:0.5rem !important;
     }
-    .info-row-kozep{
-        text-align:center;
+    .info-row-kozep:not(.m-0){
         margin:2rem 2rem !important;
     }
     .reverse-order .info-row-szoveg{
