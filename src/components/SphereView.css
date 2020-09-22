@@ -1,0 +1,44 @@
+:root{
+    --panorama-width:20rem;
+}
+.pnlm-container{
+    width:var(--panorama-width) !important;
+    height:calc(var(--panorama-width) * calc(2 / 3)) !important;
+}
+.panorama-container-container{
+    padding:0.5rem;
+    text-align:center;
+}
+.panorama-container{
+    display:inline-block;
+    text-align:center;
+    position:relative;
+    width:var(--panorama-width);
+    margin:0.5rem;
+    border-radius:0.75rem;
+    overflow:hidden;
+}
+.panorama-overlay{
+    /*position:absolute;*/
+    background-color:rgba(0,0,0,0.5);
+    width:100%;
+    height:100%;
+    z-index:1;
+    cursor:pointer !important;
+    transition:background-color 0.25s;
+}
+.panorama-overlay:hover{
+    background-color:rgba(0,0,0,0.65);
+}
+.pnlm-controls{
+    background-color:rgba(255,255,255,0.5) !important;
+    border:0 !important;
+    width:3rem !important;
+    height:3rem !important;
+}
+.pnlm-sprite{
+    background-image:none !important;
+}
+.pnlm-sprite::after{
+    content:'Toggle';
+}

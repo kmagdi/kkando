@@ -61,15 +61,50 @@ export const InfoPanel = (props) => {
             );
             break;
         case 'centerInfo':
+            const height1 = handleUndef('height','auto',props.height);
             element = (
-                <Row ref={sectionRef} id={props.id} className={rowClass} style={{minHeight:handleUndef('height','auto',props.height)}}>
+                <Row ref={sectionRef} id={props.id} className={rowClass} style={{minHeight:height1}}>
                     <Col className={"mobile-hidden"} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}></Col>
                     <Col lg={handleUndef('size',5,props.size)} className={"info-row-szoveg info-row-kozep row "+handleUndef('nomargin','',' m-0 p-4')} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}>
-
                         <div className={"col align-self-center"}>
                             {props.title===undefined?null:
                                 <h2 className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.title}</b>):props.title)}</h2>
                             }
+                            <p className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.text}</b>):props.text)}</p>
+                        </div>
+                    </Col>
+                    <Col className={"mobile-hidden"} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}></Col>
+                </Row>
+            );
+            break;
+        case 'videoBg':
+            let height2 = handleUndef('height','auto',props.height);
+            element = (
+                <Row ref={sectionRef} id={props.id} className={rowClass} style={{position:'relative',minHeight:height2}}>
+                    <video
+                        autoPlay
+                        loop
+                        muted
+                        style={{
+                            width:'100%',
+                            height:'100%',
+                            position:'absolute',
+                            left:0,
+                            top:0,
+                            objectFit:'cover',
+                            zIndex:-1
+                        }}
+                    >
+                        <source style={{
+                            width:'100%',
+                            minHeight:height2,
+                            objectFit:'cover'
+                        }} src={props.bgvid} type="video/mp4" />
+                    </video>
+                    <Col className={"mobile-hidden"} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}></Col>
+                    <Col lg={handleUndef('size',5,props.size)} className={"info-row-szoveg info-row-kozep row "+handleUndef('nomargin','',' m-0 p-4')} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}>
+                        <div className={"col align-self-center"}>
+                            <h2 className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.title}</b>):props.title)}</h2>
                             <p className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.text}</b>):props.text)}</p>
                         </div>
                     </Col>

@@ -1,7 +1,7 @@
 .info-row{
     overflow:hidden;
 }
-.info-row-szoveg{
+.info-row-szoveg:not(.m-0){
     margin:0.5rem 2rem !important;
 }
 .info-row-szoveg p{

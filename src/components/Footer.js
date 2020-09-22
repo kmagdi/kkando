@@ -9,7 +9,7 @@ export const Footer=(props)=> {
             <div id="pre-footer">
                 {/*<p>Talán valami szöveg a footer előtt</p>*/}
                 <MyParallax img={props.bgimage} amount={0.5} sizeToContent={true}>
-                    <img className="foot-fade" src={require('./assets/fade.png')} />
+                    <img className="foot-fade" src={require('./assets/fade.png')} alt="Footer előtti kép mögötti kép" />
                     <img src={require('./assets/footer.png')} alt="Footer előtti kép" />
                 </MyParallax>
             </div>
