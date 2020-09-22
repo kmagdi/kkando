@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.08b91666.chunk.css",
-    "main.js": "/static/js/main.7e4869e0.chunk.js",
-    "main.js.map": "/static/js/main.7e4869e0.chunk.js.map",
+    "main.css": "/static/css/main.90be9278.chunk.css",
+    "main.js": "/static/js/main.df68ff1e.chunk.js",
+    "main.js.map": "/static/js/main.df68ff1e.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.ff6a7fac.chunk.js": "/static/js/2.ff6a7fac.chunk.js",
-    "static/js/2.ff6a7fac.chunk.js.map": "/static/js/2.ff6a7fac.chunk.js.map",
+    "static/js/2.74df4a03.chunk.js": "/static/js/2.74df4a03.chunk.js",
+    "static/js/2.74df4a03.chunk.js.map": "/static/js/2.74df4a03.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.92a2f13224d410503118a273d3584dba.js": "/precache-manifest.92a2f13224d410503118a273d3584dba.js",
+    "precache-manifest.a8ed635157c14ef508fefbe6fde9eebc.js": "/precache-manifest.a8ed635157c14ef508fefbe6fde9eebc.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.08b91666.chunk.css.map": "/static/css/main.08b91666.chunk.css.map",
-    "static/js/2.ff6a7fac.chunk.js.LICENSE.txt": "/static/js/2.ff6a7fac.chunk.js.LICENSE.txt",
+    "static/css/main.90be9278.chunk.css.map": "/static/css/main.90be9278.chunk.css.map",
+    "static/js/2.74df4a03.chunk.js.LICENSE.txt": "/static/js/2.74df4a03.chunk.js.LICENSE.txt",
     "static/media/SZ2.jpg": "/static/media/SZ2.5e95016b.jpg",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
     "static/media/T10.jpg": "/static/media/T10.f91c98cf.jpg",
@@ -46,15 +46,16 @@
     "static/media/logo.png": "/static/media/logo.099ab748.png",
     "static/media/mitcsinal.jpg": "/static/media/mitcsinal.9fd854a0.jpg",
     "static/media/munkakor.jpg": "/static/media/munkakor.b447b3aa.jpg",
-    "static/media/pano1.jpg": "/static/media/pano1.fe5d9d8b.jpg",
+    "static/media/pano1.jpg": "/static/media/pano1.28909db0.jpg",
+    "static/media/pano2.jpg": "/static/media/pano2.928f5bda.jpg",
     "static/media/parallax1.jpg": "/static/media/parallax1.908ec899.jpg",
     "static/media/parallax2.jpg": "/static/media/parallax2.b7d43887.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.ff6a7fac.chunk.js",
-    "static/css/main.08b91666.chunk.css",
-    "static/js/main.7e4869e0.chunk.js"
+    "static/js/2.74df4a03.chunk.js",
+    "static/css/main.90be9278.chunk.css",
+    "static/js/main.df68ff1e.chunk.js"
   ]
 }
