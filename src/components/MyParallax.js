@@ -8,6 +8,13 @@ export const MyParallax=(props)=>{
     }
     window.addEventListener('resize',onResize);
     window.addEventListener('scroll',onResize);
+    const style = {};
+    if(props.sizeToContent === true){
+        style['height']='auto';
+        style['minHeight'] = props.height;
+    }else{
+        style['height']=props.height;
+    }
     const _banner = (
         <ParallaxBanner
             className={"parallax-panel" + (props.className===undefined?'':' '+props.className)}
@@ -17,9 +24,7 @@ export const MyParallax=(props)=>{
                     amount:props.amount===undefined?0.15:props.amount
                 }
             ]}
-            style={{
-                height:props.height
-            }}
+            style={style}
         >
             <>{props.children}</>
         </ParallaxBanner>

@@ -17,7 +17,7 @@ export const MyCarousel=()=>{
         .then(resp=>resp.text())
         .then(text=>{
             const adatokJSON=csvToJSON(text, ';')
-            console.log(adatokJSON)
+            //console.log(adatokJSON)
             const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
             setcsvData(filtered)
         },[])
@@ -34,7 +34,7 @@ export const MyCarousel=()=>{
                     <Carousel.Item key={i.kod}>
                         <img src={require('./assets/' + i.kod + '.jpg')} alt="kep1" />
                         <Carousel.Caption>
-                            <Link to={"/kkando/szak/" + i.kod}><h2>{i.leiras}</h2></Link>
+                            <Link to={"/kkando/szak/" + i.kod}><h2>{i.nev}</h2></Link>
                             <Truncate lines={1} ellipsis={<>... <Link to={"/kkando/szak/" + i.kod}><br /><span className="read-more">Tovább</span></Link></>}>
                                 <p>{i.kinek}</p>
                             </Truncate>

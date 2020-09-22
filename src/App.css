@@ -12,6 +12,11 @@ body,html{
         overflow-y:scroll;
     }
 }
+@media (max-width: 991px) {
+    .mobile-hidden{
+        display:none;
+    }
+}
 a{
     color: #eee !important;
     text-decoration: none !important;

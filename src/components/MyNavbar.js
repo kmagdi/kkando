@@ -63,12 +63,12 @@ export const MyNavbar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
-                <Link to="/kkando/#iskola"><p  className="nav-link link" role="button">Iskolánkról</p></Link>
-                <Link to="/kkando/#szakok"><p  className="nav-link link" role="button">Szakok...</p></Link>
-                <Link to="/kkando/#footer"><p  className="nav-link link" role="button">Elérhetőség</p></Link>
+                <Link to="/kkando/#iskola"><p className="nav-link link" role="button">Iskolánkról</p></Link>
+                <Link to="/kkando/#szakok"><p className="nav-link link" role="button">Szakok...</p></Link>
+                <Link to="/kkando/#footer"><p className="nav-link link" role="button">Elérhetőség</p></Link>
                 </Nav>
                 <Nav>
-                <Link to="/kkando/#something" className="nav-link" role="button">Something</Link>
+                <a href="http://www.kkando.hu/"><p className="nav-link link" role="button">Vissza a Kandó oldalára</p></a>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

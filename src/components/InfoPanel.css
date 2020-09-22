@@ -3,7 +3,6 @@
 }
 .info-row-szoveg{
     margin:0.5rem 2rem !important;
-    margin:0.5rem 2rem !important;
 }
 .info-row-szoveg p{
     margin:0;
@@ -25,6 +24,10 @@
     max-width: 1500px;
     margin:0 auto !important;
 }
+.sidebyside-margins{
+    max-width: 1500px;
+    margin:2rem auto !important;
+}
 .fade-int{
     opacity:0;
 }
@@ -35,9 +38,12 @@
     order:1;
 }
 @media (max-width: 991px) {
+    .sidebyside .info-row-szoveg{
+        margin:0.5rem !important;
+    }
     .info-row-kozep{
         text-align:center;
-        margin:2rem 3rem !important;
+        margin:2rem 2rem !important;
     }
     .reverse-order .info-row-szoveg{
         order:1;
