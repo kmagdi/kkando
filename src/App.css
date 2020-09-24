@@ -32,9 +32,15 @@ a:hover, .link:hover{
     top:50%;
     transform: translate(-50%,-50%);
 }
+#top-banner-container{
+    margin-bottom:0.5rem;
+}
 #welcome-image-logo{
     width:8rem;
     height:auto;
+}
+#welcome-text, #welcome-title{
+    text-shadow:0 0 0.75rem rgba(0,0,0,0.75);
 }
 #welcome-text{
     margin:1rem 0 0 0;

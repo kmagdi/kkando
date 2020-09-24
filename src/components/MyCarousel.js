@@ -11,23 +11,23 @@ export const MyCarousel=()=>{
     const[loaded,setLoaded]=useState(false)
    
     useEffect(()=>{
-    if(!loaded){
-        const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/reszletekKK.csv"
-    fetch(url)           
-        .then(resp=>resp.text())
-        .then(text=>{
-            const adatokJSON=csvToJSON(text, ';')
-            //console.log(adatokJSON)
-            const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
-            setcsvData(filtered)
-        },[])
-        setLoaded(true)
-      }
+        if(!loaded){
+            const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/reszletekKK.csv"
+            fetch(url)           
+                .then(resp=>resp.text())
+                .then(text=>{
+                    const adatokJSON=csvToJSON(text, ';')
+                    //console.log(adatokJSON)
+                    const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
+                    setcsvData(filtered)
+                },[])
+            setLoaded(true)
+        }
     })
 
     return (
       
-        <Carousel id="szakok" className="justify-content-center" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
+        <Carousel id="szakok" className="justify-content-center szakmagaleria" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
         {
             csvData.map(i=>{
                 return (

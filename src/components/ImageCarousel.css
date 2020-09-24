@@ -1,0 +1,59 @@
+.carousel:not(.szakmagaleria){
+    width:100% !important;
+    height:40vh !important;
+}
+.carousel:not(.szakmagaleria) .carousel-inner {
+    max-width:71vh;
+    max-height:40vh !important;
+    height:100% !important;
+    margin:0 auto;
+    background-color:transparent !important;
+    overflow:hidden;
+}
+.carousel:not(.szakmagaleria) .carousel-item{
+    height:100%;
+    padding:3rem;
+    overflow:hidden;
+}
+.carousel:not(.szakmagaleria) .carousel-item img, .image-carousel-overlay{
+    height:100%;
+    border-radius:1rem;
+    box-shadow:0 0 1rem rgba(0,0,0,0.5) !important;
+}
+.carousel:not(.szakmagaleria) .carousel-indicators li{
+    border-radius:50%;
+    width:9px !important;
+    height:9px !important;
+    transition:opacity 0.2s, width 0.2s, height 0.2s !important;
+}
+.carousel:not(.szakmagaleria) .carousel-indicators li:not(.active):hover{
+    width:9px !important;
+    height:9px !important;
+    opacity:0.75;
+}
+.carousel:not(.szakmagaleria) .carousel-indicators li.active{
+    width:18px !important;
+    height:18px !important;
+}
+.image-carousel-overlay{
+    position:absolute;
+    left:50%;
+    top:50%;
+    color:white;
+    text-align:center;
+    width:calc(calc(100% - 6rem) + 2px);
+    max-width:calc(calc(71vh - 6rem) + 2px);
+    height:calc(40vh - 6rem);
+    transform:translate(-50%,-50%);
+    opacity:0.0;
+    transition:0.25s;
+}
+.image-carousel-overlay:hover{
+    cursor:pointer;
+    opacity:1.0;
+    background-color:rgba(0,0,0,0.75);
+}
+.image-carousel-overlay{
+    margin:0 !important;
+    padding:2rem;
+}

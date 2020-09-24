@@ -5,6 +5,7 @@ import {Helper} from '../Helper'
 import { InfoPanel } from './InfoPanel';
 import CollectData from './CollectData';
 import { MyParallax } from './MyParallax';
+import { ImageCarousel } from './ImageCarousel';
 
 export const Detail=(props)=>{
     //console.log(props.adatok.kod);
@@ -44,19 +45,27 @@ export const Detail=(props)=>{
         }
     };
     if(!props.failed){
-        const par1 = kepOV('vid1.mp4','parallax1.jpg');
+        // const par1 = kepOV('vid1.mp4','parallax1.jpg');
+        // let par1el = null;
+        // if(par1[1]=='vid'){
+        //     par1el = (
+        //         <InfoPanel id="vid1" bold={true} size={6} type="videoBg" bgvid={par1[0]} bgColor={"rgba(255,255,255,0.65)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+        //     );
+        // }else{
+        //     par1el = (
+        //         <MyParallax img={par1[0]} amount={0.25} height={'40vh'} sizeToContent={true}>
+        //             <InfoPanel id="par1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+        //         </MyParallax>
+        //     );
+        // };
         let par1el = null;
-        if(par1[1]=='vid'){
+        if(props.adatok.kod!==undefined){
             par1el = (
-                <InfoPanel id="vid1" bold={true} size={6} type="videoBg" bgvid={par1[0]} bgColor={"rgba(255,255,255,0.65)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
-            );
-        }else{
-            par1el = (
-                <MyParallax img={par1[0]} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="par1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                <MyParallax img={kep('parallax1.jpg')} amount={0.25} height={'40vh'} sizeToContent={true}>
+                    <ImageCarousel kod={props.adatok.kod} bgColor={"rgba(255,255,255,0.5)"} />
                 </MyParallax>
             );
-        };
+        }
         const par2 = kepOV('vid2.mp4','parallax2.jpg');
         let par2el = null;
         if(par2[1]=='vid'){
