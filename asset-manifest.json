@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.8bbd4da8.chunk.css",
-    "main.js": "/static/js/main.b1f0d17a.chunk.js",
-    "main.js.map": "/static/js/main.b1f0d17a.chunk.js.map",
+    "main.css": "/static/css/main.dc63409a.chunk.css",
+    "main.js": "/static/js/main.a90d92a0.chunk.js",
+    "main.js.map": "/static/js/main.a90d92a0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.eb1d337f.chunk.js": "/static/js/2.eb1d337f.chunk.js",
-    "static/js/2.eb1d337f.chunk.js.map": "/static/js/2.eb1d337f.chunk.js.map",
+    "static/js/2.10004d63.chunk.js": "/static/js/2.10004d63.chunk.js",
+    "static/js/2.10004d63.chunk.js.map": "/static/js/2.10004d63.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f3f3802807576257571f234253622b76.js": "/precache-manifest.f3f3802807576257571f234253622b76.js",
+    "precache-manifest.e61365282d7da7d227c613f3167f9b5d.js": "/precache-manifest.e61365282d7da7d227c613f3167f9b5d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.8bbd4da8.chunk.css.map": "/static/css/main.8bbd4da8.chunk.css.map",
-    "static/js/2.eb1d337f.chunk.js.LICENSE.txt": "/static/js/2.eb1d337f.chunk.js.LICENSE.txt",
+    "static/css/main.dc63409a.chunk.css.map": "/static/css/main.dc63409a.chunk.css.map",
+    "static/js/2.10004d63.chunk.js.LICENSE.txt": "/static/js/2.10004d63.chunk.js.LICENSE.txt",
     "static/media/SZ2.jpg": "/static/media/SZ2.5e95016b.jpg",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
     "static/media/T10.jpg": "/static/media/T10.f91c98cf.jpg",
@@ -45,8 +45,8 @@
     "static/media/logo.png": "/static/media/logo.099ab748.png",
     "static/media/mitcsinal.jpg": "/static/media/mitcsinal.9fd854a0.jpg",
     "static/media/munkakor.jpg": "/static/media/munkakor.e70040f3.jpg",
-    "static/media/pano1.jpg": "/static/media/pano1.28909db0.jpg",
-    "static/media/pano2.jpg": "/static/media/pano2.928f5bda.jpg",
+    "static/media/pano1.jpg": "/static/media/pano1.37491623.jpg",
+    "static/media/pano2.jpg": "/static/media/pano2.52a7a4fc.jpg",
     "static/media/parallax1.jpg": "/static/media/parallax1.908ec899.jpg",
     "static/media/parallax2.jpg": "/static/media/parallax2.b7d43887.jpg",
     "static/media/vid1.mp4": "/static/media/vid1.2cff45f7.mp4",
@@ -55,8 +55,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.eb1d337f.chunk.js",
-    "static/css/main.8bbd4da8.chunk.css",
-    "static/js/main.b1f0d17a.chunk.js"
+    "static/js/2.10004d63.chunk.js",
+    "static/css/main.dc63409a.chunk.css",
+    "static/js/main.a90d92a0.chunk.js"
   ]
 }
