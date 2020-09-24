@@ -35,6 +35,11 @@
     width:18px !important;
     height:18px !important;
 }
+@media (max-width: 991px) {
+    .carousel:not(.szakmagaleria) .carousel-control-prev, .carousel:not(.szakmagaleria) .carousel-control-next{
+        width:2.8rem !important;
+    }
+}
 .image-carousel-overlay{
     position:absolute;
     left:50%;

@@ -48,14 +48,20 @@
     /*font-size:1.15rem;*/
 }
 .carousel-control-prev, .carousel-control-next{
-    transition:transform 0.2s, background-color 0.2s !important;
+    transition:transform 0.2s, background-color 0.2s, opacity 0.2s !important;
+    opacity:0.5 !important;
 }
-.carousel-control-prev:hover, .carousel-control-next:hover{
-    background-color:rgba(0,0,0,0.3);
-    transform:scale(1.25);
+@media (min-width: 992px) {
+    .carousel-control-prev:hover, .carousel-control-next:hover{
+        background-color:rgba(0,0,0,0.3);
+        transform:scale(1.25);
+        opacity:0.9 !important;
+    }
 }
 .carousel-control-prev:active, .carousel-control-next:active{
+    background-color:rgba(0,0,0,0.3);
     transform:scale(1.15);
+    opacity:0.9 !important;
 }
 .carousel-indicators{
     height:30px;
