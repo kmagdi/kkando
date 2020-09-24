@@ -30,15 +30,36 @@
 .panorama-overlay:hover{
     background-color:rgba(0,0,0,0.65);
 }
+.pnlm-about-msg{
+    display:none !important;
+}
+.pnlm-controls-container{
+    right:8px;
+    left:auto;
+}
 .pnlm-controls{
     background-color:rgba(255,255,255,0.5) !important;
     border:0 !important;
-    width:3rem !important;
-    height:3rem !important;
+    width:48px !important;
+    height:48px !important;
+    margin-top:8px !important;
+    border-radius:8px;
+    opacity:0.75;
+    transition:opacity 0.2s;
+}
+.pnlm-controls:hover{
+    opacity:1.0;
 }
 .pnlm-sprite{
-    background-image:none !important;
+    background-image:url('./assets/icons.png') !important;
+    background-repeat: no-repeat;
 }
 .pnlm-sprite::after{
-    content:'Toggle';
+    /* content:'Toggle'; */
+}
+.pnlm-fullscreen-toggle-button-inactive{
+    background-position:0 -96px;
+}
+.pnlm-fullscreen-toggle-button-active{
+    background-position:0 -144px;
 }

@@ -33,10 +33,10 @@ export const ImageCarousel=(props)=>{
     };
     let images = [];
     if(kepek > defaultNum){
-        const prefix = 'T';
         for(let i=0;i<(kepek);i++){
             const index = (i+1);
-            const kep = require('./assets/szak/'+props.kod+'/gallery/'+prefix+index+'.jpg');
+            // const kep = require('./assets/szak/'+props.kod+'/gallery/'+prefix+index+'.jpg');
+            const kep = 'https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/gallery/'+props.kod+'/galleryimg'+index+'.jpg';
             images.push(
                 <Carousel.Item key={"kep"+index}>
                     {overlay(kep)}

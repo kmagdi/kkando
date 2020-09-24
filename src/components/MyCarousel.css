@@ -90,8 +90,11 @@
     background-color:rgba(255,255,255,0.35);
     border-radius:0.125rem;
     z-index:0;
-    transition:width 0.25s;
+    opacity:0.0;
+    transition:width 0.25s, opacity 0.5s;
 }
 .read-more:hover::after{
+    opacity:1.0;
     width:100%;
+    transition:width 0.25s, opacity 0.05s;
 }
