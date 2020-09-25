@@ -1,35 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import './MyCarousel.css';
 import Truncate from 'react-truncate';
-import csvToJSON from "./csvToJSON" 
-import {Helper} from '../Helper'
+import {Helper} from '../Helper';
 
-export const MyCarousel=()=>{
-    const [csvData,setcsvData]=useState([])
-    const[loaded,setLoaded]=useState(false)
-   
-    useEffect(()=>{
-        if(!loaded){
-            const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/reszletekKK.csv"
-            fetch(url)           
-                .then(resp=>resp.text())
-                .then(text=>{
-                    const adatokJSON=csvToJSON(text, ';')
-                    //console.log(adatokJSON)
-                    const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
-                    setcsvData(filtered)
-                },[])
-            setLoaded(true)
-        }
-    })
-
+export const MyCarousel=(props)=>{
     return (
-      
         <Carousel id="szakok" className="justify-content-center szakmagaleria" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
         {
-            csvData.map(i=>{
+            props.kepek.map(i=>{
                 const kep = Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'));
                 return (
                     <Carousel.Item key={i.kod}>

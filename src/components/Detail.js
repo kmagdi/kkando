@@ -1,5 +1,4 @@
 import React, {useEffect} from 'react';
-import {useMediaQuery} from 'react-responsive';
 import { FullscreenBanner } from './FullscreenBanner';
 import './Details.css';
 import {Helper} from '../Helper'
