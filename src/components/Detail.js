@@ -1,4 +1,5 @@
 import React, {useEffect} from 'react';
+import {useMediaQuery} from 'react-responsive';
 import { FullscreenBanner } from './FullscreenBanner';
 import './Details.css';
 import {Helper} from '../Helper'
@@ -8,7 +9,6 @@ import { MyParallax } from './MyParallax';
 import { ImageCarousel } from './ImageCarousel';
 
 export const Detail=(props)=>{
-    //console.log(props.adatok.kod);
     useEffect(()=>{
         Helper.scrollToTop();
     },[]);
@@ -24,7 +24,7 @@ export const Detail=(props)=>{
                 return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
             }catch(Exception){
                 //console.log('404 not available: ./assets/szak/' + props.adatok.kod + '/' + kepnev);
-                return require('./assets/eszt.png');
+                return Helper.getMODI(require('./assets/eszt.jpg'),require('./assets/eszt_mobile.jpg'));
             }
         }
     };
@@ -39,7 +39,7 @@ export const Detail=(props)=>{
                     return [require('./assets/szak/' + props.adatok.kod + '/' + fallbackImg),'img'];
                 }catch(Exception){
                     //console.log('404 not available: ./assets/szak/' + props.adatok.kod + '/' + kepnev);
-                    return [require('./assets/eszt.png'),'img'];
+                    return [Helper.getMODI(require('./assets/eszt.jpg'),require('./assets/eszt_mobile.jpg')),'img'];
                 }
             }
         }
@@ -68,7 +68,7 @@ export const Detail=(props)=>{
         }
         const par2 = kepOV('vid2.mp4','parallax2.jpg');
         let par2el = null;
-        if(par2[1]=='vid'){
+        if(par2[1]==='vid'){
             par2el = (
                 <InfoPanel id="vid2" bold={true} size={6} type="videoBg" bgvid={par2[0]} bgColor={"rgba(255,255,255,0.65)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
             );
@@ -105,7 +105,7 @@ export const Detail=(props)=>{
 
                 {par2el}
 
-                <InfoPanel id="gyakorlat" type="sideBySide" title={getAnswer('gyakorlat')[0]} text={getAnswer('gyakorlat')[1]} image={kep('gyakorlat.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={getAnswer('gyakorlat')[1]} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található valamiben tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
                 <CollectData bgimage={kep('head.jpg')} />
             </>

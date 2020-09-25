@@ -63,3 +63,9 @@
 .pnlm-fullscreen-toggle-button-active{
     background-position:0 -144px !important;
 }
+.pnlm-orientation-button-inactive{
+    background-position:0 -288px !important;
+}
+.pnlm-orientation-button-active{
+    background-position:0 -336px !important;
+}

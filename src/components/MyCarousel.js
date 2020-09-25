@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 import './MyCarousel.css';
 import Truncate from 'react-truncate';
 import csvToJSON from "./csvToJSON" 
-
+import {Helper} from '../Helper'
 
 export const MyCarousel=()=>{
     const [csvData,setcsvData]=useState([])
@@ -30,9 +30,10 @@ export const MyCarousel=()=>{
         <Carousel id="szakok" className="justify-content-center szakmagaleria" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
         {
             csvData.map(i=>{
+                const kep = Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'));
                 return (
                     <Carousel.Item key={i.kod}>
-                        <img src={require('./assets/' + i.kod + '.jpg')} alt="kep1" />
+                        <img src={kep} alt="kep1" />
                         <Carousel.Caption>
                             <Link to={"/szak/" + i.kod}><h2>{i.nev}</h2></Link>
                             <Truncate lines={1} ellipsis={<>... <Link to={"/szak/" + i.kod}><br /><span className="read-more">Tovább</span></Link></>}>

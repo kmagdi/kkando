@@ -3,6 +3,7 @@ import {useIntersection} from 'react-use';
 import {Row,Col} from 'react-bootstrap';
 import gsap from 'gsap';
 import './InfoPanel.css';
+import { SphereView } from './SphereView';
 
 export const InfoPanel = (props) => {
     const handleUndef = (prop,trueval,falseval) => {
@@ -60,6 +61,22 @@ export const InfoPanel = (props) => {
                 </Row>
             );
             break;
+        case 'sideBySidePanorama':
+            if(props.panoimg !== null){
+                const margins2 = handleUndef('margin','',props.margin+'rem auto');
+                element = (
+                    <Row ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")} style={{marginTop:margins2,marginBottom:margins2}}>
+                        <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
+                            <h2>{props.title}</h2>
+                            <p>{props.text}<span className="moretext">{props.moretext.map((i,index)=><React.Fragment key={'moretext'+index}><br/>{i}</React.Fragment>)}</span></p>
+                        </Col>
+                        <Col className={"info-row-kep info-row-panorama fade-int "+props.id}>
+                            <SphereView id="1" image={props.panoimg} />
+                        </Col>
+                    </Row>
+                );
+                break;
+            }
         case 'centerInfo':
             const height1 = handleUndef('height','auto',props.height);
             element = (
@@ -122,8 +139,8 @@ export const InfoPanel = (props) => {
             break;
     }
     return (
-        <>
+        <React.Fragment key={props.id}>
             {element}
-        </>
+        </React.Fragment>
     );
 }

@@ -9,5 +9,7 @@ export class Helper {
             console.log('the shit is ' + document.documentElement.scrollTop);
         }
         document.getElementsByTagName('html')[0].setAttribute('smooth','true');
-    }
+    };
+    static isMobile = () => (window.innerWidth<=991);
+    static getMODI = (desktopfile,mobilefile) => (this.isMobile()?mobilefile:desktopfile);
 }

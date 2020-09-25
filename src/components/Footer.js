@@ -16,7 +16,7 @@ export const Footer=(props)=> {
             <Row id="footer">
                 <Col lg={2}></Col>
                 <Col lg={4} className="footer-col footer-col-first">
-                    <p><b>Fő Kandó weboldal:</b><br/><a href="http://www.kkando.hu/" target="_blank">http://www.kkando.hu/</a></p>
+                    <p><b>Fő Kandó weboldal:</b><br/><a href="http://www.kkando.hu/" target="_blank" rel="noopener noreferrer">http://www.kkando.hu/</a></p>
                     <p><b>Székhely:</b><br/>{props.contactData.location}</p>
                     <p><b>Levelezési cím:</b><br/>{props.contactData.adress}</p>
                     <p><b>Telefon:</b><br/>{props.contactData.tel}</p>

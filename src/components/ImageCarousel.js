@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Carousel } from 'react-bootstrap';
 import './ImageCarousel.css';
 import csvToJSON from './csvToJSON';
@@ -14,7 +14,7 @@ export const ImageCarousel=(props)=>{
                 .then(resp=>resp.text())
                 .then(text=>{
                     const adatokJSON=csvToJSON(text, ';');
-                    const filtered=adatokJSON.filter(obj=>obj.kod==props.kod);
+                    const filtered=adatokJSON.filter(obj=>obj.kod===props.kod);
                     setKepek(filtered[0].kepekszama);
                     //console.log(kepek);
                 },[])

@@ -16,6 +16,16 @@
 	background-position: center;
     min-height:40vh;
 }
+.info-row-panorama{
+    padding:0 !important;
+}
+.info-row-panorama .panorama-container{
+    margin:0 !important;
+}
+.info-row-panorama .panorama-container, .info-row-panorama .pnlm-container{
+    width:100% !important;
+    height:100% !important;
+}
 .info-row-kozep{
     text-align:center;
 }
@@ -38,6 +48,9 @@
 }
 .reverse-order .info-row-kep{
     order:1;
+}
+.moretext{
+    font-weight: bold;
 }
 @media (min-width: 1600px) {
     .sidebyside{
