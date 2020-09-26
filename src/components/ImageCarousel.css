@@ -53,7 +53,7 @@
     opacity:0.0;
     transition:0.25s;
 }
-.image-carousel-overlay:hover{
+.carousel-item:not(.carousel-item-left):not(.carousel-item-right) .image-carousel-overlay:hover{
     cursor:pointer;
     opacity:1.0;
     background-color:rgba(0,0,0,0.75);
@@ -61,4 +61,7 @@
 .image-carousel-overlay{
     margin:0 !important;
     padding:2rem;
+}
+.carousel:not(.szakmagaleria) .carousel-item-left .image-carousel-overlay, .carousel:not(.szakmagaleria) .carousel-item-right .image-carousel-overlay{
+    transition:none;
 }

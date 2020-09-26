@@ -15,7 +15,10 @@
     object-fit: cover;
 }
 .carousel-item{
-    transition:transform .6s ease-in-out, opacity 0.2s !important;
+    backface-visibility: visible;
+}
+.carousel-item-left a, .carousel-item-right a{
+    transition:none;
 }
 .carousel-item h2{
     font-size:3rem;
