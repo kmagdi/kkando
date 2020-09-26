@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.fbf6748d.chunk.css",
-    "main.js": "/static/js/main.74aaa02d.chunk.js",
-    "main.js.map": "/static/js/main.74aaa02d.chunk.js.map",
+    "main.css": "/static/css/main.f5601ac5.chunk.css",
+    "main.js": "/static/js/main.a02d54ed.chunk.js",
+    "main.js.map": "/static/js/main.a02d54ed.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.63e86494.chunk.js": "/static/js/2.63e86494.chunk.js",
-    "static/js/2.63e86494.chunk.js.map": "/static/js/2.63e86494.chunk.js.map",
+    "static/js/2.d9ea118d.chunk.js": "/static/js/2.d9ea118d.chunk.js",
+    "static/js/2.d9ea118d.chunk.js.map": "/static/js/2.d9ea118d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.6e7f7a6cd8c8268e4c62856f269a85b4.js": "/precache-manifest.6e7f7a6cd8c8268e4c62856f269a85b4.js",
+    "precache-manifest.12a1baa1483e125b5fcd6fa7b161e745.js": "/precache-manifest.12a1baa1483e125b5fcd6fa7b161e745.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.fbf6748d.chunk.css.map": "/static/css/main.fbf6748d.chunk.css.map",
-    "static/js/2.63e86494.chunk.js.LICENSE.txt": "/static/js/2.63e86494.chunk.js.LICENSE.txt",
+    "static/css/main.f5601ac5.chunk.css.map": "/static/css/main.f5601ac5.chunk.css.map",
+    "static/js/2.d9ea118d.chunk.js.LICENSE.txt": "/static/js/2.d9ea118d.chunk.js.LICENSE.txt",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
     "static/media/T10.jpg": "/static/media/T10.f91c98cf.jpg",
     "static/media/T10_mobile.jpg": "/static/media/T10_mobile.565e6f68.jpg",
@@ -44,7 +44,6 @@
     "static/media/T4.jpg": "/static/media/T4.ae6c0c9c.jpg",
     "static/media/T4_mobile.jpg": "/static/media/T4_mobile.6af74c0e.jpg",
     "static/media/T5.jpg": "/static/media/T5.20258bf3.jpg",
-    "static/media/T5.psd": "/static/media/T5.63155efb.psd",
     "static/media/T5_mobile.jpg": "/static/media/T5_mobile.e99b2232.jpg",
     "static/media/T6.jpg": "/static/media/T6.182cb864.jpg",
     "static/media/T6_mobile.jpg": "/static/media/T6_mobile.418cfc95.jpg",
@@ -62,7 +61,6 @@
     "static/media/footer.png": "/static/media/footer.fbc229fc.png",
     "static/media/gyakorlat.jpg": "/static/media/gyakorlat.88081055.jpg",
     "static/media/head.jpg": "/static/media/head.f4255e40.jpg",
-    "static/media/ikon.ico": "/static/media/ikon.15336a07.ico",
     "static/media/ismeretek.jpg": "/static/media/ismeretek.fe27b125.jpg",
     "static/media/kinek.jpg": "/static/media/kinek.90dc38f2.jpg",
     "static/media/loading.gif": "/static/media/loading.a6e0a35b.gif",
@@ -79,8 +77,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.63e86494.chunk.js",
-    "static/css/main.fbf6748d.chunk.css",
-    "static/js/main.74aaa02d.chunk.js"
+    "static/js/2.d9ea118d.chunk.js",
+    "static/css/main.f5601ac5.chunk.css",
+    "static/js/main.a02d54ed.chunk.js"
   ]
 }
