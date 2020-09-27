@@ -85,9 +85,16 @@ export const InfoPanel = (props) => {
                     <Col lg={handleUndef('size',5,props.size)} className={"info-row-szoveg info-row-kozep row "+handleUndef('nomargin','',' m-0 p-4')} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}>
                         <div className={"col align-self-center"}>
                             {props.title===undefined?null:
-                                <h2 className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.title}</b>):props.title)}</h2>
+                                <h2 className={"fade-int "+props.id}>
+                                    {(props.bold === true ? (<b>{props.title}</b>):(props.title))}
+                                </h2>
                             }
-                            <p className={"fade-int "+props.id}>{(props.bold === true ? (<b>{props.text}</b>):props.text)}</p>
+                            <p className={"fade-int "+props.id}>
+                                {(props.bold === true ? (<b>{(props.quote===true?<i>“{props.text}”</i>:props.text)}</b>):(props.quote===true?<i>“{props.text}”</i>:props.text))}
+                                <span style={{fontSize:'110%',fontWeight:'bold'}}>
+                                    {(props.author===undefined?null:<>&nbsp;&nbsp;({props.author})</>)}
+                                </span>
+                            </p>
                         </div>
                     </Col>
                     <Col className={"mobile-hidden"} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}></Col>

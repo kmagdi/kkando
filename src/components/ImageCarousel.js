@@ -2,9 +2,10 @@ import React, {useState} from 'react';
 import { Carousel } from 'react-bootstrap';
 import './ImageCarousel.css';
 import csvToJSON from './csvToJSON';
+import { Helper } from '../Helper';
 
 export const ImageCarousel=(props)=>{
-    const defaultNum = 1;
+    const defaultNum = 0;
     const [loaded,setLoaded]=useState(false)
     const [kepek,setKepek]=useState(defaultNum)
     //useEffect(()=>{
@@ -36,7 +37,7 @@ export const ImageCarousel=(props)=>{
         for(let i=0;i<(kepek);i++){
             const index = (i+1);
             // const kep = require('./assets/szak/'+props.kod+'/gallery/'+prefix+index+'.jpg');
-            const kep = 'https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/gallery/'+props.kod+'/galleryimg'+index+'.jpg';
+            const kep = Helper.isMobile()?('https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/gallery/'+props.kod+'/galleryimg'+index+'.jpg'):('https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/gallery/'+props.kod+'/galleryimg'+index+'.jpg');
             images.push(
                 <Carousel.Item key={"kep"+index}>
                     {overlay(kep)}
