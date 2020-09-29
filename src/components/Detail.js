@@ -9,9 +9,9 @@ import { ImageCarousel } from './ImageCarousel';
 import Preload from 'react-preload'
 
 export const Detail=(props)=>{
-    useEffect(()=>{
+    //useEffect(()=>{
         Helper.scrollToTop();
-    },[]);
+    //},[]);
     let element = null;
     const getAnswer = (question) => {
         return [props.temaKorok[question],props.adatok[question]];
