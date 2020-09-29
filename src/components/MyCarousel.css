@@ -8,6 +8,7 @@
 }
 .carousel-inner{
     background-color:black;
+    height:100%;
 }
 .carousel-item img{
     width:100%;
@@ -16,6 +17,7 @@
 }
 .carousel-item{
     backface-visibility: visible;
+    height:100%;
 }
 .carousel-item-left a, .carousel-item-right a{
     transition:none;
