@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "230b2160458599654d90cf17b1c23268",
+    "revision": "3a423904f7edb76c458f9adfdde819ca",
     "url": "/index.html"
   },
   {
-    "revision": "c1ce1251aee1b7951fa7",
+    "revision": "e888af7792c147fac87e",
     "url": "/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "04e058c8f71d9b262583",
-    "url": "/static/css/main.91608fb4.chunk.css"
+    "revision": "f101264c9e7edf4e82a3",
+    "url": "/static/css/main.2de10f5c.chunk.css"
   },
   {
-    "revision": "c1ce1251aee1b7951fa7",
-    "url": "/static/js/2.0e42f1dc.chunk.js"
+    "revision": "e888af7792c147fac87e",
+    "url": "/static/js/2.ff0c35bd.chunk.js"
   },
   {
     "revision": "a3d5da51d8489a02931a36aa8a33f4e5",
-    "url": "/static/js/2.0e42f1dc.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.ff0c35bd.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "04e058c8f71d9b262583",
-    "url": "/static/js/main.4d98814a.chunk.js"
+    "revision": "f101264c9e7edf4e82a3",
+    "url": "/static/js/main.fadf2896.chunk.js"
   },
   {
     "revision": "7797d651da93de8b8058",
@@ -400,8 +400,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/loading.a6e0a35b.gif"
   },
   {
-    "revision": "e91f0efb57315f1c90d5b25210bbdd5b",
-    "url": "/static/media/logo.e91f0efb.png"
+    "revision": "711f29fa14b9867afa3468ad018fc995",
+    "url": "/static/media/logo.711f29fa.png"
   },
   {
     "revision": "2cec13b5d88c8acb1c78d09f2ffa7829",
@@ -430,6 +430,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "5710c67f8839cd8babebc45d66bcbd96",
     "url": "/static/media/mozaik1_mobile.5710c67f.jpg"
+  },
+  {
+    "revision": "a89ca4480889d8a599bf8fc2f7d31e3e",
+    "url": "/static/media/mozdony.a89ca448.jpg"
+  },
+  {
+    "revision": "a9fc1cda8ace06d389a7f141c7cf4494",
+    "url": "/static/media/mozdony_mobile.a9fc1cda.jpg"
   },
   {
     "revision": "87ce6e691863683e4e5044841dab7562",
