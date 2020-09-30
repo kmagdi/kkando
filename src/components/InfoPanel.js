@@ -52,7 +52,7 @@ export const InfoPanel = (props) => {
         case 'sideBySide':
             const margins = handleUndef('margin','',props.margin+'rem auto');
             element = (
-                <Row ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")} style={{marginTop:margins,marginBottom:margins}}>
+                <Row id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")} style={{marginTop:margins,marginBottom:margins}}>
                     <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
                         <h2>{props.title}</h2>
                         <p>{props.text}</p>
@@ -90,8 +90,8 @@ export const InfoPanel = (props) => {
                                 </h2>
                             }
                             <p className={"fade-int "+props.id}>
-                                {(props.bold === true ? (<b>{(props.quote===true?<i>“{props.text}”</i>:props.text)}</b>):(props.quote===true?<i>“{props.text}”</i>:props.text))}
-                                <span style={{fontSize:'110%',fontWeight:'bold'}}>
+                                {(props.bold === true ? (<b>{(props.quote===true?<span className="quote"><i>“{props.text}”</i></span>:props.text)}</b>):(props.quote===true?<span className="quote"><i>“{props.text}”</i></span>:props.text))}
+                                <span className="quote-author">
                                     {(props.author===undefined?null:<>&nbsp;&nbsp;({props.author})</>)}
                                 </span>
                             </p>

@@ -52,6 +52,16 @@
 .moretext{
     font-weight: bold;
 }
+.quote, .quote-author{
+    font-weight: bold;
+    text-shadow: 0 0 5px rgba(255,255,255,1);
+}
+.quote{
+    font-size:110%;
+}
+.quote-author{
+    font-size:120%;
+}
 @media (min-width: 1600px) {
     .sidebyside{
         max-width: 1500px !important;

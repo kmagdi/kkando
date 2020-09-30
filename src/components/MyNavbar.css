@@ -1,5 +1,19 @@
+.navbar{
+    backdrop-filter: saturate(180%) blur(5px);
+    box-shadow:0 0 1.25rem rgba(0,0,0,0.25);
+    border-bottom: 1px solid rgba(255,255,255,0.1)
+}
+.navbar-dark{
+    /*background-color: rgba(52, 58, 64, 0.9) !important;*/
+    background:linear-gradient(90deg, rgba(52,58,64,0.9) 0%, rgba(52,58,64,1) 100%);
+}
 .navbar-brand {
     cursor:pointer;
+}
+@media (min-width: 992px) {
+    .navbar-brand {
+        padding-left:0.5rem;
+    }
 }
 .navbar p{
     margin-bottom:0;
