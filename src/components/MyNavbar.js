@@ -55,11 +55,12 @@ export const MyNavbar = () => {
             textDecoration: 'none',
             opacity: navbarState,
             display: navbarState===0?"none":"flex"
-                }} collapseOnSelect expand="lg" bg="dark" variant="dark" fixed="top">
-            <Link to="/#home"><Navbar.Brand>
+                }} collapseOnSelect expand="lg" variant="dark" fixed="top">
+            {/*<Link to="/#home"><Navbar.Brand>*/}
+            <a href="/"><Navbar.Brand>
                 {/*<Link to="/">Kandópage</Link>*/}
                 <img src={require('./assets/logo.png')} height="30px" alt="Kandó logo" />
-            </Navbar.Brand></Link>
+            </Navbar.Brand></a>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">

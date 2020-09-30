@@ -32,6 +32,7 @@ export const Home=()=>{
         head: Helper.getMODI(require('./assets/head.jpg'),require('./assets/head_mobile.jpg')),
         other: Helper.getMODI(require('./assets/eszt2.jpg'),require('./assets/eszt2_mobile.jpg')),
         mozaik1: Helper.getMODI(require('./assets/mozaik1.jpg'),require('./assets/mozaik1_mobile.jpg')),
+        mozdony: Helper.getMODI(require('./assets/mozdony.jpg'),require('./assets/mozdony_mobile.jpg')),
         logo: require('./assets/logo.png')
     };
     //console.log(Object.values(images).concat(csvData.map((i)=>('./assets/' + i.kod + '.jpg'))));
@@ -58,19 +59,28 @@ export const Home=()=>{
                     <InfoPanel id="par1" bold={true} quote={true} author="Szentgyörgyi Albert" type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} color="white" nomargin={true} height={'40vh'} text='Az iskola arra való, hogy az ember megtanuljon tanulni, hogy felébredjen tudásvágya, megismerje a jól végzett munka örömét, megízlelje az alkotás izgalmát, és megtalálja a munkát, amit szeretni fog.' from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
 
-                <InfoPanel id="else" className="sidebyside-margins" type="sideBySide" title="A jelen" text="Az oktatott szakképesítések / szakmák köre folyamatosan változik, a mindenkori munkaerő-piaci igényeknek megfelelően. A jelenlegi képzési szerkezethez nagyvállalati képzőhelyek - duális partnerek - kapcsolódnak, akikkel a beiskolázási igények egyeztetésétől a szakmai vizsgák megszervezéséig szorosan együttműködünk. A kereslet-vezérelt szakképzés elvárásainak a jelenlegi nagyvállalati partnereink segítségével már most is meg tudunk felelni, célunk, hogy újabb vállalkozásokat is partnereink között tudhassunk. " image={images.head} from={{opacity:0,x:200,ease:'power4.out'}} to={{opacity:1,x:0,ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="jelen" className="sidebyside-margins" type="sideBySide" title="A jelen" text="Az oktatott szakképesítések / szakmák köre folyamatosan változik, a mindenkori munkaerő-piaci igényeknek megfelelően. A jelenlegi képzési szerkezethez nagyvállalati képzőhelyek - duális partnerek - kapcsolódnak, akikkel a beiskolázási igények egyeztetésétől a szakmai vizsgák megszervezéséig szorosan együttműködünk. A kereslet-vezérelt szakképzés elvárásainak a jelenlegi nagyvállalati partnereink segítségével már most is meg tudunk felelni, célunk, hogy újabb vállalkozásokat is partnereink között tudhassunk. " image={images.head} from={{opacity:0,x:200,ease:'power4.out'}} to={{opacity:1,x:0,ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <MyParallax img={images.other} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="par2" bold={true} quote={true} author="Marie Curie" type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} color="white" nomargin={true} height={'40vh'} text='Egyikünk élete sem könnyű. És akkor? Legyen bennünk kitartás, és mindenekelőtt bízzunk önmagunkban. Hinnünk kell benne, hogy tehetségesek vagyunk valamiben, és ezt a valamit - kerül, amibe kerül - meg tudjuk valósítani.' from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                <MyParallax img={images.mozdony} amount={0.25} height={'40vh'} sizeToContent={true}>
+                    <InfoPanel id="par2" bold={true} quote={true} author="Marie Curie" type="centerInfo" bgColor={"rgba(255,255,255,0.75)"} color="white" nomargin={true} height={'40vh'} text='Egyikünk élete sem könnyű. És akkor? Legyen bennünk kitartás, és mindenekelőtt bízzunk önmagunkban. Hinnünk kell benne, hogy tehetségesek vagyunk valamiben, és ezt a valamit - kerül, amibe kerül - meg tudjuk valósítani.' from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
 
-                <InfoPanel id="else2" className="sidebyside-margins" type="sideBySide" title="A jövő" text="A technikai- technológiai fejlődés, a digitalizáció, a az ipar 4.0 technikai kihívásai a szakmai képzés számára is folyamatos kihívást jelentenek, melynek igyekszünk folyamatosan megfelelni. Ehhez jelenleg is folyik a szakképzés tartalmi és módszertani átalakítása, valamint az infrastrukturális feltételek folyamatos fejlesztése. A Kandó átfogó korszerűsítés és bővítés előtt áll, melynek előkészítő munkálatai már elkezdődtek. A Kandó mindig különös gondot fordított a szakmai oktatás mellett a kultúra közvetítésére, a tanulók egyéni képességeinek fejlesztésére, a tehetséggondozásra. Tanulóink kiemelkedő országos versenyeredményeire különösen büszkék vagyunk." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
+                <InfoPanel id="jovo" className="sidebyside-margins" type="sideBySide" title="A jövő" text="A technikai- technológiai fejlődés, a digitalizáció, a az ipar 4.0 technikai kihívásai a szakmai képzés számára is folyamatos kihívást jelentenek, melynek igyekszünk folyamatosan megfelelni. Ehhez jelenleg is folyik a szakképzés tartalmi és módszertani átalakítása, valamint az infrastrukturális feltételek folyamatos fejlesztése. A Kandó átfogó korszerűsítés és bővítés előtt áll, melynek előkészítő munkálatai már elkezdődtek. A Kandó mindig különös gondot fordított a szakmai oktatás mellett a kultúra közvetítésére, a tanulók egyéni képességeinek fejlesztésére, a tehetséggondozásra. Tanulóink kiemelkedő országos versenyeredményeire különösen büszkék vagyunk." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
                 <div id="szakok" className="row justify-content-center">
                     <MyCarousel kepek={carouselImages} />
                 </div>
 
+                <InfoPanel id="buszke" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
+
+                <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
+                    <InfoPanel id="else1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                </MyParallax>
+
+                <InfoPanel id="else2" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
+
                 <div className={'panorama-container-container'}>
+                <h2>Ezeknek is kelleni fog majd egy külön szekció:</h2>
                     <SphereView id="1" image={Helper.getMODI(require('./assets/pano1.jpg'),require('./assets/pano1.jpg'))} />
                     <SphereView id="2" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} />
                 </div>
