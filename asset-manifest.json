@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.2de10f5c.chunk.css",
-    "main.js": "/static/js/main.fadf2896.chunk.js",
-    "main.js.map": "/static/js/main.fadf2896.chunk.js.map",
+    "main.js": "/static/js/main.3ddfecec.chunk.js",
+    "main.js.map": "/static/js/main.3ddfecec.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.ff0c35bd.chunk.js": "/static/js/2.ff0c35bd.chunk.js",
-    "static/js/2.ff0c35bd.chunk.js.map": "/static/js/2.ff0c35bd.chunk.js.map",
+    "static/js/2.3205c50b.chunk.js": "/static/js/2.3205c50b.chunk.js",
+    "static/js/2.3205c50b.chunk.js.map": "/static/js/2.3205c50b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.58c081d10a2f6ea8f7d8d7b850136e8d.js": "/precache-manifest.58c081d10a2f6ea8f7d8d7b850136e8d.js",
+    "precache-manifest.8021402822b80cb076f5054ad56c8376.js": "/precache-manifest.8021402822b80cb076f5054ad56c8376.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.2de10f5c.chunk.css.map": "/static/css/main.2de10f5c.chunk.css.map",
-    "static/js/2.ff0c35bd.chunk.js.LICENSE.txt": "/static/js/2.ff0c35bd.chunk.js.LICENSE.txt",
+    "static/js/2.3205c50b.chunk.js.LICENSE.txt": "/static/js/2.3205c50b.chunk.js.LICENSE.txt",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
     "static/media/T10.jpg": "/static/media/T10.20258bf3.jpg",
     "static/media/T10_mobile.jpg": "/static/media/T10_mobile.20258bf3.jpg",
@@ -58,7 +58,7 @@
     "static/media/eszt_mobile.jpg": "/static/media/eszt_mobile.24cdb87d.jpg",
     "static/media/fade.png": "/static/media/fade.c6324cc4.png",
     "static/media/footer.png": "/static/media/footer.fbc229fc.png",
-    "static/media/gyakorlat.jpg": "/static/media/gyakorlat.a1d6b1ed.jpg",
+    "static/media/gyakorlat.jpg": "/static/media/gyakorlat.f62f1a48.jpg",
     "static/media/gyakorlat2.jpg": "/static/media/gyakorlat2.a4f985b1.jpg",
     "static/media/gyakorlat3.jpg": "/static/media/gyakorlat3.5c9c9de9.jpg",
     "static/media/head.jpg": "/static/media/head.fe2ce265.jpg",
@@ -87,8 +87,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.ff0c35bd.chunk.js",
+    "static/js/2.3205c50b.chunk.js",
     "static/css/main.2de10f5c.chunk.css",
-    "static/js/main.fadf2896.chunk.js"
+    "static/js/main.3ddfecec.chunk.js"
   ]
 }
