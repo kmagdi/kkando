@@ -64,15 +64,15 @@ export const MyNavbar = () => {
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">
-                <Link to="/#iskola"><p className="nav-link link" role="button">Iskolánkról</p></Link>
-                <Link to="/#szakok"><p className="nav-link link" role="button">Szakok...</p></Link>
-                <Link to="/#dualis"><p className="nav-link link" role="button">Duális partnerek</p></Link>
-                <Link to="/#inno"><p className="nav-link link" role="button">Innovációk</p></Link>
-                <Link to="/#buszke"><p className="nav-link link" role="button">Amikre büszkék vagyunk</p></Link>
-                <Link to="/#footer"><p className="nav-link link" role="button">Elérhetőség</p></Link>
+                    <Link to="/#iskola"><p className="nav-link link" role="button">Iskolánkról</p></Link>
+                    <Link to="/#szakok"><p className="nav-link link" role="button">Szakok...</p></Link>
+                    <Link to="/#dualis"><p className="nav-link link" role="button">Duális partnerek</p></Link>
+                    <Link to="/#inno"><p className="nav-link link" role="button">Innovációk</p></Link>
+                    <Link to="/#buszke"><p className="nav-link link" role="button">Amikre büszkék vagyunk</p></Link>
+                    <Link to="/#footer"><p className="nav-link link" role="button">Elérhetőség</p></Link>
                 </Nav>
                 <Nav>
-                <a href="http://www.kkando.hu/"><p className="nav-link link active" role="button">Vissza a Kandó oldalára</p></a>
+                    <a href="http://www.kkando.hu/"><p className="nav-link link active" role="button">Vissza a Kandó oldalára</p></a>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
