@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import CollectData from "./CollectData"
 import { MyCarousel } from './MyCarousel';  
+import { CarouselDualis } from './CarouselDualis';  
 import { MyParallax } from './MyParallax';
 import { FullscreenBanner } from './FullscreenBanner';
 import { InfoPanel } from './InfoPanel';
@@ -8,6 +9,7 @@ import { SphereView } from './SphereView';
 import { Helper } from '../Helper';
 import Preload from 'react-preload'
 import csvToJSON from "./csvToJSON";
+
 
 export const Home=()=>{
 
@@ -71,7 +73,13 @@ export const Home=()=>{
                     <MyCarousel kepek={carouselImages} />
                 </div>
 
+               
+
                 <InfoPanel id="buszke" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
+
+                <div id="dualis" className="row justify-content-center">
+                    <CarouselDualis  />
+                </div>
 
                 <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
                     <InfoPanel id="else1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
