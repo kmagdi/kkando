@@ -6,7 +6,7 @@ export const DetailDualis=(props)=>{
     return(
        
         <div>
-             <p>adatok....{props.adatok.kod}</p>
+             <p>adatok..esetleg ide johetne a ceg logoja s allatta a link ami a ceg oldalara mutat..{props.adatok.kod}</p>
              <p>{props.adatok.nev}</p>
              <p>{props.adatok.link}</p>
              <p>{props.adatok.text1}</p>
