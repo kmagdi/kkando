@@ -1,12 +1,12 @@
 import React, {useEffect} from 'react';
 import { FullscreenBanner } from './FullscreenBanner';
 import './Details.css';
-import {Helper} from '../Helper'
+import {Helper} from '../Helper';
 import { InfoPanel } from './InfoPanel';
 import CollectData from './CollectData';
 import { MyParallax } from './MyParallax';
 import { ImageCarousel } from './ImageCarousel';
-import Preload from 'react-preload'
+import Preload from 'react-preload';
 
 export const Detail=(props)=>{
     Helper.scrollToTop();

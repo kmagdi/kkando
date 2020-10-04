@@ -18,9 +18,14 @@ body,html{
     }
 }
 a{
-    color: #eee !important;
     text-decoration: none !important;
     transition:color 0.2s;
+}
+a:not(.darklink){
+    color: #eee !important;
+}
+a.darklink{
+    color: #212529 !important;
 }
 a:hover, .link:hover{
     color:#ccc !important;

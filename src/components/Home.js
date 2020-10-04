@@ -15,7 +15,10 @@ export const Home=()=>{
 
     const [csvData,setcsvData]=useState([])
     const[loaded,setLoaded]=useState(false)
+    const [dualCsvData,setDualCsvData]=useState([])
+    const[dualLoaded,setDualLoaded]=useState(false)
     useEffect(()=>{
+        // MyCarousel kép betöltés
         if(!loaded){
             const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/reszletekKK.csv"
             fetch(url)           
@@ -28,6 +31,18 @@ export const Home=()=>{
                 },[])
             setLoaded(true)
         }
+        // DualisCarousel kép betöltés
+        if(!dualLoaded){
+            const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/dualis.csv"
+            fetch(url)           
+                .then(resp=>resp.text())
+                .then(text=>{
+                    const adatokJSON=csvToJSON(text, ';')
+                    const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
+                    setDualCsvData(filtered)
+                },[])
+            setDualLoaded(true)
+        }
     })
 
     const images = {
@@ -39,6 +54,7 @@ export const Home=()=>{
     };
     //console.log(Object.values(images).concat(csvData.map((i)=>('./assets/' + i.kod + '.jpg'))));
     let carouselImages = csvData.map((i)=>([Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg')),i]));
+    let dualImages = dualCsvData.map((i)=>([Helper.getMODI(require('./assets/dualis/' + i.kod + '/head.jpg'),require('./assets/dualis/' + i.kod + '/head_mobile.jpg')),i]));
     return(
         <Preload
             loadingIndicator={(
@@ -49,7 +65,7 @@ export const Home=()=>{
                     </div>
                 </div>
             )}
-            images={carouselImages.map((i)=>(i[0])).concat(Object.values(images))}
+            images={dualImages.map((i)=>(i[0])).concat(carouselImages.map((i)=>(i[0]))).concat(Object.values(images))}
             autoResolveDelay={null}
         >
             <>
@@ -73,17 +89,15 @@ export const Home=()=>{
                     <MyCarousel kepek={carouselImages} />
                 </div>
 
-               
-
                 <InfoPanel id="buszke" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
                 <div id="dualis" className="row justify-content-center">
-                    <CarouselDualis  />
+                    <CarouselDualis kepek={dualImages} />
                 </div>
 
-                <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
+                {/* <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
                     <InfoPanel id="else1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
-                </MyParallax>
+                </MyParallax> */}
 
                 <InfoPanel id="else2" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 

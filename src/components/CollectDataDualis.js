@@ -2,8 +2,6 @@ import React,{ Component }  from 'react';
 import csvToJSON from "./csvToJSON" 
 import {DetailDualis} from "./DetailDualis"
 
-
-
 class CollectDataDualis extends Component{
     constructor(props){
         super()
@@ -19,11 +17,11 @@ class CollectDataDualis extends Component{
             .then(resp=>resp.text())
             .then(text=>{
                 const adatokJSON=csvToJSON(text, ';')
-                console.log("adatok:"+Object.keys(adatokJSON[0]))
-           console.log("adatok2:"+adatokJSON[0].kod)
-           console.log("props:"+this.props.id)
+                //console.log("adatok:"+Object.keys(adatokJSON[0]))
+                //console.log("adatok2:"+adatokJSON[0].kod)
+                //console.log("props:"+this.props.id)
                 const filtered=adatokJSON.filter(obj=>obj.kod===this.props.id)
-                console.log("filtered="+filtered)
+                //console.log("filtered="+filtered)
                 if(filtered.length === 0){
                     this.setState({failed:true});
                 }else{
@@ -31,7 +29,7 @@ class CollectDataDualis extends Component{
                     this.setState({temaKorok:adatokJSON[0]})
                     this.setState({adatok:filtered[0]})
                 }
-                console.log("ok")
+                //console.log("ok")
         }) 
     }
    
