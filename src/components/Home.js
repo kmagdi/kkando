@@ -9,6 +9,7 @@ import { SphereView } from './SphereView';
 import { Helper } from '../Helper';
 import Preload from 'react-preload'
 import csvToJSON from "./csvToJSON";
+import {Innovacio} from "./Innovacio"
 
 
 export const Home=()=>{
@@ -17,6 +18,9 @@ export const Home=()=>{
     const[loaded,setLoaded]=useState(false)
     const [dualCsvData,setDualCsvData]=useState([])
     const[dualLoaded,setDualLoaded]=useState(false)
+    const [innovacioCsvData,setInnovacioCsvData]=useState([])
+    const[innovacioLoaded,setInnovacioLoaded]=useState(false)
+
     useEffect(()=>{
         // MyCarousel kép betöltés
         if(!loaded){
@@ -43,7 +47,22 @@ export const Home=()=>{
                 },[])
             setDualLoaded(true)
         }
+
+        // innovacios kép betöltés
+      if(!innovacioLoaded){
+        const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/innovacio.csv"
+        fetch(url)           
+            .then(resp=>resp.text())
+            .then(text=>{
+                const adatokJSON=csvToJSON(text, ';')
+                const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
+                setInnovacioCsvData(filtered)
+            },[])
+        setInnovacioLoaded(true)
+    }
+
     })
+      
 
     const images = {
         head: Helper.getMODI(require('./assets/head.jpg'),require('./assets/head_mobile.jpg')),
@@ -55,6 +74,7 @@ export const Home=()=>{
     //console.log(Object.values(images).concat(csvData.map((i)=>('./assets/' + i.kod + '.jpg'))));
     let carouselImages = csvData.map((i)=>([Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg')),i]));
     let dualImages = dualCsvData.map((i)=>([Helper.getMODI(require('./assets/dualis/' + i.kod + '/head.jpg'),require('./assets/dualis/' + i.kod + '/head_mobile.jpg')),i]));
+    let innovacioImages=innovacioCsvData.map((i)=>([Helper.getMODI(require('./assets/innovacio/' + i.kod + '/head.jpg'),require('./assets/innovacio/' + i.kod + '/head_mobile.jpg')),i]));
     return(
         <Preload
             loadingIndicator={(
@@ -94,6 +114,7 @@ export const Home=()=>{
                 <div id="dualis" className="row justify-content-center">
                     <CarouselDualis kepek={dualImages} />
                 </div>
+                
 
                 {/* <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
                     <InfoPanel id="else1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
@@ -101,6 +122,9 @@ export const Home=()=>{
 
                 <InfoPanel id="else2" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
+                <div id="innovacio" className="row justify-content-center">
+                    <Innovacio kepek={innovacioImages} />
+                </div>
                 <div className={'panorama-container-container'}>
                 <h2>Ezeknek is kelleni fog majd egy külön szekció:</h2>
                     <SphereView id="1" image={Helper.getMODI(require('./assets/pano1.jpg'),require('./assets/pano1.jpg'))} />
