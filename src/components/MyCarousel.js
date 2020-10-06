@@ -1,38 +1,46 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { Carousel } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import './MyCarousel.css';
 import Truncate from 'react-truncate';
 
 export const MyCarousel=(props)=>{
-    if(document.querySelector('.ind > .carousel-indicators > li') !== null){
-        document.querySelectorAll('.ind > .carousel-indicators > li').forEach((i,index)=>{
-            const name = ('ind-tt-'+index);
-            let obj = document.createElement('p');
-            if(document.querySelector('#'+name) === null){
-                obj.setAttribute('id',name);
-                obj.setAttribute('class','ind-tt');
-                //i.parentNode.insertBefore(obj,i.previousElementSibling);
-                //i.before(obj);
-                obj.innerHTML = document.querySelector('.ind .carousel-inner > .carousel-item:nth-child('+(index+1)+') > .carousel-caption h2').innerHTML;
-                i.appendChild(obj);
-            }
-            i.addEventListener('mouseenter',()=>{
-                if(!i.classList.contains('ind-tt-act')){
-                    let classes = [...i.classList];
-                    classes.push('ind-tt-act');
-                    i.setAttribute('class',classes.join(' '));
+    const addTooltips = () => {
+        if(document.querySelector('.ind > .carousel-indicators > li') !== null){
+            console.log('aasd');
+            document.querySelectorAll('.ind > .carousel-indicators > li').forEach((i,index)=>{
+                const name = ('ind-tt-'+index);
+                let obj = document.createElement('p');
+                if(document.querySelector('#'+name) === null){
+                    obj.setAttribute('id',name);
+                    obj.setAttribute('class','ind-tt');
+                    //i.parentNode.insertBefore(obj,i.previousElementSibling);
+                    //i.before(obj);
+                    obj.innerHTML = document.querySelector('.ind .carousel-inner > .carousel-item:nth-child('+(index+1)+') > .carousel-caption h2').innerHTML;
+                    i.appendChild(obj);
                 }
+                i.addEventListener('mouseenter',()=>{
+                    if(!i.classList.contains('ind-tt-act')){
+                        let classes = [...i.classList];
+                        classes.push('ind-tt-act');
+                        i.setAttribute('class',classes.join(' '));
+                    }
+                });
+                i.addEventListener('mouseleave',()=>{
+                    if(i.classList.contains('ind-tt-act')){
+                        let classes = [...i.classList];
+                        delete classes[classes.indexOf('ind-tt-act')];
+                        i.setAttribute('class',classes.join(' '));
+                    }
+                });
             });
-            i.addEventListener('mouseleave',()=>{
-                if(i.classList.contains('ind-tt-act')){
-                    let classes = [...i.classList];
-                    delete classes[classes.indexOf('ind-tt-act')];
-                    i.setAttribute('class',classes.join(' '));
-                }
-            });
-        });
+        }else{
+            console.log('rip buddy');
+        }
     }
+    useEffect(()=>{
+        addTooltips();
+    })
     return (
         <Carousel id="szakok" className="justify-content-center szakmagaleria ind" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
         {

@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import { Box } from './Box';
 
 export const Innovacio=(props)=>{
-    console.log("innovacio"+props.kepek.length)
+    //console.log("innovacio"+props.kepek.length)
     //const teszt = ['asd','asd2'];
     return (
         <div className="row justify-content-center" /*className="row"*/>
