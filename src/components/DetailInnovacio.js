@@ -52,7 +52,12 @@ export const DetailInnovacio=(props)=>{
             </>
         )
     }else{
-        element = <FullscreenBanner title="Ez az innováció nem létezik" />;
+        element = <FullscreenBanner title={
+            <>
+                Ez az innováció nem létezik<br/>
+                <a style={{fontSize:'70%',cursor:'pointer'}} href="/">Vissza a főoldalra...</a>
+            </>
+        } />;
     }
     return(
         //(props.adatok.kod===undefined)?null:

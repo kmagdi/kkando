@@ -72,13 +72,36 @@
     height:30px;
 }
 .carousel-indicators li{
-    transition:height 0.2s !important;
+    position:relative;
+    transition:height 0.2s, opacity 0.2s !important;
 }
 .carousel-indicators li:hover{
     height:6px;
+    opacity:0.85;
 }
 .carousel-indicators li.active{
     height:12px;
+}
+.ind-tt{
+    position:absolute;
+    font-weight:bold;
+    margin:0;
+    /* right:0; */
+    bottom:1rem;
+    left:-200%;
+    width:500%;
+    z-index: 100;
+    text-indent:0;
+    text-align:center;
+    color:white;
+    background-color:rgba(0,0,0,0.4);
+    border-radius:0.25rem;
+    padding:0.125rem 0.25rem;
+    opacity:0.0;
+    transition:opacity 0.25s;
+}
+.ind-tt-act .ind-tt{
+    opacity:1.0;
 }
 .read-more{
     /*background-color:rgba(255,255,255,0.25);*/

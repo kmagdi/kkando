@@ -8,19 +8,30 @@ import {MyNavbar} from "./components/MyNavbar"
 import { ParallaxProvider } from 'react-scroll-parallax'
 import './App.css'
 
+const patchnotes = `<!--
+    PATCH NOTES:
+    - Added some extra styling (mostly for mobile)
+    - Removed the demon script (it made a user feel uneasy after finding several demons in his backyard)
+    - Fixed the alignment of the cards
+    - Nerfed Terjedelmes Csongor (he was simply too terjedelmes)
+    - Made the background of the navbar blurry
+    - Removed Herobrine
+-->`;
+
 export const App=()=>{
     //console.log("This is the process.env:"+process.env.PUBLIC_URL)  
     return(
         <ParallaxProvider>
+            <div id="patch-notes" dangerouslySetInnerHTML={{__html:patchnotes}} />
             <BrowserRouter basename={process.env.PUBLIC_URL}>
                 <MyNavbar/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                   {/* <Route exact path="/kkando" component={Home}/>*/}
+                    {/* <Route exact path="/kkando" component={Home}/>*/}
                     <Route exact path="/szak/:id" component={Szak} />
-                   {/* <Route path="/kkando/szak/:id" component={Szak} />*/}
-                   <Route exact path="/dualis/:id" component={Dualis} />
-                   <Route exact path="/innovacio/:id" component={FilterInnovacio} />
+                    {/* <Route path="/kkando/szak/:id" component={Szak} />*/}
+                    <Route exact path="/dualis/:id" component={Dualis} />
+                    <Route exact path="/innovacio/:id" component={FilterInnovacio} />
                     <Redirect to="/" />
                 </Switch>
             </BrowserRouter>
