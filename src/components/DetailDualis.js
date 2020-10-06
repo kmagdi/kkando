@@ -51,7 +51,7 @@ export const DetailDualis=(props)=>{
         element = <FullscreenBanner title="Ez a partner nem létezik" />;
     }
     return(
-        (props.adatok.kod===undefined)?null:
+        //(props.adatok.kod===undefined)?null:
         <Preload
             loadingIndicator={(
                 <div style={{width:'100vw',height:'100vh',backgroundColor:'#343a40',color:'white'}}>

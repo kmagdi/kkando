@@ -122,11 +122,13 @@ export const Home=()=>{
 
                 <InfoPanel id="else2" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
-                <div id="innovacio" className="row justify-content-center">
+                <div id="innovacio" style={{margin:'0 0 1rem 0'}}>
+                    <h2 style={{textAlign:'center'}}>Innovációk:</h2>
                     <Innovacio kepek={innovacioImages} />
                 </div>
+
                 <div className={'panorama-container-container'}>
-                <h2>Ezeknek is kelleni fog majd egy külön szekció:</h2>
+                    <h2>Ezeknek is kelleni fog majd egy külön szekció:</h2>
                     <SphereView id="1" image={Helper.getMODI(require('./assets/pano1.jpg'),require('./assets/pano1.jpg'))} />
                     <SphereView id="2" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} />
                 </div>

@@ -122,14 +122,14 @@ export const Detail=(props)=>{
 
                 <InfoPanel id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={getAnswer('gyakorlat')[1]} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található valamiben tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <CollectData bgimage={images.head} />
+                {(props.adatok.kod===undefined)?null:<CollectData bgimage={images.head} />}
             </>
         )
     }else{
         element = <FullscreenBanner title="Ez a szak nem létezik" />;
     }
     return (
-        (props.adatok.kod===undefined)?null:
+        //(props.adatok.kod===undefined)?null:
         <Preload
             loadingIndicator={(
                 <div style={{width:'100vw',height:'100vh',backgroundColor:'#343a40',color:'white'}}>
