@@ -3,6 +3,7 @@ import { FullscreenBanner } from './FullscreenBanner';
 import {Helper} from '../Helper';
 import Preload from 'react-preload';
 import { InfoPanel } from './InfoPanel';
+import CollectData from './CollectData';
 
 export const DetailDualis=(props)=>{
     Helper.scrollToTop();
@@ -38,6 +39,7 @@ export const DetailDualis=(props)=>{
         element = (
             <>
                 <FullscreenBanner bgimage={images.head} title={props.adatok.nev} image={images.logo} />
+
                 <InfoPanel id="gyakorlat" type="sideBySide" title={"Something"} text={
                     <React.Fragment>
                         <span>{props.adatok.text1}</span>
@@ -45,10 +47,17 @@ export const DetailDualis=(props)=>{
                         <a href={props.adatok.link} target="_blank" rel="noopener noreferrer" className="darklink">honlap</a>
                     </React.Fragment>
                 } image={images.head} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
+                {(props.adatok.kod===undefined)?null:<CollectData bgimage={images.head} />}
             </>
         )
     }else{
-        element = <FullscreenBanner title="Ez a partner nem létezik" />;
+        element = <FullscreenBanner title={
+            <>
+                Ez a partner nem létezik<br/>
+                <a style={{fontSize:'70%',cursor:'pointer'}} href="/">Vissza a főoldalra...</a>
+            </>
+        } />;
     }
     return(
         //(props.adatok.kod===undefined)?null:

@@ -3,6 +3,7 @@ import { FullscreenBanner } from './FullscreenBanner';
 import {Helper} from '../Helper';
 import Preload from 'react-preload';
 import { InfoPanel } from './InfoPanel';
+import CollectData from './CollectData';
 
 export const DetailInnovacio=(props)=>{
     Helper.scrollToTop();
@@ -38,10 +39,16 @@ export const DetailInnovacio=(props)=>{
         element = (
             <>
                 <FullscreenBanner bgimage={images.head} title={props.adatok.nev} image={images.logo} />
+
                 <InfoPanel id="cim1" type="sideBySide" title={props.adatok.cim1} text={props.adatok.text1} image={images.head} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
                 <InfoPanel id="cim2" type="sideBySide" title={props.adatok.cim2} text={props.adatok.text2} image={images.head} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
                 <InfoPanel id="cim3" type="sideBySide" title={props.adatok.cim3} text={props.adatok.text3} image={images.head} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
                 <InfoPanel id="cim4" type="sideBySide" title={props.adatok.cim4} text={props.adatok.text4} image={images.head} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
+                {(props.adatok.kod===undefined)?null:<CollectData bgimage={images.head} />}
             </>
         )
     }else{
