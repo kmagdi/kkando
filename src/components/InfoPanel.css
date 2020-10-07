@@ -32,6 +32,14 @@
 .info-row-kozep:not(.m-0){
     margin:2rem 0.5rem !important;
 }
+.info-row-click{
+    background-color:red;
+    cursor:pointer;
+    transition:opacity 0.25s;
+}
+.info-row-click:hover{
+    opacity:0.8 !important;
+}
 .sidebyside{
     max-width: 1200px;
     margin:0 auto !important;

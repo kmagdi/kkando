@@ -57,7 +57,7 @@ export const InfoPanel = (props) => {
                         <h2>{props.title}</h2>
                         <p>{props.text}</p>
                     </Col>
-                    <Col className={"info-row-kep fade-int "+props.id} style={{backgroundImage:'url('+props.image+')'}}></Col>
+                    <Col className={"info-row-kep fade-int "+props.id+(props.clickable===undefined?'':' info-row-click')} style={{backgroundImage:'url('+props.image+')'}} onClick={(props.clickable===undefined?null:()=>{ window.open(props.image, '_blank') })}></Col>
                 </Row>
             );
             break;

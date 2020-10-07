@@ -5,7 +5,9 @@ export class Helper {
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;
         if(navigator.userAgent.search("Firefox")  > -1){
-            document.location.href = "#top";
+            if(document.documentElement.scrollTop !== 0){
+                document.location.href = "#top";
+            }
         }
         document.getElementsByTagName('html')[0].setAttribute('smooth','true');
     };

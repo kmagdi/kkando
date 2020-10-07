@@ -7,7 +7,6 @@ import Truncate from 'react-truncate';
 export const MyCarousel=(props)=>{
     const addTooltips = () => {
         if(document.querySelector('.ind > .carousel-indicators > li') !== null){
-            console.log('aasd');
             document.querySelectorAll('.ind > .carousel-indicators > li').forEach((i,index)=>{
                 const name = ('ind-tt-'+index);
                 let obj = document.createElement('p');
@@ -23,19 +22,17 @@ export const MyCarousel=(props)=>{
                     if(!i.classList.contains('ind-tt-act')){
                         let classes = [...i.classList];
                         classes.push('ind-tt-act');
-                        i.setAttribute('class',classes.join(' '));
+                        i.setAttribute('class',classes.join(' ').trim());
                     }
                 });
                 i.addEventListener('mouseleave',()=>{
                     if(i.classList.contains('ind-tt-act')){
                         let classes = [...i.classList];
                         delete classes[classes.indexOf('ind-tt-act')];
-                        i.setAttribute('class',classes.join(' '));
+                        i.setAttribute('class',classes.join(' ').trim());
                     }
                 });
             });
-        }else{
-            console.log('rip buddy');
         }
     }
     useEffect(()=>{
