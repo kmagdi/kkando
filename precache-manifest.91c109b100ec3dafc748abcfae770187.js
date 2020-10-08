@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f52e8eefb487ff9be7801296853be9f6",
+    "revision": "b2b04324b818572f1385a8c075741625",
     "url": "/index.html"
   },
   {
-    "revision": "93ed2bd8a073451c68df",
+    "revision": "7407c5396f349b745233",
     "url": "/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "8d2d412dd80a7fcb0a94",
-    "url": "/static/css/main.866d3470.chunk.css"
+    "revision": "8a678bd8148c936707dc",
+    "url": "/static/css/main.888d1350.chunk.css"
   },
   {
-    "revision": "93ed2bd8a073451c68df",
-    "url": "/static/js/2.7618fc15.chunk.js"
+    "revision": "7407c5396f349b745233",
+    "url": "/static/js/2.dbdedc36.chunk.js"
   },
   {
     "revision": "99b8abf64e1fcf3bee4aa2b597af6fe0",
-    "url": "/static/js/2.7618fc15.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.dbdedc36.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8d2d412dd80a7fcb0a94",
-    "url": "/static/js/main.80d4d1ac.chunk.js"
+    "revision": "8a678bd8148c936707dc",
+    "url": "/static/js/main.b10271b1.chunk.js"
   },
   {
     "revision": "7797d651da93de8b8058",
@@ -514,6 +514,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "39825d4d1b0a9e6e8cba5a60a4c95bd8",
     "url": "/static/media/munkakor_mobile.39825d4d.jpg"
+  },
+  {
+    "revision": "40a59b52bb05bafbbc3421720e0e3bb3",
+    "url": "/static/media/nopanorama.40a59b52.jpg"
   },
   {
     "revision": "3749162350fc55686d6b22a6d561f728",
