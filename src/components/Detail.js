@@ -25,7 +25,16 @@ export const Detail=(props)=>{
             try{
                 const spl = kepnev.split('.');
                 if(spl[spl.length-2]==='gyakorlat' || nomobile){
-                    return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                    if(spl[spl.length-2]==='gyakorlat'){
+                        try{
+                            return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                        }catch(Exception){
+                            return require('./assets/nopanorama.jpg');
+                        }
+                    }
+                    if(nomobile){
+                        return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                    }
                 }else{
                     spl[spl.length-2] += '_mobile';
                     return Helper.getMODI(require('./assets/szak/' + props.adatok.kod + '/' + kepnev),require('./assets/szak/' + props.adatok.kod + '/' + spl.join('.')));

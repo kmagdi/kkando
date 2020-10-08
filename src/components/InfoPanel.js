@@ -104,20 +104,15 @@ export const InfoPanel = (props) => {
         case 'centerInfoWide':
             const height3 = handleUndef('height','auto',props.height);
             element = (
-                <Row ref={sectionRef} id={props.id} className={rowClass} style={{minHeight:height3}}>
+                <Row id={props.id} className={rowClass} style={{minHeight:height3}}>
                     <Col className={"info-row-szoveg info-row-kozep row "+handleUndef('nomargin','',' m-0 p-4')} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}>
                         <div className={"col align-self-center"}>
                             {props.title===undefined?null:
-                                <h2 className={"fade-int "+props.id}>
+                                <h2 className={props.id}>
                                     {(props.bold === true ? (<b>{props.title}</b>):(props.title))}
                                 </h2>
                             }
-                            <p className={"fade-int "+props.id} style={(props.centered===true)?{textAlign:'center'}:null}>
-                                {(props.bold === true ? (<b>{(props.quote===true?<span className="quote"><i>“{props.text}”</i></span>:props.text)}</b>):(props.quote===true?<span className="quote"><i>“{props.text}”</i></span>:props.text))}
-                                <span className="quote-author">
-                                    {(props.author===undefined?null:<>&nbsp;&nbsp;({props.author})</>)}
-                                </span>
-                            </p>
+                            <div style={{overflow:'hidden'}}>{props.text}</div>
                         </div>
                     </Col>
                 </Row>
