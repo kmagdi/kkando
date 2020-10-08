@@ -92,14 +92,15 @@ export const Detail=(props)=>{
             par2el = (
                 //<MyParallax img={par2[0]} amount={0.25} height={'40vh'} sizeToContent={true}>
                 <MyParallax img={par2} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="par2" bold={true} centered={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Videók" text={(props.adatok.videok==='')?<>Nincsenek videók</>:<>
-                        (Később embed lesz)<br/>
+                    <InfoPanel id="par2" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Videók (vagy ehelyett akikre büszkék vagyunk)" text={(props.adatok.videok==='')?<>Nincsenek videók</>:<>
                         {
                             String(props.adatok.videok).split(' ').map((i,index)=>{
                                 return (
-                                    <>
-                                        {(index+1)}. videó: <a href={i} target="_blank" rel="noopener noreferrer">{i}</a><br/>
-                                    </>
+                                    <React.Fragment key={i}>
+                                        {//(index+1)}. videó: <a href={i} target="_blank" rel="noopener noreferrer">{i}</a><br/>
+                                        }
+                                        <iframe className="yt-video" width="560" height="315" src={"https://www.youtube.com/embed/" + i.substring(i.lastIndexOf('/'))} frameBorder="0" allow="clipboard-write; encrypted-media" allowFullScreen></iframe>
+                                    </React.Fragment>
                                 );
                             })
                         }

@@ -2,3 +2,8 @@
     margin:0 auto;
     text-align:center;
 }
+.yt-video{
+    display:inline-block;
+    margin:0.5rem;
+    max-width:100%;
+}
