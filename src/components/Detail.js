@@ -7,6 +7,7 @@ import CollectData from './CollectData';
 import { MyParallax } from './MyParallax';
 import { ImageCarousel } from './ImageCarousel';
 import Preload from 'react-preload';
+import { logDOM } from '@testing-library/react';
 
 export const Detail=(props)=>{
     Helper.scrollToTop();
@@ -91,7 +92,18 @@ export const Detail=(props)=>{
             par2el = (
                 //<MyParallax img={par2[0]} amount={0.25} height={'40vh'} sizeToContent={true}>
                 <MyParallax img={par2} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="par2" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                    <InfoPanel id="par2" bold={true} centered={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Videók" text={(props.adatok.videok==='')?<>Nincsenek videók</>:<>
+                        (Később embed lesz)<br/>
+                        {
+                            String(props.adatok.videok).split(' ').map((i,index)=>{
+                                return (
+                                    <>
+                                        {(index+1)}. videó: <a href={i} target="_blank" rel="noopener noreferrer">{i}</a><br/>
+                                    </>
+                                );
+                            })
+                        }
+                    </>} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
             );
         //};

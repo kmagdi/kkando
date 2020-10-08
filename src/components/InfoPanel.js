@@ -89,7 +89,7 @@ export const InfoPanel = (props) => {
                                     {(props.bold === true ? (<b>{props.title}</b>):(props.title))}
                                 </h2>
                             }
-                            <p className={"fade-int "+props.id}>
+                            <p className={"fade-int "+props.id} style={(props.centered===true)?{textAlign:'center'}:null}>
                                 {(props.bold === true ? (<b>{(props.quote===true?<span className="quote"><i>“{props.text}”</i></span>:props.text)}</b>):(props.quote===true?<span className="quote"><i>“{props.text}”</i></span>:props.text))}
                                 <span className="quote-author">
                                     {(props.author===undefined?null:<>&nbsp;&nbsp;({props.author})</>)}
