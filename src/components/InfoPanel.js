@@ -4,6 +4,7 @@ import {Row,Col} from 'react-bootstrap';
 import gsap from 'gsap';
 import './InfoPanel.css';
 import { SphereView } from './SphereView';
+import { MosaicGallery } from './MosaicGallery';
 
 export const InfoPanel = (props) => {
     const handleUndef = (prop,trueval,falseval) => {
@@ -116,6 +117,11 @@ export const InfoPanel = (props) => {
                         </div>
                     </Col>
                 </Row>
+            );
+            break;
+        case 'mosaicGallery':
+            element = (
+                <MosaicGallery animRef={sectionRef} id={props.id} className={rowClass} title={props.title} images={props.images}></MosaicGallery>
             );
             break;
         case 'videoBg':

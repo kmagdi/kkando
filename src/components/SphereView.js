@@ -6,21 +6,30 @@ export const SphereView = (props) => {
     // const goFullscreen = () => {
     //     toggleFullscreen();
     // };
+    const content = (
+        <ReactPannellum
+            id={"panorama"+props.id}
+            sceneId={"scene"+props.id}
+            imageSource={props.image}
+            config={{
+                autoLoad:true,
+                showZoomCtrl:false,
+                mouseZoom:'fullscreenonly',
+                showFullscreenCtrl:true,
+                disableKeyboardCtrl:true,
+            }}
+        />
+    )
     return (
         <div className={'panorama-container'}>
-            {/* <div className={'panorama-overlay'} onClick={()=>goFullscreen()}></div> */}
-            <ReactPannellum
-                id={"panorama"+props.id}
-                sceneId={"scene"+props.id}
-                imageSource={props.image}
-                config={{
-                    autoLoad:true,
-                    showZoomCtrl:false,
-                    mouseZoom:'fullscreenonly',
-                    showFullscreenCtrl:true,
-                    disableKeyboardCtrl:true,
-                }}
-            />
+            {
+                props.extraContainer===true?
+                    <div className="extra-container">
+                        {content}
+                    </div>
+                :content
+            }
+            
         </div>
     );
 }

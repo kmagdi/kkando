@@ -1,9 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {MyParallax} from './MyParallax';
 
 export const FullscreenBanner = (props)=>{
     const imageExists = props.image!==undefined;
     const titleExists = props.title!==undefined;
+    useEffect(()=>{
+        const obj = document.querySelector('#welcome-image-logo');
+        if(obj !== null){
+            if(obj.clientWidth < obj.clientHeight){
+                obj.setAttribute('style','width:10rem;height:auto;');
+            }else{
+                obj.setAttribute('style','height:10rem;width:auto;');
+            }
+        }
+    },[]);
     return (
         <MyParallax
             div="top-banner-container"

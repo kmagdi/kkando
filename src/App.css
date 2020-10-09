@@ -42,7 +42,7 @@ a:hover, .link:hover{
 }
 #welcome-image-logo{
     width:10rem;
-    height:auto;
+    height:10rem;
 }
 #welcome-text, #welcome-title{
     text-shadow:0 0 0.75rem rgba(0,0,0,0.75);
@@ -77,6 +77,9 @@ a:hover, .link:hover{
     to{
         opacity:1.0;
     }
+}
+.less-be-hozzank{
+    margin-bottom:0;
 }
 
 /* CUSTOM SCROLLBAR */

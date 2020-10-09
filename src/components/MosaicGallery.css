@@ -1,0 +1,37 @@
+:root{
+    --image-mg:0.25rem;
+}
+.mosaic-gallery{
+    width:100%;
+    padding:2rem 0;
+    text-align:center;
+}
+.mosaic-image-container{
+    margin:0 var(--image-mg) var(--image-mg) var(--image-mg);
+    border-radius:0.25rem;
+    padding:0;
+    cursor:pointer;
+    display:inline-block;
+    overflow:hidden;
+}
+.mosaic-image{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:transform 0.75s cubic-bezier(.17,0,0,1);
+}
+.mosaic-image:hover{
+    transform:scale(1.1);
+}
+@media (orientation:landscape) {
+    .mosaic-image-container{
+        width:15vw;
+        height:15vw;
+    }
+}
+@media (orientation:portrait) {
+    .mosaic-image-container{
+        width:20vh;
+        height:20vh;
+    }
+}

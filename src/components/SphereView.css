@@ -5,10 +5,10 @@
     width:var(--panorama-width) !important;
     height:calc(var(--panorama-width) * calc(2 / 3)) !important;
 }
-.panorama-container-container{
+/* .panorama-container-container{
     padding:0.5rem;
     text-align:center;
-}
+} */
 .panorama-container{
     display:inline-block;
     text-align:center;
@@ -16,7 +16,15 @@
     width:var(--panorama-width);
     margin:0.5rem;
     border-radius:0.75rem;
+    /* overflow:hidden; */
+    box-shadow:0 0 0.5rem rgba(0,0,0,0.5);
+}
+div:not(.extra-container) .panorama-container{
     overflow:hidden;
+}
+.extra-container{
+    overflow:hidden;
+    border-radius:0.75rem;
 }
 .panorama-overlay{
     /*position:absolute;*/

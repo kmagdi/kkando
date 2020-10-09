@@ -1,5 +1,5 @@
-import React, {useState, useEffect} from 'react';
-import CollectData from "./CollectData"
+import React, { useState, useEffect } from 'react';
+import CollectData from './CollectData';
 import { MyCarousel } from './MyCarousel';  
 import { CarouselDualis } from './CarouselDualis';  
 import { MyParallax } from './MyParallax';
@@ -7,9 +7,10 @@ import { FullscreenBanner } from './FullscreenBanner';
 import { InfoPanel } from './InfoPanel';
 import { SphereView } from './SphereView';
 import { Helper } from '../Helper';
-import Preload from 'react-preload'
+import Preload from 'react-preload';
 import csvToJSON from "./csvToJSON";
-import {Innovacio} from "./Innovacio"
+import { Innovacio } from './Innovacio';
+import { MosaicGallery } from './MosaicGallery'
 
 
 export const Home=()=>{
@@ -122,18 +123,34 @@ export const Home=()=>{
 
                 <InfoPanel id="else2" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
-                <div id="innovacio" style={{margin:'0 0 1rem 0'}}>
-                    <h2 style={{textAlign:'center'}}>Innovációk:</h2>
+                <div id="innovacio" style={{margin:'0 0 2rem 0'}}>
+                    <h2 style={{textAlign:'center',marginBottom:'0'}}>Innovációk:</h2>
                     <Innovacio kepek={innovacioImages} />
                 </div>
 
-                <div className={'panorama-container-container'}>
+                {/* <div className={'panorama-container-container'}>
                     <h2>Ezeknek is kelleni fog majd egy külön szekció:</h2>
                     <SphereView id="1" image={Helper.getMODI(require('./assets/pano1.jpg'),require('./assets/pano1.jpg'))} />
                     <SphereView id="2" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} />
-                </div>
+                </div> */}
+                <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
+                    <InfoPanel id="less-be-hozzank" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Less be hozzánk!" text={<>
+                        <p style={{textAlign:'center'}}><b>Esetleg leírás az általános sulis panorámákról</b></p>
+                        <SphereView extraContainer={true} id="1" image={Helper.getMODI(require('./assets/pano1.jpg'),require('./assets/pano1.jpg'))} />
+                        <SphereView extraContainer={true} id="2" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} />
+                    </>} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                </MyParallax>
 
-                <CollectData bgimage={images.head} />
+                <InfoPanel id="mosaic1" type="mosaicGallery" title="Custom mozaik" images={[
+                    require("./assets/mozdony.jpg"),
+                    require("./assets/head.jpg"),
+                    require("./assets/eszt2.jpg"),
+                    require("./assets/mozdony.jpg"),
+                    require("./assets/eszt2.jpg"),
+                    require("./assets/head.jpg")
+                ]}></InfoPanel>
+
+                <CollectData bgimage={images.head} direction={"column"} />
             </>
         </Preload>
 

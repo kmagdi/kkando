@@ -38,15 +38,22 @@ export const DetailDualis=(props)=>{
     if(!props.failed){
         element = (
             <>
-                <FullscreenBanner bgimage={images.head} title={props.adatok.nev} image={images.logo} />
+                <FullscreenBanner bgimage={images.head} title={
+                    <>
+                        <span>{props.adatok.nev}</span><br/>
+                        <a href={props.adatok.link} target="_blank" rel="noopener noreferrer"><small>{'Ugrás ' + (Helper.isVowel(String(props.adatok.nev).charAt(0))?'az':'a') + ' ' + props.adatok.nev + ' honlapjára...'}</small></a>
+                    </>
+                } image={images.logo} />
+                
+                <InfoPanel id="text1" type="sideBySide" title={"Cím1"} text={props.adatok.text1} image={kep('kep1.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="gyakorlat" type="sideBySide" title={"Something"} text={
-                    <React.Fragment>
-                        <span>{props.adatok.text1}</span>
-                        <br/>
-                        <a href={props.adatok.link} target="_blank" rel="noopener noreferrer" className="darklink">honlap</a>
-                    </React.Fragment>
-                } image={images.head} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="text2" type="sideBySide" title={"Cím2"} text={props.adatok.text2} image={kep('kep2.jpg')} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
+                <InfoPanel id="text3" type="sideBySide" title={"Cím3"} text={props.adatok.text3} image={kep('kep3.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
+                <InfoPanel id="text4" type="sideBySide" title={"Cím4"} text={props.adatok.text4} image={kep('kep4.jpg')} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
+                <InfoPanel id="text5" type="sideBySide" title={"Cím5"} text={props.adatok.text5} image={kep('kep5.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
                 {(props.adatok.kod===undefined)?null:<CollectData bgimage={images.head} />}
             </>
