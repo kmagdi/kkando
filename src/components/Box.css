@@ -28,7 +28,6 @@
     padding:1rem;
     border-radius: 1rem;
     overflow:hidden;
-    /*transition:box-shadow 0.25s;*/
 }
 .react-card-front{
     background-image:url('./assets/card-back.png');

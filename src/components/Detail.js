@@ -7,7 +7,6 @@ import CollectData from './CollectData';
 import { MyParallax } from './MyParallax';
 import { ImageCarousel } from './ImageCarousel';
 import Preload from 'react-preload';
-import { logDOM } from '@testing-library/react';
 
 export const Detail=(props)=>{
     Helper.scrollToTop();
@@ -108,7 +107,7 @@ export const Detail=(props)=>{
                                     <React.Fragment key={i}>
                                         {//(index+1)}. videó: <a href={i} target="_blank" rel="noopener noreferrer">{i}</a><br/>
                                         }
-                                        <iframe className="yt-video" width="560" height="315" src={"https://www.youtube.com/embed/" + i.substring(i.lastIndexOf('/'))} frameBorder="0" allow="clipboard-write; encrypted-media" allowFullScreen></iframe>
+                                        <iframe className="yt-video" width="560" height="315" src={"https://www.youtube.com/embed" + i.substring(i.lastIndexOf('/'))} frameBorder="0" allow="clipboard-write; encrypted-media" title={'YouTube videó (' + i.substring(i.lastIndexOf('/')+1) + ')'} allowFullScreen></iframe>
                                     </React.Fragment>
                                 );
                             })

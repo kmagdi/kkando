@@ -121,7 +121,7 @@ export const InfoPanel = (props) => {
             break;
         case 'mosaicGallery':
             element = (
-                <MosaicGallery animRef={sectionRef} id={props.id} className={rowClass} title={props.title} images={props.images}></MosaicGallery>
+                <MosaicGallery animRef={sectionRef} id={props.id} className={rowClass} title={props.title} images={props.images} titles={props.titles}></MosaicGallery>
             );
             break;
         case 'videoBg':

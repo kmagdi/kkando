@@ -11,6 +11,7 @@ import Preload from 'react-preload';
 import csvToJSON from "./csvToJSON";
 import { Innovacio } from './Innovacio';
 import { MosaicGallery } from './MosaicGallery'
+import { Buszke } from './Buszke';
 
 
 export const Home=()=>{
@@ -48,19 +49,18 @@ export const Home=()=>{
                 },[])
             setDualLoaded(true)
         }
-
         // innovacios kép betöltés
-      if(!innovacioLoaded){
-        const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/innovacio.csv"
-        fetch(url)           
-            .then(resp=>resp.text())
-            .then(text=>{
-                const adatokJSON=csvToJSON(text, ';')
-                const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
-                setInnovacioCsvData(filtered)
-            },[])
-        setInnovacioLoaded(true)
-    }
+        if(!innovacioLoaded){
+            const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/innovacio.csv"
+            fetch(url)           
+                .then(resp=>resp.text())
+                .then(text=>{
+                    const adatokJSON=csvToJSON(text, ';')
+                    const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod!=="")
+                    setInnovacioCsvData(filtered)
+                },[])
+            setInnovacioLoaded(true)
+        }
 
     })
       
@@ -110,7 +110,7 @@ export const Home=()=>{
                     <MyCarousel kepek={carouselImages} />
                 </div>
 
-                <InfoPanel id="buszke" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
+                <InfoPanel id="sth" className="sidebyside-margins" type="sideBySide" title="Ide kell még valami" text="Nem tudom lenne-e ide még tartalom, de valami kellene, hogy legyen egy kis elválasztás a fent meg az alul lévő panel között... Másik mozaik az már túl hosszú lenne, az mindenképpen az aljára kell" image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
                 <div id="dualis" className="row justify-content-center">
                     <CarouselDualis kepek={dualImages} />
@@ -121,10 +121,8 @@ export const Home=()=>{
                     <InfoPanel id="else1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax> */}
 
-                <InfoPanel id="else2" className="sidebyside-margins" type="sideBySide" title="Amikre büszkék vagyunk" text="Ez nem feltétlen így lesz, csak egyelőre így lett berakva, hogy legalább azt lássuk, hogy hol fog elhelyezkedni ez a szekció." reverse={true} image={images.head} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
-
                 <div id="innovacio" style={{margin:'0 0 2rem 0'}}>
-                    <h2 style={{textAlign:'center',marginBottom:'0'}}>Innovációk:</h2>
+                    <h2 style={{textAlign:'center',margin:'2rem 0 0 0'}}>Innovációk:</h2>
                     <Innovacio kepek={innovacioImages} />
                 </div>
 
@@ -141,14 +139,7 @@ export const Home=()=>{
                     </>} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
 
-                <InfoPanel id="mosaic1" type="mosaicGallery" title="Custom mozaik" images={[
-                    require("./assets/mozdony.jpg"),
-                    require("./assets/head.jpg"),
-                    require("./assets/eszt2.jpg"),
-                    require("./assets/mozdony.jpg"),
-                    require("./assets/eszt2.jpg"),
-                    require("./assets/head.jpg")
-                ]}></InfoPanel>
+                <Buszke></Buszke>
 
                 <CollectData bgimage={images.head} direction={"column"} />
             </>

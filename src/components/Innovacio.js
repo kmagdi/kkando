@@ -22,7 +22,7 @@ export const Innovacio=(props)=>{
                             </div>              
                         </div>*/
                         <Box key={index} hatlap={
-                            <img src={require('./assets/innovacio/' + i[1].kod + '/logo.png')} alt="kep1" style={{width:"50%",borderRadius:'50%'}} />
+                            <img src={require('./assets/innovacio/' + i[1].kod + '/logo.png')} alt="kep1" style={{width:"50%"}} />
                         } id={"box"+index} adatok={
                             <React.Fragment>
                                 <h2>{i[1].nev}</h2>
