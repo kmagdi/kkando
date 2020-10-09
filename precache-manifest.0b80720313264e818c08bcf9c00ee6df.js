@@ -1,31 +1,39 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "b2b04324b818572f1385a8c075741625",
+    "revision": "9566e4ea748bc752cf3436442f657559",
     "url": "/index.html"
   },
   {
-    "revision": "7407c5396f349b745233",
+    "revision": "cddbf6a2ddf0e8c4a564",
     "url": "/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "8a678bd8148c936707dc",
-    "url": "/static/css/main.888d1350.chunk.css"
+    "revision": "70b32d3624b4c9e19b75",
+    "url": "/static/css/main.ae469352.chunk.css"
   },
   {
-    "revision": "7407c5396f349b745233",
-    "url": "/static/js/2.dbdedc36.chunk.js"
+    "revision": "cddbf6a2ddf0e8c4a564",
+    "url": "/static/js/2.f69a7db0.chunk.js"
   },
   {
     "revision": "99b8abf64e1fcf3bee4aa2b597af6fe0",
-    "url": "/static/js/2.dbdedc36.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.f69a7db0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "8a678bd8148c936707dc",
-    "url": "/static/js/main.b10271b1.chunk.js"
+    "revision": "70b32d3624b4c9e19b75",
+    "url": "/static/js/main.a0c7dafb.chunk.js"
   },
   {
     "revision": "7797d651da93de8b8058",
     "url": "/static/js/runtime-main.6ad499f6.js"
+  },
+  {
+    "revision": "96a09e8487d4a80ac3e33b5762b6c568",
+    "url": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg"
+  },
+  {
+    "revision": "d73a4750ad3daf163f2b2549a5c4ce54",
+    "url": "/static/media/LOGO_Mercedes.d73a4750.pdf"
   },
   {
     "revision": "d86c547b80999c201be1240787f01272",
@@ -180,6 +188,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/T9_mobile.20258bf3.jpg"
   },
   {
+    "revision": "a6adce102acf7127c229af8e2e33270f",
+    "url": "/static/media/_logo.a6adce10.png"
+  },
+  {
     "revision": "44abb8c2aefd7e3e6923756df5c311aa",
     "url": "/static/media/card-back.44abb8c2.png"
   },
@@ -268,6 +280,18 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/head.255c9cda.jpg"
   },
   {
+    "revision": "33540febdbf8dc70ac5f022df18310ed",
+    "url": "/static/media/head.33540feb.jpg"
+  },
+  {
+    "revision": "3a5cf930edf085d1341d5534d589158e",
+    "url": "/static/media/head.3a5cf930.jpg"
+  },
+  {
+    "revision": "4c81040b17abfc9a2384e36355a12fc4",
+    "url": "/static/media/head.4c81040b.jpg"
+  },
+  {
     "revision": "863333ad49b6673daba7c14664a3bb8f",
     "url": "/static/media/head.863333ad.jpg"
   },
@@ -324,10 +348,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/head.f91c98cf.jpg"
   },
   {
-    "revision": "fb5fcc9c4fe3a8c34ba27f19eb7bac20",
-    "url": "/static/media/head.fb5fcc9c.jpg"
-  },
-  {
     "revision": "fe2ce265052f18bde95db4a185887be6",
     "url": "/static/media/head.fe2ce265.jpg"
   },
@@ -372,8 +392,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/head_mobile.8a45e378.jpg"
   },
   {
+    "revision": "8b27daed3e5cddafa081076d5349e8ea",
+    "url": "/static/media/head_mobile.8b27daed.jpg"
+  },
+  {
     "revision": "8fa71759f1f771401054570ed98bf231",
     "url": "/static/media/head_mobile.8fa71759.jpg"
+  },
+  {
+    "revision": "a29e81b4190cc6b18e73522fab64e74d",
+    "url": "/static/media/head_mobile.a29e81b4.jpg"
   },
   {
     "revision": "a7dc753de541196a313b0a1a7ffb2302",
@@ -396,12 +424,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/head_mobile.d2025820.jpg"
   },
   {
-    "revision": "e99b22327815de29cea13cbc27a930c5",
-    "url": "/static/media/head_mobile.e99b2232.jpg"
+    "revision": "e93f5fca894d39540d73ffe8149850fd",
+    "url": "/static/media/head_mobile.e93f5fca.jpg"
   },
   {
-    "revision": "fb5fcc9c4fe3a8c34ba27f19eb7bac20",
-    "url": "/static/media/head_mobile.fb5fcc9c.jpg"
+    "revision": "e99b22327815de29cea13cbc27a930c5",
+    "url": "/static/media/head_mobile.e99b2232.jpg"
   },
   {
     "revision": "a0156b0b38d79682830c5fabe4bc389b",
@@ -422,6 +450,74 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "517347a0ed8cc1a352182d0b5e9d45b7",
     "url": "/static/media/ismeretek_mobile.517347a0.jpg"
+  },
+  {
+    "revision": "a74870aefe9545d0ba34f54979106501",
+    "url": "/static/media/kep1.a74870ae.jpg"
+  },
+  {
+    "revision": "ae432a04ba31ea39944c068d1c5754e0",
+    "url": "/static/media/kep1.ae432a04.jpg"
+  },
+  {
+    "revision": "f1e430e8e43ec6477cde2d393094c035",
+    "url": "/static/media/kep1.f1e430e8.jpg"
+  },
+  {
+    "revision": "4ac9311c72b4611de49d639c9e50fc8d",
+    "url": "/static/media/kep2.4ac9311c.jpg"
+  },
+  {
+    "revision": "c991acd9efcbf4267c2ed983af718260",
+    "url": "/static/media/kep2.c991acd9.jpg"
+  },
+  {
+    "revision": "f0cb0fd2704606f505b88a2c8029e49c",
+    "url": "/static/media/kep2.f0cb0fd2.jpg"
+  },
+  {
+    "revision": "3a5cf930edf085d1341d5534d589158e",
+    "url": "/static/media/kep3.3a5cf930.jpg"
+  },
+  {
+    "revision": "55e33b77fd2fa5bc56ff6b950272a431",
+    "url": "/static/media/kep3.55e33b77.jpg"
+  },
+  {
+    "revision": "b15d9c61951c7f55db8afb3f24e25f5a",
+    "url": "/static/media/kep3.b15d9c61.jpg"
+  },
+  {
+    "revision": "365ffaf83faa01eb076b535099d9916b",
+    "url": "/static/media/kep4.365ffaf8.jpg"
+  },
+  {
+    "revision": "6b09cea76f8f27ccc93c915fc2c64f00",
+    "url": "/static/media/kep4.6b09cea7.jpg"
+  },
+  {
+    "revision": "7a41fbd80b26a8161eae735503e3a1a2",
+    "url": "/static/media/kep4.7a41fbd8.jpg"
+  },
+  {
+    "revision": "5e506388ccbda969e91ba0fbf471eee6",
+    "url": "/static/media/kep5.5e506388.jpg"
+  },
+  {
+    "revision": "a5dbd9376702dd9d7a23cd653a5571d3",
+    "url": "/static/media/kep5.a5dbd937.jpg"
+  },
+  {
+    "revision": "edccf2e84afde4c953f0609de8013aef",
+    "url": "/static/media/kep5.edccf2e8.jpg"
+  },
+  {
+    "revision": "b7b1621cd5418cdb1e84dc4f80b6a30b",
+    "url": "/static/media/kep6.b7b1621c.jpg"
+  },
+  {
+    "revision": "232fefc0806c6bc0a8ff12444b537351",
+    "url": "/static/media/kep7.232fefc0.jpg"
   },
   {
     "revision": "5107aa7215dabc86faac0a89d1f42bab",
@@ -448,6 +544,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/loading.a6e0a35b.gif"
   },
   {
+    "revision": "572b177ec3476fdecf8ee62485e39866",
+    "url": "/static/media/logo.572b177e.png"
+  },
+  {
+    "revision": "5c6e6be608ae95cdb6f4196680b6971f",
+    "url": "/static/media/logo.5c6e6be6.png"
+  },
+  {
     "revision": "711f29fa14b9867afa3468ad018fc995",
     "url": "/static/media/logo.711f29fa.png"
   },
@@ -456,8 +560,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/logo.779122ab.png"
   },
   {
-    "revision": "aa0753c2ac81306c2defd4232a79d337",
-    "url": "/static/media/logo.aa0753c2.png"
+    "revision": "d555c5ff1da688a951b278c2631bec02",
+    "url": "/static/media/logo.d555c5ff.png"
+  },
+  {
+    "revision": "e654b2f1557b924de28f292c41c489e1",
+    "url": "/static/media/logo.e654b2f1.png"
+  },
+  {
+    "revision": "9e06358b34d21c373f689c4b07eb328d",
+    "url": "/static/media/mag-svg.9e06358b.svg"
   },
   {
     "revision": "2cec13b5d88c8acb1c78d09f2ffa7829",
