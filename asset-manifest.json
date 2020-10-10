@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.4e5aa511.chunk.css",
-    "main.js": "/static/js/main.fe33343c.chunk.js",
-    "main.js.map": "/static/js/main.fe33343c.chunk.js.map",
+    "main.js": "/static/js/main.6cc03c29.chunk.js",
+    "main.js.map": "/static/js/main.6cc03c29.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.12aac28b.chunk.js": "/static/js/2.12aac28b.chunk.js",
     "static/js/2.12aac28b.chunk.js.map": "/static/js/2.12aac28b.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8f9761ad69c52d2eaeafc8f082c3135f.js": "/precache-manifest.8f9761ad69c52d2eaeafc8f082c3135f.js",
+    "precache-manifest.b6267ccc15ad32740428cca7a76e3fa6.js": "/precache-manifest.b6267ccc15ad32740428cca7a76e3fa6.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.4e5aa511.chunk.css.map": "/static/css/main.4e5aa511.chunk.css.map",
@@ -71,12 +71,12 @@
     "static/media/head_mobile.jpg": "/static/media/head_mobile.e99b2232.jpg",
     "static/media/ismeretek.jpg": "/static/media/ismeretek.fe27b125.jpg",
     "static/media/ismeretek_mobile.jpg": "/static/media/ismeretek_mobile.517347a0.jpg",
-    "static/media/kep1.jpg": "/static/media/kep1.f1e430e8.jpg",
-    "static/media/kep2.jpg": "/static/media/kep2.f0cb0fd2.jpg",
-    "static/media/kep3.jpg": "/static/media/kep3.b15d9c61.jpg",
-    "static/media/kep4.jpg": "/static/media/kep4.7a41fbd8.jpg",
-    "static/media/kep5.jpg": "/static/media/kep5.edccf2e8.jpg",
-    "static/media/kep6.jpg": "/static/media/kep6.b7b1621c.jpg",
+    "static/media/kep1.jpg": "/static/media/kep1.f57130ed.jpg",
+    "static/media/kep2.jpg": "/static/media/kep2.e22248bc.jpg",
+    "static/media/kep3.jpg": "/static/media/kep3.86e9055b.jpg",
+    "static/media/kep4.jpg": "/static/media/kep4.92408bd8.jpg",
+    "static/media/kep5.jpg": "/static/media/kep5.f0e514ee.jpg",
+    "static/media/kep6.jpg": "/static/media/kep6.4ad8fc23.jpg",
     "static/media/kep7.jpg": "/static/media/kep7.232fefc0.jpg",
     "static/media/kinek.jpg": "/static/media/kinek.b85adc1d.jpg",
     "static/media/kinek_mobile.jpg": "/static/media/kinek_mobile.f41dc1f5.jpg",
@@ -114,6 +114,6 @@
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.12aac28b.chunk.js",
     "static/css/main.4e5aa511.chunk.css",
-    "static/js/main.fe33343c.chunk.js"
+    "static/js/main.6cc03c29.chunk.js"
   ]
 }
