@@ -45,15 +45,15 @@ export const DetailDualis=(props)=>{
                     </>
                 } image={images.logo} />
                 
-                <InfoPanel id="text1" type="sideBySide" title={"Cím1"} text={props.adatok.text1} image={kep('kep1.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="text1" type="sideBySide" title={props.adatok.text1}  image={kep('kep1.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="text2" type="sideBySide" title={"Cím2"} text={props.adatok.text2} image={kep('kep2.jpg')} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="text2" type="sideBySide"  text={props.adatok.text2} image={kep('kep2.jpg')} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="text3" type="sideBySide" title={"Cím3"} text={props.adatok.text3} image={kep('kep3.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="text3" type="sideBySide"  text={props.adatok.text3} image={kep('kep3.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="text4" type="sideBySide" title={"Cím4"} text={props.adatok.text4} image={kep('kep4.jpg')} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="text4" type="sideBySide"  text={props.adatok.text4} image={kep('kep4.jpg')} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="text5" type="sideBySide" title={"Cím5"} text={props.adatok.text5} image={kep('kep5.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="text5" type="sideBySide"  text={props.adatok.text5} image={kep('kep5.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
                 {(props.adatok.kod===undefined)?null:<CollectData bgimage={images.head} />}
             </>
