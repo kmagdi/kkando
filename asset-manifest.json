@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4e5aa511.chunk.css",
-    "main.js": "/static/js/main.f24b2445.chunk.js",
-    "main.js.map": "/static/js/main.f24b2445.chunk.js.map",
+    "main.js": "/static/js/main.97a03933.chunk.js",
+    "main.js.map": "/static/js/main.97a03933.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.7a5fa7e6.chunk.js": "/static/js/2.7a5fa7e6.chunk.js",
-    "static/js/2.7a5fa7e6.chunk.js.map": "/static/js/2.7a5fa7e6.chunk.js.map",
+    "static/js/2.cab0b84d.chunk.js": "/static/js/2.cab0b84d.chunk.js",
+    "static/js/2.cab0b84d.chunk.js.map": "/static/js/2.cab0b84d.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b98cf34c83896c1c636f5e48c7c0dc86.js": "/precache-manifest.b98cf34c83896c1c636f5e48c7c0dc86.js",
+    "precache-manifest.dac386015a71e743e5aa78e1ddaa391d.js": "/precache-manifest.dac386015a71e743e5aa78e1ddaa391d.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.4e5aa511.chunk.css.map": "/static/css/main.4e5aa511.chunk.css.map",
-    "static/js/2.7a5fa7e6.chunk.js.LICENSE.txt": "/static/js/2.7a5fa7e6.chunk.js.LICENSE.txt",
+    "static/js/2.cab0b84d.chunk.js.LICENSE.txt": "/static/js/2.cab0b84d.chunk.js.LICENSE.txt",
     "static/media/Kesz Ipari Gyártó_logo.jpg": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg",
     "static/media/LOGO_Mercedes.pdf": "/static/media/LOGO_Mercedes.d73a4750.pdf",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
@@ -87,7 +87,9 @@
     "static/media/makerspace.jpg": "/static/media/makerspace.cb0344da.jpg",
     "static/media/makerspace_mobile.jpg": "/static/media/makerspace_mobile.0e8a7ddc.jpg",
     "static/media/mitcsinal.jpg": "/static/media/mitcsinal.fad497a8.jpg",
+    "static/media/mitcsinal.JPG": "/static/media/mitcsinal.ad75605b.JPG",
     "static/media/mitcsinal_mobile.jpg": "/static/media/mitcsinal_mobile.ef0d0eb1.jpg",
+    "static/media/mitcsinal_mobile.JPG": "/static/media/mitcsinal_mobile.ad75605b.JPG",
     "static/media/ml-omv-1.jpg": "/static/media/ml-omv-1.7ffe4941.jpg",
     "static/media/mozaik1.jpg": "/static/media/mozaik1.33e52695.jpg",
     "static/media/mozaik1_mobile.jpg": "/static/media/mozaik1_mobile.5710c67f.jpg",
@@ -113,8 +115,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.7a5fa7e6.chunk.js",
+    "static/js/2.cab0b84d.chunk.js",
     "static/css/main.4e5aa511.chunk.css",
-    "static/js/main.f24b2445.chunk.js"
+    "static/js/main.97a03933.chunk.js"
   ]
 }

@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "80ffacb8cb050cec0bf51ed69d0e14ad",
+    "revision": "e7833a7bd01cc8d27bcea3c22872c50a",
     "url": "/index.html"
   },
   {
-    "revision": "75e926ca26e16c29d5e8",
+    "revision": "6faabdedd1cfd91729de",
     "url": "/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "fe300d30c9fe8b16b5ba",
+    "revision": "210102cf7fc62646d23c",
     "url": "/static/css/main.4e5aa511.chunk.css"
   },
   {
-    "revision": "75e926ca26e16c29d5e8",
-    "url": "/static/js/2.7a5fa7e6.chunk.js"
+    "revision": "6faabdedd1cfd91729de",
+    "url": "/static/js/2.cab0b84d.chunk.js"
   },
   {
     "revision": "a3d5da51d8489a02931a36aa8a33f4e5",
-    "url": "/static/js/2.7a5fa7e6.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.cab0b84d.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "fe300d30c9fe8b16b5ba",
-    "url": "/static/js/main.f24b2445.chunk.js"
+    "revision": "210102cf7fc62646d23c",
+    "url": "/static/js/main.97a03933.chunk.js"
   },
   {
     "revision": "7797d651da93de8b8058",
@@ -468,6 +468,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/ismeretek.a0156b0b.jpg"
   },
   {
+    "revision": "ae73b8832240767b7a15ac13a1ccd663",
+    "url": "/static/media/ismeretek.ae73b883.jpg"
+  },
+  {
     "revision": "d868b566dd495510a7c5b56e0ddef97b",
     "url": "/static/media/ismeretek.d868b566.jpg"
   },
@@ -506,6 +510,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "9b2719c55bbd7c5d9ee2c1b3650dfd9a",
     "url": "/static/media/ismeretek_mobile.9b2719c5.jpg"
+  },
+  {
+    "revision": "ae73b8832240767b7a15ac13a1ccd663",
+    "url": "/static/media/ismeretek_mobile.ae73b883.jpg"
   },
   {
     "revision": "d868b566dd495510a7c5b56e0ddef97b",
@@ -600,6 +608,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/kinek.5107aa72.jpg"
   },
   {
+    "revision": "5470fe148c0d763f039e8794aa5bc2cf",
+    "url": "/static/media/kinek.5470fe14.jpg"
+  },
+  {
     "revision": "555bce5a2d590d388bd36a2213bdd126",
     "url": "/static/media/kinek.555bce5a.jpg"
   },
@@ -634,6 +646,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4c7bc02e7b8d63bac56eb4255d9d927f",
     "url": "/static/media/kinek_mobile.4c7bc02e.jpg"
+  },
+  {
+    "revision": "5470fe148c0d763f039e8794aa5bc2cf",
+    "url": "/static/media/kinek_mobile.5470fe14.jpg"
   },
   {
     "revision": "64399fe7e3bc1b77b7ee20148037bbf6",
@@ -724,6 +740,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/mitcsinal.a40bd48d.jpg"
   },
   {
+    "revision": "ad75605b6cf4a51dcc285affa19eb992",
+    "url": "/static/media/mitcsinal.ad75605b.JPG"
+  },
+  {
     "revision": "ef0d0eb10d2d3b2d3315365a50b01fb2",
     "url": "/static/media/mitcsinal.ef0d0eb1.jpg"
   },
@@ -764,6 +784,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/mitcsinal_mobile.a137e04f.jpg"
   },
   {
+    "revision": "ad75605b6cf4a51dcc285affa19eb992",
+    "url": "/static/media/mitcsinal_mobile.ad75605b.JPG"
+  },
+  {
     "revision": "ef0d0eb10d2d3b2d3315365a50b01fb2",
     "url": "/static/media/mitcsinal_mobile.ef0d0eb1.jpg"
   },
@@ -794,6 +818,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "175745684512ac9a7cbb92cdd2ad6682",
     "url": "/static/media/munkakor.17574568.jpg"
+  },
+  {
+    "revision": "503be7fbbdc200ced5ad43c7e168c6cf",
+    "url": "/static/media/munkakor.503be7fb.jpg"
   },
   {
     "revision": "628229207e3ef4de6c2115f7bea87ff6",
@@ -838,6 +866,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "4aee262bb1fdcca7db3399b7513a22b8",
     "url": "/static/media/munkakor_mobile.4aee262b.jpg"
+  },
+  {
+    "revision": "503be7fbbdc200ced5ad43c7e168c6cf",
+    "url": "/static/media/munkakor_mobile.503be7fb.jpg"
   },
   {
     "revision": "628229207e3ef4de6c2115f7bea87ff6",
