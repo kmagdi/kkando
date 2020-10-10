@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.4e5aa511.chunk.css",
-    "main.js": "/static/js/main.6cc03c29.chunk.js",
-    "main.js.map": "/static/js/main.6cc03c29.chunk.js.map",
+    "main.js": "/static/js/main.bc2a3032.chunk.js",
+    "main.js.map": "/static/js/main.bc2a3032.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.12aac28b.chunk.js": "/static/js/2.12aac28b.chunk.js",
-    "static/js/2.12aac28b.chunk.js.map": "/static/js/2.12aac28b.chunk.js.map",
+    "static/js/2.f2085fea.chunk.js": "/static/js/2.f2085fea.chunk.js",
+    "static/js/2.f2085fea.chunk.js.map": "/static/js/2.f2085fea.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.b6267ccc15ad32740428cca7a76e3fa6.js": "/precache-manifest.b6267ccc15ad32740428cca7a76e3fa6.js",
+    "precache-manifest.548e8041d61c1f72aa808d38cd688b57.js": "/precache-manifest.548e8041d61c1f72aa808d38cd688b57.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.4e5aa511.chunk.css.map": "/static/css/main.4e5aa511.chunk.css.map",
-    "static/js/2.12aac28b.chunk.js.LICENSE.txt": "/static/js/2.12aac28b.chunk.js.LICENSE.txt",
+    "static/js/2.f2085fea.chunk.js.LICENSE.txt": "/static/js/2.f2085fea.chunk.js.LICENSE.txt",
     "static/media/Kesz Ipari Gyártó_logo.jpg": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg",
     "static/media/LOGO_Mercedes.pdf": "/static/media/LOGO_Mercedes.d73a4750.pdf",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
@@ -70,7 +70,7 @@
     "static/media/head.jpg": "/static/media/head.fe2ce265.jpg",
     "static/media/head_mobile.jpg": "/static/media/head_mobile.e99b2232.jpg",
     "static/media/ismeretek.jpg": "/static/media/ismeretek.fe27b125.jpg",
-    "static/media/ismeretek_mobile.jpg": "/static/media/ismeretek_mobile.517347a0.jpg",
+    "static/media/ismeretek_mobile.jpg": "/static/media/ismeretek_mobile.ecb95f02.jpg",
     "static/media/kep1.jpg": "/static/media/kep1.f57130ed.jpg",
     "static/media/kep2.jpg": "/static/media/kep2.e22248bc.jpg",
     "static/media/kep3.jpg": "/static/media/kep3.86e9055b.jpg",
@@ -92,8 +92,8 @@
     "static/media/mozaik1_mobile.jpg": "/static/media/mozaik1_mobile.5710c67f.jpg",
     "static/media/mozdony.jpg": "/static/media/mozdony.a89ca448.jpg",
     "static/media/mozdony_mobile.jpg": "/static/media/mozdony_mobile.a9fc1cda.jpg",
-    "static/media/munkakor.jpg": "/static/media/munkakor.c5dfa706.jpg",
-    "static/media/munkakor_mobile.jpg": "/static/media/munkakor_mobile.a50bedfa.jpg",
+    "static/media/munkakor.jpg": "/static/media/munkakor.cbc49470.jpg",
+    "static/media/munkakor_mobile.jpg": "/static/media/munkakor_mobile.cbc49470.jpg",
     "static/media/nopanorama.jpg": "/static/media/nopanorama.40a59b52.jpg",
     "static/media/ocs-zrinyi-1.jpg": "/static/media/ocs-zrinyi-1.f339e679.jpg",
     "static/media/original_szakmaszerkezet.jpg": "/static/media/original_szakmaszerkezet.362a1717.jpg",
@@ -112,8 +112,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.12aac28b.chunk.js",
+    "static/js/2.f2085fea.chunk.js",
     "static/css/main.4e5aa511.chunk.css",
-    "static/js/main.6cc03c29.chunk.js"
+    "static/js/main.bc2a3032.chunk.js"
   ]
 }
