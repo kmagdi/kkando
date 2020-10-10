@@ -49,7 +49,7 @@ export const MyCarousel=(props)=>{
                         <Carousel.Caption>
                             <Link to={"/szak/" + i[1].kod}><h2>{i[1].nev}</h2></Link>
                             <Truncate lines={1} ellipsis={<>...<br /><Link to={"/szak/" + i[1].kod}><span className="read-more">Tovább</span></Link></>}>
-                                <p>{i[1].kinek}</p>
+                                <p>{i[1].leiras}</p>
                             </Truncate>
                         </Carousel.Caption>
                     </Carousel.Item>
