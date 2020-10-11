@@ -10,7 +10,6 @@ import { Helper } from '../Helper';
 import Preload from 'react-preload';
 import csvToJSON from "./csvToJSON";
 import { Innovacio } from './Innovacio';
-import { MosaicGallery } from './MosaicGallery'
 import { Buszke } from './Buszke';
 
 
@@ -74,7 +73,13 @@ export const Home=()=>{
         makerspace: Helper.getMODI(require('./assets/makerspace.jpg'),require('./assets/makerspace_mobile.jpg'))
     };
     //console.log(Object.values(images).concat(csvData.map((i)=>('./assets/' + i.kod + '.jpg'))));
-    let carouselImages = csvData.map((i)=>([Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg')),i]));
+    let carouselImages = csvData.map((i)=>{
+        try{
+            return [Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'),require('./assets/missing.jpg')),i];
+        }catch(Exception){
+            return [require('./assets/missing.jpg'),i];
+        }
+    });
     let dualImages = dualCsvData.map((i)=>([Helper.getMODI(require('./assets/dualis/' + i.kod + '/head.jpg'),require('./assets/dualis/' + i.kod + '/head_mobile.jpg')),i]));
     let innovacioImages=innovacioCsvData.map((i)=>([Helper.getMODI(require('./assets/innovacio/' + i.kod + '/head.jpg'),require('./assets/innovacio/' + i.kod + '/head_mobile.jpg')),i]));
     return(

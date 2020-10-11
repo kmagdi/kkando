@@ -13,7 +13,6 @@ export const Buszke = () => {
                 const adatokJSON=csvToJSON(text, ';')
                 const filtered=adatokJSON.filter(obj=>obj.kep!==undefined&&obj.kep!=="")
                 setBuszkeCsvData(filtered)
-                console.log(filtered);
             },[])
         setBuszkeLoaded(true)
     }

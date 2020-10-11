@@ -29,7 +29,7 @@ class CollectDataInnovacio extends Component{
                     this.setState({temaKorok:adatokJSON[0]})
                     this.setState({adatok:filtered[0]})
                 }
-                console.log("ok-collectDataInnovacio")
+                //console.log("ok-collectDataInnovacio")
         }) 
     }
    

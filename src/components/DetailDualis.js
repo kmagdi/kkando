@@ -31,7 +31,8 @@ export const DetailDualis=(props)=>{
                 }
             }
         }
-    };const images = {
+    };
+    const images = {
         head:kep('head.jpg'),
         logo:kep('logo.png')
     };
