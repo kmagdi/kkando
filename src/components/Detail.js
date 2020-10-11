@@ -17,6 +17,9 @@ export const Detail=(props)=>{
     const getAnswer = (question) => {
         return [props.temaKorok[question],props.adatok[question]];
     };
+    const addLinks = (str) => {
+        return String(str).split(' ').map((i)=>(i.startsWith('http'))?<><br/><a className="darklink" href={i} target="_blank" rel="noopener noreferrer">Kattints ide a részletek megtekintéséhez...</a></>:<>{i} </>);
+    };
     const kep = (kepnev,nomobile) => {
         if(props.adatok.kod===undefined){
             return null;
@@ -100,13 +103,11 @@ export const Detail=(props)=>{
             par2el = (
                 //<MyParallax img={par2[0]} amount={0.25} height={'40vh'} sizeToContent={true}>
                 <MyParallax img={par2} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="par2" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Videók (vagy ehelyett akikre büszkék vagyunk)" text={(props.adatok.videok==='')?<>Nincsenek videók</>:<>
+                    <InfoPanel id="par2" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Videók (vagy ehelyett interjúk)" text={(props.adatok.videok==='')?<>Nincsenek videók</>:<>
                         {
                             String(props.adatok.videok).split(' ').map((i,index)=>{
                                 return (
                                     <React.Fragment key={i}>
-                                        {//(index+1)}. videó: <a href={i} target="_blank" rel="noopener noreferrer">{i}</a><br/>
-                                        }
                                         <iframe className="yt-video" width="560" height="315" src={"https://www.youtube.com/embed" + i.substring(i.lastIndexOf('/'))} frameBorder="0" allow="clipboard-write; encrypted-media" title={'YouTube videó (' + i.substring(i.lastIndexOf('/')+1) + ')'} allowFullScreen></iframe>
                                     </React.Fragment>
                                 );
@@ -141,7 +142,7 @@ export const Detail=(props)=>{
 
                 {par2el}
 
-                <InfoPanel id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={getAnswer('gyakorlat')[1]} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található valamiben tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
                 {(props.adatok.kod===undefined)?null:<CollectData bgimage={images.head} />}
             </>

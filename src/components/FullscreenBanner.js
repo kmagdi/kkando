@@ -18,14 +18,14 @@ export const FullscreenBanner = (props)=>{
             const windowWidth = Math.round(window.innerWidth*0.9);
             if((obj.clientWidth+10) > windowWidth){
                 obj.setAttribute('style','width:' + (windowWidth) + 'px;height:auto;');
-                //console.log(1);
+                console.log(1);
             }else{
                 if(obj.clientWidth < obj.clientHeight){
                     obj.setAttribute('style','width:10rem;height:auto;');
-                    //console.log(2);
+                    console.log(2);
                 }else{
                     obj.setAttribute('style','height:10rem;width:auto;');
-                    //console.log(3);
+                    console.log(3);
                 }
             }
         }
