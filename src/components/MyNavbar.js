@@ -67,9 +67,9 @@ export const MyNavbar = () => {
                     <Link to="/#iskola"><p className="nav-link link" role="button">Iskolánkról</p></Link>
                     <Link to="/#szakok"><p className="nav-link link" role="button">Szakok...</p></Link>
                     <Link to="/#dualis"><p className="nav-link link" role="button">Duális partnerek</p></Link>
-                    <Link to="/#buszke"><p className="nav-link link" role="button">Amikre büszkék vagyunk</p></Link>
                     <Link to="/#innovacio"><p className="nav-link link" role="button">Innovációk</p></Link>
                     <Link to="/#less-be-hozzank"><p className="nav-link link" role="button">Less be hozzánk!</p></Link>
+                    <Link to="/#buszke"><p className="nav-link link" role="button">Akikre büszkék vagyunk</p></Link>
                     <Link to="/#footer"><p className="nav-link link" role="button">Elérhetőség</p></Link>
                 </Nav>
                 <Nav>
