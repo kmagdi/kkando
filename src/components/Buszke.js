@@ -18,7 +18,7 @@ export const Buszke = () => {
     }
     return (
         <>
-            <InfoPanel id="buszke" type="mosaicGallery" title="Akikre büszkék vagyunk" images={buszkeCsvData.map((i,index)=>(require('./assets/buszke/' + i.kep)))} titles={buszkeCsvData.map((i,index)=>(i.cim))}></InfoPanel>
+            <InfoPanel id="buszke" type="mosaicGallery" title="Akikre büszkék vagyunk" images={buszkeCsvData.map((i,index)=>(i.kep))} titles={buszkeCsvData.map((i,index)=>(i.cim))}></InfoPanel>
         </>
     );
 }
