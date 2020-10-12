@@ -16,6 +16,12 @@
     width:256px;
     height:256px;
 }
+@media (max-width: 991px) {
+    .mosaic-image-container{
+        width:128px;
+        height:128px;
+    }
+}
 .mosaic-image{
     width:100%;
     min-height:100%;
