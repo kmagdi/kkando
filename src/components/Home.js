@@ -116,7 +116,7 @@ export const Home=()=>{
                     <MyCarousel kepek={carouselImages} />
                 </div>
 
-                <InfoPanel id="sth" className="sidebyside-margins" type="sideBySide" title="Ide kell még valami" text="Nem tudom lenne-e ide még tartalom, de valami kellene, hogy legyen egy kis elválasztás a fent meg az alul lévő panel között... Másik mozaik az már túl hosszú lenne, az mindenképpen az aljára kell" image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
+                <InfoPanel id="sth" className="sidebyside-margins" type="sideBySide" title="Duális szakképző partnereink" text="A Kecskeméti SZC Kandó Kálmán Technikum szorosan együttműködik a duális partnerekkel, így a szakképzésről elmondható, hogy az munkaerő-piaci alapú, kereslet vezérelt szerkezetű. Ez több dologban is megnyilvánul: a beiskolázás a cégek szakképzési igényein alapul, a pályaválasztási programokban a legnagyobb cégek folyamatosan részt vesznek, a képzési program összehangolt, az oktatás folyamatát rendszeres szakmai egyeztetések kisérik." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
                 <div id="dualis" className="row justify-content-center">
                     <CarouselDualis kepek={dualImages} />

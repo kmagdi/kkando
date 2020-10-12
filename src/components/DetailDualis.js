@@ -42,7 +42,7 @@ export const DetailDualis=(props)=>{
                 <FullscreenBanner bgimage={images.head} title={
                     <>
                         <span>{props.adatok.nev}</span><br/>
-                        <a href={props.adatok.link} target="_blank" rel="noopener noreferrer"><small>{'Ugrás ' + (Helper.isVowel(String(props.adatok.nev).charAt(0))?'az':'a') + ' ' + props.adatok.nev + ' honlapjára...'}</small></a>
+                        {(props.adatok.link==='')?null:<a href={props.adatok.link} target="_blank" rel="noopener noreferrer"><small>{'Ugrás ' + (Helper.isVowel(String(props.adatok.nev).charAt(0))?'az':'a') + ' ' + props.adatok.nev + ' honlapjára...'}</small></a>}
                     </>
                 } image={images.logo} />
                 
