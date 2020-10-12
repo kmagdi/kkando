@@ -4,28 +4,28 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CNAME"
   },
   {
-    "revision": "d6d3539f6b5528d409ca805462a05d51",
+    "revision": "b5c9186a03e7cd570313df81d4895a56",
     "url": "/index.html"
   },
   {
-    "revision": "2a64d15b3bc03490305c",
+    "revision": "bd4b73b7ef47df7833f5",
     "url": "/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "cf1bf1efc02271faaa15",
-    "url": "/static/css/main.d01567f1.chunk.css"
+    "revision": "300ef833477ab0d91641",
+    "url": "/static/css/main.29965907.chunk.css"
   },
   {
-    "revision": "2a64d15b3bc03490305c",
-    "url": "/static/js/2.6e930a6d.chunk.js"
+    "revision": "bd4b73b7ef47df7833f5",
+    "url": "/static/js/2.27404461.chunk.js"
   },
   {
     "revision": "a3d5da51d8489a02931a36aa8a33f4e5",
-    "url": "/static/js/2.6e930a6d.chunk.js.LICENSE.txt"
+    "url": "/static/js/2.27404461.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "cf1bf1efc02271faaa15",
-    "url": "/static/js/main.19cd752d.chunk.js"
+    "revision": "300ef833477ab0d91641",
+    "url": "/static/js/main.65f5d7ac.chunk.js"
   },
   {
     "revision": "7797d651da93de8b8058",
@@ -986,6 +986,30 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "da337bb443b21c78b1e72d88cd65113b",
     "url": "/static/media/szr-szktv-1.da337bb4.jpg"
+  },
+  {
+    "revision": "3cd4236ad3102ec6122b4a2a3470defc",
+    "url": "/static/media/thumbnail_ml-omv-1.3cd4236a.jpg"
+  },
+  {
+    "revision": "452725fbc5445890e7c8eba42ce912d1",
+    "url": "/static/media/thumbnail_ocs-zrinyi-1.452725fb.jpg"
+  },
+  {
+    "revision": "862ac2f8e4e6eaac228077adf1c0360e",
+    "url": "/static/media/thumbnail_sp-szetv-1.862ac2f8.jpg"
+  },
+  {
+    "revision": "5e7bf738515494a9bf782604ca94a121",
+    "url": "/static/media/thumbnail_szpp-szktv-2.5e7bf738.jpg"
+  },
+  {
+    "revision": "4d5d6cf778353769ea2b87a04036d91e",
+    "url": "/static/media/thumbnail_szr-szktv-1.4d5d6cf7.jpg"
+  },
+  {
+    "revision": "ecd02b2aa21f6deb426d9b4fb64f25c3",
+    "url": "/static/media/thumbnail_vg-osztv-1.ecd02b2a.jpg"
   },
   {
     "revision": "98d40c660081493f7e09e98eab7b72cb",
