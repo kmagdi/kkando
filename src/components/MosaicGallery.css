@@ -13,6 +13,8 @@
     cursor:pointer;
     display:inline-block;
     overflow:hidden;
+    width:256px;
+    height:256px;
 }
 .mosaic-image{
     width:100%;
@@ -23,7 +25,7 @@
 .mosaic-image:hover{
     transform:scale(1.1);
 }
-@media (orientation:landscape) {
+/* @media (orientation:landscape) {
     .mosaic-image-container{
         width:15vw;
         height:15vw;
@@ -34,4 +36,4 @@
         width:20vh;
         height:20vh;
     }
-}
+} */
