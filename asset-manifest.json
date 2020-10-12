@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.067cdeb8.chunk.css",
-    "main.js": "/static/js/main.7c9ed694.chunk.js",
-    "main.js.map": "/static/js/main.7c9ed694.chunk.js.map",
+    "main.css": "/static/css/main.d01567f1.chunk.css",
+    "main.js": "/static/js/main.19cd752d.chunk.js",
+    "main.js.map": "/static/js/main.19cd752d.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
@@ -10,10 +10,10 @@
     "static/js/2.6e930a6d.chunk.js.map": "/static/js/2.6e930a6d.chunk.js.map",
     "CNAME": "/CNAME",
     "index.html": "/index.html",
-    "precache-manifest.421259f5d93f5b8549702a06a61f2d38.js": "/precache-manifest.421259f5d93f5b8549702a06a61f2d38.js",
+    "precache-manifest.db749b9e6a650e58db47c62f6f501f44.js": "/precache-manifest.db749b9e6a650e58db47c62f6f501f44.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.067cdeb8.chunk.css.map": "/static/css/main.067cdeb8.chunk.css.map",
+    "static/css/main.d01567f1.chunk.css.map": "/static/css/main.d01567f1.chunk.css.map",
     "static/js/2.6e930a6d.chunk.js.LICENSE.txt": "/static/js/2.6e930a6d.chunk.js.LICENSE.txt",
     "static/media/KSZC-Data-master.zip": "/static/media/KSZC-Data-master.884f6e8c.zip",
     "static/media/Kesz Ipari Gyártó_logo.jpg": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg",
@@ -125,7 +125,7 @@
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.6e930a6d.chunk.js",
-    "static/css/main.067cdeb8.chunk.css",
-    "static/js/main.7c9ed694.chunk.js"
+    "static/css/main.d01567f1.chunk.css",
+    "static/js/main.19cd752d.chunk.js"
   ]
 }
