@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React from 'react'
 import {MyParallax} from './MyParallax';
 
 export const FullscreenBanner = (props)=>{
@@ -7,7 +7,7 @@ export const FullscreenBanner = (props)=>{
 
     let img = new Image();
     img.src = props.image;
-    img.onload = (i) => {
+    img.onload = () => {
         window.addEventListener('resize',()=>updateImage(img.src));
         updateImage(img.src);
     }
@@ -20,7 +20,7 @@ export const FullscreenBanner = (props)=>{
             const windowH = Math.round(window.innerHeight*0.5);
             if(obj.clientWidth > obj.clientHeight){
                 obj.setAttribute('style','height:10rem;');
-                console.log('width: ' + obj.clientWidth + ', height: ' + obj.clientHeight + '\nwWidth: ' + windowW + ', wHeight: ' + windowH);
+                //console.log('width: ' + obj.clientWidth + ', height: ' + obj.clientHeight + '\nwWidth: ' + windowW + ', wHeight: ' + windowH);
                 if(obj.clientWidth > windowW){
                     obj.setAttribute('class','fade-in-img logo-maxw');
                 }else if(obj.clientHeight > windowH){
