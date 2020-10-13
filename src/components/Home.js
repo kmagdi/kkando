@@ -38,7 +38,7 @@ export const Home=()=>{
         }
         return "";
     }
-    const carouselIndex = (getCookie('prevSzak')+'');
+    const carouselIndex = (getCookie('prevSzak')===''?0:getCookie('prevSzak'));
 
     useEffect(()=>{
         // MyCarousel kép betöltés
