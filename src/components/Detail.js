@@ -88,12 +88,12 @@ export const Detail=(props)=>{
         let par1el = null;
         if(props.adatok.kod!==undefined){
             par1el = (
-                <MyParallax img={images.parallax1} amount={0.25} height={'40vh'} sizeToContent={true}>
+                <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
                     <ImageCarousel kod={props.adatok.kod} bgColor={"rgba(255,255,255,0.5)"} />
                 </MyParallax>
             );
         }
-        const par2 = images.parallax2;
+        const par2 = images.head;
         let par2el = null;
         // if(par2[1]==='vid'){
         //     par2el = (

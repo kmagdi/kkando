@@ -15,6 +15,7 @@ const initScript = ()=>{
     });
     window.addEventListener('beforeunload', () => {
         Helper.scrollToTop();
+        document.cookie = 'prevSzak=0';
     });
 }
 
