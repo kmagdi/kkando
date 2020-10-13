@@ -7,6 +7,7 @@ import CollectData from './CollectData';
 
 export const DetailInnovacio=(props)=>{
     Helper.scrollToTop();
+    document.cookie = "prevSzak=0";
     useEffect(()=>{
         Helper.scrollToTop();
     },[]);

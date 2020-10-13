@@ -10,7 +10,8 @@ class CollectDataSpec extends Component{
         this.state = {
             temaKorok:[],
             adatok:{},
-            failed:false
+            failed:false,
+            carouselIndex:0
         }
     }
     componentDidMount(){  
@@ -18,14 +19,22 @@ class CollectDataSpec extends Component{
         fetch(urlJobs)           
             .then(resp=>resp.text())
             .then(text=>{
-                const adatokJSON=csvToJSON(text, ';')
-                const filtered=adatokJSON.filter(obj=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod===this.props.id)
+                const adatokJSON=csvToJSON(text, ';');
+                //console.log(adatokJSON);
+                //const filtered=adatokJSON.filter((obj,index)=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod===this.props.id)
+                let filtered = [];
+                const _filtered=adatokJSON.forEach((obj,index)=>{
+                    if(obj.kod!==undefined&&obj.kod!=='0'&&obj.kod===this.props.id){
+                        filtered.push([index,obj]);
+                    }
+                });
                 if(filtered.length === 0){
                     this.setState({failed:true});
                 }else{
                     this.setState({failed:false});
                     this.setState({temaKorok:adatokJSON[0]})
-                    this.setState({adatok:filtered[0]})
+                    this.setState({adatok:filtered[0][1]})
+                    this.setState({carouselIndex:(filtered[0][0]-1)})
                 }
         }) 
     }
@@ -33,7 +42,7 @@ class CollectDataSpec extends Component{
 render(){
     return(
         <div>
-            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok} failed={this.state.failed} />
+            <Detail temaKorok={this.state.temaKorok} adatok={this.state.adatok} failed={this.state.failed} carouselIndex={this.state.carouselIndex} />
         </div>
     )}   
 }

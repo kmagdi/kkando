@@ -10,6 +10,7 @@ import Preload from 'react-preload';
 
 export const Detail=(props)=>{
     Helper.scrollToTop();
+    document.cookie = "prevSzak="+props.carouselIndex;
     useEffect(()=>{
         Helper.scrollToTop();
     },[]);

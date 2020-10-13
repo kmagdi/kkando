@@ -11,7 +11,7 @@ import Preload from 'react-preload';
 import csvToJSON from "./csvToJSON";
 import { Innovacio } from './Innovacio';
 import { Buszke } from './Buszke';
-
+import { useLocation } from 'react-router';
 
 export const Home=()=>{
 
@@ -21,6 +21,24 @@ export const Home=()=>{
     const[dualLoaded,setDualLoaded]=useState(false)
     const [innovacioCsvData,setInnovacioCsvData]=useState([])
     const[innovacioLoaded,setInnovacioLoaded]=useState(false)
+
+    // thank w3
+    function getCookie(cname) {
+        var name = cname + "=";
+        var decodedCookie = decodeURIComponent(document.cookie);
+        var ca = decodedCookie.split(';');
+        for(var i = 0; i <ca.length; i++) {
+            var c = ca[i];
+            while (c.charAt(0) == ' ') {
+                c = c.substring(1);
+            }
+            if (c.indexOf(name) == 0) {
+                return c.substring(name.length, c.length);
+            }
+        }
+        return "";
+    }
+    const carouselIndex = (getCookie('prevSzak')+'');
 
     useEffect(()=>{
         // MyCarousel kép betöltés
@@ -60,9 +78,12 @@ export const Home=()=>{
                 },[])
             setInnovacioLoaded(true)
         }
-
-    })
-      
+        //document.cookie = 'prevSzak=0';
+    });
+    
+    const useQuery = () => {
+        return new URLSearchParams(useLocation().search);
+    };
 
     const images = {
         head: Helper.getMODI(require('./assets/head.jpg'),require('./assets/head_mobile.jpg')),
@@ -113,7 +134,7 @@ export const Home=()=>{
                 <InfoPanel id="jovo" className="sidebyside-margins" type="sideBySide" title="A jövő" text="A technikai- technológiai fejlődés, a digitalizáció, a az ipar 4.0 technikai kihívásai a szakmai képzés számára is folyamatos kihívást jelentenek, melynek igyekszünk folyamatosan megfelelni. Ehhez jelenleg is folyik a szakképzés tartalmi és módszertani átalakítása, valamint az infrastrukturális feltételek folyamatos fejlesztése. A Kandó átfogó korszerűsítés és bővítés előtt áll, melynek előkészítő munkálatai már elkezdődtek. A Kandó mindig különös gondot fordított a szakmai oktatás mellett a kultúra közvetítésére, a tanulók egyéni képességeinek fejlesztésére, a tehetséggondozásra. Tanulóink kiemelkedő országos versenyeredményeire különösen büszkék vagyunk." reverse={true} image={images.makerspace} from={{opacity:0,x:-200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
                 <div id="szakok" className="row justify-content-center">
-                    <MyCarousel kepek={carouselImages} />
+                    <MyCarousel startIndex={carouselIndex} kepek={carouselImages} />
                 </div>
 
                 <InfoPanel id="sth" className="sidebyside-margins" type="sideBySide" title="Duális szakképző partnereink" text="A Kecskeméti SZC Kandó Kálmán Technikum szorosan együttműködik a duális partnerekkel, így a szakképzésről elmondható, hogy az munkaerő-piaci alapú, kereslet vezérelt szerkezetű. Ez több dologban is megnyilvánul: a beiskolázás a cégek szakképzési igényein alapul, a pályaválasztási programokban a legnagyobb cégek folyamatosan részt vesznek, a képzési program összehangolt, az oktatás folyamatát rendszeres szakmai egyeztetések kisérik." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />

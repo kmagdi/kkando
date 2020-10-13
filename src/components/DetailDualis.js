@@ -7,6 +7,7 @@ import CollectData from './CollectData';
 
 export const DetailDualis=(props)=>{
     Helper.scrollToTop();
+    document.cookie = "prevSzak=0";
     useEffect(()=>{
         Helper.scrollToTop();
     },[]);

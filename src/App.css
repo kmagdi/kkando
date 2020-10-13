@@ -71,7 +71,7 @@ a:hover, .link:hover{
     height:auto;
 }
 #welcome-text, #welcome-title{
-    text-shadow:0 0 0.75rem rgba(0,0,0,0.75);
+    text-shadow:0 0 0.6rem rgba(0,0,0,1);
 }
 #welcome-text{
     margin:1rem 0 0 0;

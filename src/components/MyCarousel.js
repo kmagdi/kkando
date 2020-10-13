@@ -39,7 +39,7 @@ export const MyCarousel=(props)=>{
         addTooltips();
     })
     return (
-        <Carousel id="szakok" className="justify-content-center szakmagaleria ind" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
+        <Carousel/* id="szakok"*/ defaultActiveIndex={parseInt(props.startIndex)} className="justify-content-center szakmagaleria ind" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
         {
             props.kepek.map(i=>{
                 //const kep = Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'));
