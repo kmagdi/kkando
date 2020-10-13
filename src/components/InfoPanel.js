@@ -52,11 +52,13 @@ export const InfoPanel = (props) => {
     switch(props.type){
         case 'sideBySide':
             const margins = handleUndef('margin','',props.margin+'rem auto');
+            const titleExists = props.title!==undefined;
+            const textExists = props.text!==undefined;
             element = (
-                <Row id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")} style={{marginTop:margins,marginBottom:margins}}>
+                <Row id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"") + ((titleExists&&textExists)?'':' eq-sep')} style={{marginTop:margins,marginBottom:margins}}>
                     <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
-                        <h2>{props.title}</h2>
-                        <p>{props.text}</p>
+                        {(titleExists)?<h2>{props.title}</h2>:null}
+                        {(textExists)?<p>{props.text}</p>:null}
                     </Col>
                     <Col className={"info-row-kep fade-int "+props.id+(props.clickable===undefined?'':' info-row-click')} style={{backgroundImage:'url('+(props.image==='szakmaszerkezet'?require('./assets/szakmaszerkezet.jpg'):props.image)+')'}} onClick={(props.clickable===undefined?null:()=>{ window.open(props.image==='szakmaszerkezet'?require('./assets/original_szakmaszerkezet.jpg'):props.image, '_blank') })}></Col>
                 </Row>

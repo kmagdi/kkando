@@ -79,8 +79,11 @@
     }
 }
 @media (max-width: 991px) {
-    .sidebyside .info-row-szoveg{
+    .sidebyside:not(.eq-sep) .info-row-szoveg{
         margin:1rem 0.5rem 0.5rem 0.5rem !important;
+    }
+    .sidebyside.eq-sep .info-row-szoveg p{
+        margin-bottom:0.75rem !important;
     }
     .sidebyside .info-row-kep{
         margin-top:0.25rem !important;
