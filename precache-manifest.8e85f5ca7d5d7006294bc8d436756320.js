@@ -4,7 +4,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/CNAME"
   },
   {
-    "revision": "85734537cbbe81e04f2d7ca3d7284981",
+    "revision": "da3aeb1be4fe508d1967f8e4512cca8a",
     "url": "/index.html"
   },
   {
@@ -12,7 +12,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/css/2.d9ad5f5c.chunk.css"
   },
   {
-    "revision": "45f67f19e5f357232730",
+    "revision": "166d432c0eab0b85bd1e",
     "url": "/static/css/main.2073d47a.chunk.css"
   },
   {
@@ -24,8 +24,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/js/2.85dd688c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "45f67f19e5f357232730",
-    "url": "/static/js/main.536af28a.chunk.js"
+    "revision": "166d432c0eab0b85bd1e",
+    "url": "/static/js/main.d9b8d6c8.chunk.js"
   },
   {
     "revision": "7797d651da93de8b8058",
@@ -1220,8 +1220,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/static/media/sp-szetv-1.e955d4e5.jpg"
   },
   {
-    "revision": "7330dc88cc61f0f5413e3b72449be964",
-    "url": "/static/media/szakmaszerkezet.7330dc88.jpg"
+    "revision": "55271e668404aa9dee11de8009375148",
+    "url": "/static/media/szakmaszerkezet.55271e66.jpg"
   },
   {
     "revision": "be925168f7eab6b47118a7d078457115",
