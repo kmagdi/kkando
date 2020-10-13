@@ -11,7 +11,6 @@ import Preload from 'react-preload';
 import csvToJSON from "./csvToJSON";
 import { Innovacio } from './Innovacio';
 import { Buszke } from './Buszke';
-import { useLocation } from 'react-router';
 
 export const Home=()=>{
 
@@ -80,10 +79,6 @@ export const Home=()=>{
         }
         //document.cookie = 'prevSzak=0';
     });
-    
-    const useQuery = () => {
-        return new URLSearchParams(useLocation().search);
-    };
 
     const images = {
         head: Helper.getMODI(require('./assets/head.jpg'),require('./assets/head_mobile.jpg')),

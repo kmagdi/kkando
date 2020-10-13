@@ -34,20 +34,24 @@ export const DetailInnovacio=(props)=>{
         }
     };const images = {
         head:kep('head.jpg'),
-        logo:kep('logo.png')
+        logo:kep('logo.png'),
+        kep1:kep('kep1.jpg'),
+        kep2:kep('kep2.jpg'),
+        kep3:kep('kep3.jpg'),
+        kep4:kep('kep4.jpg')
     };
     if(!props.failed){
         element = (
             <>
                 <FullscreenBanner bgimage={images.head} title={props.adatok.nev} image={images.logo} />
 
-                <InfoPanel id="cim1" type="sideBySide" title={props.adatok.cim1} text={props.adatok.text1} image={images.head} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="cim1" type="sideBySide" title={props.adatok.cim1} text={props.adatok.text1} image={images.kep1} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="cim2" type="sideBySide" title={props.adatok.cim2} text={props.adatok.text2} image={images.head} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="cim2" type="sideBySide" title={props.adatok.cim2} text={props.adatok.text2} image={images.kep2} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="cim3" type="sideBySide" title={props.adatok.cim3} text={props.adatok.text3} image={images.head} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="cim3" type="sideBySide" title={props.adatok.cim3} text={props.adatok.text3} image={images.kep3} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                <InfoPanel id="cim4" type="sideBySide" title={props.adatok.cim4} text={props.adatok.text4} image={images.head} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel id="cim4" type="sideBySide" title={props.adatok.cim4} text={props.adatok.text4} image={images.kep4} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
                 {(props.adatok.kod===undefined)?null:<CollectData bgimage={images.head} />}
             </>
