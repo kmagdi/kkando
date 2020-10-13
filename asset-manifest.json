@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.2073d47a.chunk.css",
-    "main.js": "/static/js/main.d9b8d6c8.chunk.js",
-    "main.js.map": "/static/js/main.d9b8d6c8.chunk.js.map",
+    "main.css": "/static/css/main.978f728f.chunk.css",
+    "main.js": "/static/js/main.f41cfe26.chunk.js",
+    "main.js.map": "/static/js/main.f41cfe26.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
@@ -10,10 +10,10 @@
     "static/js/2.85dd688c.chunk.js.map": "/static/js/2.85dd688c.chunk.js.map",
     "CNAME": "/CNAME",
     "index.html": "/index.html",
-    "precache-manifest.8e85f5ca7d5d7006294bc8d436756320.js": "/precache-manifest.8e85f5ca7d5d7006294bc8d436756320.js",
+    "precache-manifest.d3422b8a21a90d539ec0c749fcfca779.js": "/precache-manifest.d3422b8a21a90d539ec0c749fcfca779.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.2073d47a.chunk.css.map": "/static/css/main.2073d47a.chunk.css.map",
+    "static/css/main.978f728f.chunk.css.map": "/static/css/main.978f728f.chunk.css.map",
     "static/js/2.85dd688c.chunk.js.LICENSE.txt": "/static/js/2.85dd688c.chunk.js.LICENSE.txt",
     "static/media/KSZC-Data-master.zip": "/static/media/KSZC-Data-master.884f6e8c.zip",
     "static/media/Kesz Ipari Gyártó_logo.jpg": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg",
@@ -118,7 +118,7 @@
     "static/media/parallax1.jpg": "/static/media/parallax1.7bad7113.jpg",
     "static/media/parallax2.jpg": "/static/media/parallax2.b7d43887.jpg",
     "static/media/sp-szetv-1.jpg": "/static/media/sp-szetv-1.e955d4e5.jpg",
-    "static/media/szakmaszerkezet.jpg": "/static/media/szakmaszerkezet.55271e66.jpg",
+    "static/media/szakmaszerkezet.jpg": "/static/media/szakmaszerkezet.e860becc.jpg",
     "static/media/szpp-szktv-2.jpg": "/static/media/szpp-szktv-2.be925168.jpg",
     "static/media/szr-szktv-1.jpg": "/static/media/szr-szktv-1.da337bb4.jpg",
     "static/media/thumbnail_ml-omv-1.jpg": "/static/media/thumbnail_ml-omv-1.3cd4236a.jpg",
@@ -135,7 +135,7 @@
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.85dd688c.chunk.js",
-    "static/css/main.2073d47a.chunk.css",
-    "static/js/main.d9b8d6c8.chunk.js"
+    "static/css/main.978f728f.chunk.css",
+    "static/js/main.f41cfe26.chunk.js"
   ]
 }
