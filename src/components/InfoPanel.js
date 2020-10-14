@@ -64,6 +64,31 @@ export const InfoPanel = (props) => {
                 </Row>
             );
             break;
+        case 'sideBySideLogos':
+            const margins2 = handleUndef('margin','',props.margin+'rem auto');
+            const titleExists2 = props.title!==undefined;
+            const textExists2 = props.text!==undefined;
+            element = (
+                <Row id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"") + ((titleExists2&&textExists2)?'':' eq-sep')} style={{marginTop:margins2,marginBottom:margins2}}>
+                    <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
+                        {(titleExists2)?<h2>{props.title}</h2>:null}
+                        {(textExists2)?<p>{props.text}</p>:null}
+                    </Col>
+                    <Col className={"info-row-kep fade-int "+props.id+(props.clickable===undefined?'':' info-row-click')} style={{backgroundImage:'url('+(props.image==='szakmaszerkezet'?require('./assets/szakmaszerkezet.jpg'):props.image)+')'}} onClick={(props.clickable===undefined?null:()=>{ window.open(props.image==='szakmaszerkezet'?require('./assets/original_szakmaszerkezet.jpg'):props.image, '_blank') })}>
+                        <div className="logo-container">
+                            <Row className="">
+                                <Col className="top-row" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU1/logo_128.png')} /></Col>
+                                <Col className="top-row" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU2/logo_128.png')} /></Col>
+                            </Row>
+                            <Row>
+                                <Col className="bottom-tow" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU3/logo_128.png')} /></Col>
+                                <Col className="bottom-tow" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU4/logo_128.png')} /></Col>
+                            </Row>
+                        </div>
+                    </Col>
+                </Row>
+            );
+            break;
         case 'sideBySidePanorama':
             if(props.panoimg !== null){
                 const margins2 = handleUndef('margin','',props.margin+'rem auto');
