@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.77f3fe10.chunk.css",
-    "main.js": "/static/js/main.2328835f.chunk.js",
-    "main.js.map": "/static/js/main.2328835f.chunk.js.map",
+    "main.css": "/static/css/main.8813a188.chunk.css",
+    "main.js": "/static/js/main.e5ef12a0.chunk.js",
+    "main.js.map": "/static/js/main.e5ef12a0.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.b545c4a5.chunk.js": "/static/js/2.b545c4a5.chunk.js",
-    "static/js/2.b545c4a5.chunk.js.map": "/static/js/2.b545c4a5.chunk.js.map",
+    "static/js/2.ab8b9308.chunk.js": "/static/js/2.ab8b9308.chunk.js",
+    "static/js/2.ab8b9308.chunk.js.map": "/static/js/2.ab8b9308.chunk.js.map",
     "CNAME": "/CNAME",
     "index.html": "/index.html",
-    "precache-manifest.08f3ecf6709cd9807084b0b2a6fcc0ba.js": "/precache-manifest.08f3ecf6709cd9807084b0b2a6fcc0ba.js",
+    "precache-manifest.5c7805e0c80fd83fe4779e3a50ff25d4.js": "/precache-manifest.5c7805e0c80fd83fe4779e3a50ff25d4.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.77f3fe10.chunk.css.map": "/static/css/main.77f3fe10.chunk.css.map",
-    "static/js/2.b545c4a5.chunk.js.LICENSE.txt": "/static/js/2.b545c4a5.chunk.js.LICENSE.txt",
+    "static/css/main.8813a188.chunk.css.map": "/static/css/main.8813a188.chunk.css.map",
+    "static/js/2.ab8b9308.chunk.js.LICENSE.txt": "/static/js/2.ab8b9308.chunk.js.LICENSE.txt",
     "static/media/Kesz Ipari Gyártó_logo.jpg": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg",
     "static/media/LOGO_Mercedes.pdf": "/static/media/LOGO_Mercedes.d73a4750.pdf",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
@@ -58,7 +58,8 @@
     "static/media/T9.jpg": "/static/media/T9.b050090a.jpg",
     "static/media/T9_mobile.jpg": "/static/media/T9_mobile.74b082cf.jpg",
     "static/media/_logo.png": "/static/media/_logo.a6adce10.png",
-    "static/media/Box.css": "/static/media/card-back.48099dd8.png",
+    "static/media/card-back-ms.png": "/static/media/card-back-ms.0066ccb7.png",
+    "static/media/card-back-se.png": "/static/media/card-back-se.95120900.png",
     "static/media/eszt.jpg": "/static/media/eszt.bec74eb7.jpg",
     "static/media/eszt2.jpg": "/static/media/eszt2.1ea094f5.jpg",
     "static/media/eszt2_mobile.jpg": "/static/media/eszt2_mobile.8ffe4923.jpg",
@@ -124,8 +125,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.b545c4a5.chunk.js",
-    "static/css/main.77f3fe10.chunk.css",
-    "static/js/main.2328835f.chunk.js"
+    "static/js/2.ab8b9308.chunk.js",
+    "static/css/main.8813a188.chunk.css",
+    "static/js/main.e5ef12a0.chunk.js"
   ]
 }
