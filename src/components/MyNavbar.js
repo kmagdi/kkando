@@ -3,6 +3,7 @@ import {Navbar,Nav} from 'react-bootstrap';
 //import {Link} from 'react-router-dom';
 import {NavHashLink as Link} from "react-router-hash-link"
 import './MyNavbar.css'
+import { Helper } from '../Helper';
 
 export const MyNavbar = () => {
     // lekéri milyen közel van a navbar a megadott elem aljához (0-1 közötti szám)
@@ -57,10 +58,12 @@ export const MyNavbar = () => {
             display: navbarState===0?"none":"flex"
                 }} collapseOnSelect expand="lg" variant="dark" fixed="top">
             {/*<Link to="/#home"><Navbar.Brand>*/}
-            <a href="/"><Navbar.Brand>
-                {/*<Link to="/">Kandópage</Link>*/}
-                <img src={require('./assets/logo.png')} height="30px" alt="Kandó logo" />
-            </Navbar.Brand></a>
+            <Link to="/" onClick={Helper.scrollToTop}>
+                <Navbar.Brand>
+                    {/*<Link to="/">Kandópage</Link>*/}
+                    <img src={require('./assets/logo.png')} height="30px" alt="Kandó logo" />
+                </Navbar.Brand>
+            </Link>
             <Navbar.Toggle aria-controls="responsive-navbar-nav" />
             <Navbar.Collapse id="responsive-navbar-snav">
                 <Nav className="mr-auto">

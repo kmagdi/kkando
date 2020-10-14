@@ -1,6 +1,6 @@
 export class Helper {
     static scrollToTop = () => {
-        document.getElementsByTagName('html')[0].setAttribute('smooth','false');
+        document.querySelector('html').setAttribute('smooth','false');
         window.scrollTo(0,0);
         document.body.scrollTop = 0;
         document.documentElement.scrollTop = 0;

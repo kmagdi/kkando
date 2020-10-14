@@ -23,7 +23,7 @@ class CollectDataSpec extends Component{
                 //console.log(adatokJSON);
                 //const filtered=adatokJSON.filter((obj,index)=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod===this.props.id)
                 let filtered = [];
-                const _filtered=adatokJSON.forEach((obj,index)=>{
+                /*const _filtered=*/adatokJSON.forEach((obj,index)=>{
                     if(obj.kod!==undefined&&obj.kod!=='0'&&obj.kod===this.props.id){
                         filtered.push([index,obj]);
                     }
