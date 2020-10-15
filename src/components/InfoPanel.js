@@ -55,7 +55,7 @@ export const InfoPanel = (props) => {
             const titleExists = props.title!==undefined;
             const textExists = props.text!==undefined;
             element = (
-                <Row id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"") + ((titleExists&&textExists)?'':' eq-sep')} style={{marginTop:margins,marginBottom:margins}}>
+                <Row key={props.id} id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"") + ((titleExists&&textExists)?'':' eq-sep')} style={{marginTop:margins,marginBottom:margins}}>
                     <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
                         {(titleExists)?<h2>{props.title}</h2>:null}
                         {(textExists)?<p>{props.text}</p>:null}
@@ -69,7 +69,7 @@ export const InfoPanel = (props) => {
             const titleExists2 = props.title!==undefined;
             const textExists2 = props.text!==undefined;
             element = (
-                <Row id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"") + ((titleExists2&&textExists2)?'':' eq-sep')} style={{marginTop:margins2,marginBottom:margins2}}>
+                <Row key={props.id} id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"") + ((titleExists2&&textExists2)?'':' eq-sep')} style={{marginTop:margins2,marginBottom:margins2}}>
                     <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
                         {(titleExists2)?<h2>{props.title}</h2>:null}
                         {(textExists2)?<p>{props.text}</p>:null}
@@ -77,12 +77,12 @@ export const InfoPanel = (props) => {
                     <Col className={"info-row-kep fade-int "+props.id+(props.clickable===undefined?'':' info-row-click')} style={{backgroundImage:'url('+(props.image==='szakmaszerkezet'?require('./assets/szakmaszerkezet.jpg'):props.image)+')'}} onClick={(props.clickable===undefined?null:()=>{ window.open(props.image==='szakmaszerkezet'?require('./assets/original_szakmaszerkezet.jpg'):props.image, '_blank') })}>
                         <div className="logo-container">
                             <Row className="">
-                                <Col className="top-row" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU1/logo_128.png')} /></Col>
-                                <Col className="top-row" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU2/logo_128.png')} /></Col>
+                                <Col className="top-row" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU1/logo_128.png')} alt="logo1" /></Col>
+                                <Col className="top-row" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU2/logo_128.png')} alt="logo2" /></Col>
                             </Row>
                             <Row>
-                                <Col className="bottom-tow" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU3/logo_128.png')} /></Col>
-                                <Col className="bottom-tow" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU4/logo_128.png')} /></Col>
+                                <Col className="bottom-tow" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU3/logo_128.png')} alt="logo3" /></Col>
+                                <Col className="bottom-tow" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU4/logo_128.png')} alt="logo4" /></Col>
                             </Row>
                         </div>
                     </Col>
@@ -93,13 +93,13 @@ export const InfoPanel = (props) => {
             if(props.panoimg !== null){
                 const margins2 = handleUndef('margin','',props.margin+'rem auto');
                 element = (
-                    <Row ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")} style={{marginTop:margins2,marginBottom:margins2}}>
+                    <Row key={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")} style={{marginTop:margins2,marginBottom:margins2}}>
                         <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
                             <h2>{props.title}</h2>
                             <p>{props.text}<span className="moretext">{props.moretext.map((i,index)=><React.Fragment key={'moretext'+index}><br/>{i}</React.Fragment>)}</span></p>
                         </Col>
                         <Col className={"info-row-kep info-row-panorama fade-int "+props.id}>
-                            <SphereView id="1" image={props.panoimg} />
+                            <SphereView id="1" hely="gyakorlat helyszínének" image={props.panoimg} />
                         </Col>
                     </Row>
                 );
@@ -108,7 +108,7 @@ export const InfoPanel = (props) => {
         case 'centerInfo':
             const height1 = handleUndef('height','auto',props.height);
             element = (
-                <Row ref={sectionRef} id={props.id} className={rowClass} style={{minHeight:height1}}>
+                <Row key={props.id} ref={sectionRef} id={props.id} className={rowClass} style={{minHeight:height1}}>
                     <Col className={"mobile-hidden"} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}></Col>
                     <Col lg={handleUndef('size',5,props.size)} className={"info-row-szoveg info-row-kozep row "+handleUndef('nomargin','',' m-0 p-4')} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}>
                         <div className={"col align-self-center"}>
@@ -132,7 +132,7 @@ export const InfoPanel = (props) => {
         case 'centerInfoWide':
             const height3 = handleUndef('height','auto',props.height);
             element = (
-                <Row id={props.id} className={rowClass} style={{minHeight:height3}}>
+                <Row key={props.id} id={props.id} className={rowClass} style={{minHeight:height3}}>
                     <Col className={"info-row-szoveg info-row-kozep row "+handleUndef('nomargin','',' m-0 p-4')} style={{backgroundColor:handleUndef('bgColor','',props.bgColor)}}>
                         <div className={"col align-self-center"}>
                             {props.title===undefined?null:
@@ -148,13 +148,13 @@ export const InfoPanel = (props) => {
             break;
         case 'mosaicGallery':
             element = (
-                <MosaicGallery animRef={sectionRef} id={props.id} className={rowClass} title={props.title} images={props.images} titles={props.titles}></MosaicGallery>
+                <MosaicGallery key={props.id} animRef={sectionRef} id={props.id} className={rowClass} title={props.title} images={props.images} titles={props.titles}></MosaicGallery>
             );
             break;
         case 'videoBg':
             let height2 = handleUndef('height','auto',props.height);
             element = (
-                <Row ref={sectionRef} id={props.id} className={rowClass} style={{position:'relative',minHeight:height2}}>
+                <Row key={props.id} ref={sectionRef} id={props.id} className={rowClass} style={{position:'relative',minHeight:height2}}>
                     <video
                         autoPlay
                         loop
@@ -188,7 +188,7 @@ export const InfoPanel = (props) => {
             break;
         default:
             element = (
-                <Row ref={sectionRef} className={rowClass}>
+                <Row key={props.id} ref={sectionRef} className={rowClass}>
                     <h2>{props.title}</h2>
                     <p>{props.text}</p>
                 </Row>
@@ -196,7 +196,7 @@ export const InfoPanel = (props) => {
             break;
     }
     return (
-        <React.Fragment key={props.id}>
+        <React.Fragment key={props.id+"-container"}>
             {element}
         </React.Fragment>
     );

@@ -27,16 +27,46 @@ div:not(.extra-container) .panorama-container{
     border-radius:0.75rem;
 }
 .panorama-overlay{
-    /*position:absolute;*/
-    background-color:rgba(0,0,0,0.5);
+    position:absolute;
+    background-color:black;
+    background-image:url('./assets/makerspace.jpg');
+    background-size: cover;
+    background-position: 0;
     width:100%;
     height:100%;
     z-index:1;
     cursor:pointer !important;
     transition:background-color 0.25s;
+    display:none;
 }
 .panorama-overlay:hover{
     background-color:rgba(0,0,0,0.65);
+}
+.pnlm-load-button{
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    margin:0;
+}
+.pnlm-load-button-content p{
+    text-align:center !important;
+    width:100%;
+    margin:0;
+    font-size:105%;
+    font-weight:bold;
+    align-self:center;
+    text-shadow:0 0 0.5rem rgba(0,0,0,1);
+}
+.pnlm-load-button-content{
+    width:100%;
+    height:100%;
+    color:white;
+    background-size:cover;
+    background-position:0;
+    display:flex;
+    position:absolute;
+    z-index:10;
 }
 .pnlm-about-msg{
     display:none !important;

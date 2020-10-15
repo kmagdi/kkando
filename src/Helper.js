@@ -13,5 +13,5 @@ export class Helper {
     };
     static isMobile = () => (window.innerWidth<=991);
     static getMODI = (desktopfile,mobilefile) => (this.isMobile()?mobilefile:desktopfile);
-    static isVowel = (x) => /[aáeéiíoóöőuúüűAÁEÉIÍOÓÖŐUÚÜŰ]/.test(x);
+    static isVowel = (x) => /[aáeéiíoóöőuúüűAÁEÉIÍOÓÖŐUÚÜŰ]/.test(String(x).replace('"',''));
 }
