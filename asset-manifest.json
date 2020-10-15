@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.4f89492f.chunk.css",
+    "main.css": "/static/css/main.766d7525.chunk.css",
     "main.js": "/static/js/main.dacc0e18.chunk.js",
     "main.js.map": "/static/js/main.dacc0e18.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
@@ -10,10 +10,10 @@
     "static/js/2.dd450913.chunk.js.map": "/static/js/2.dd450913.chunk.js.map",
     "CNAME": "/CNAME",
     "index.html": "/index.html",
-    "precache-manifest.d6ca30e04db6f22907edd1f545d063fa.js": "/precache-manifest.d6ca30e04db6f22907edd1f545d063fa.js",
+    "precache-manifest.efff562a2a7e6a75040ba73af6cd9dd7.js": "/precache-manifest.efff562a2a7e6a75040ba73af6cd9dd7.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
-    "static/css/main.4f89492f.chunk.css.map": "/static/css/main.4f89492f.chunk.css.map",
+    "static/css/main.766d7525.chunk.css.map": "/static/css/main.766d7525.chunk.css.map",
     "static/js/2.dd450913.chunk.js.LICENSE.txt": "/static/js/2.dd450913.chunk.js.LICENSE.txt",
     "static/media/Kesz Ipari Gyártó_logo.jpg": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg",
     "static/media/LOGO_Mercedes.pdf": "/static/media/LOGO_Mercedes.d73a4750.pdf",
@@ -128,7 +128,7 @@
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
     "static/js/2.dd450913.chunk.js",
-    "static/css/main.4f89492f.chunk.css",
+    "static/css/main.766d7525.chunk.css",
     "static/js/main.dacc0e18.chunk.js"
   ]
 }
