@@ -1,20 +1,19 @@
 {
   "files": {
     "main.css": "/static/css/main.766d7525.chunk.css",
-    "main.js": "/static/js/main.dacc0e18.chunk.js",
-    "main.js.map": "/static/js/main.dacc0e18.chunk.js.map",
+    "main.js": "/static/js/main.c9c449ec.chunk.js",
+    "main.js.map": "/static/js/main.c9c449ec.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.6ad499f6.js",
     "runtime-main.js.map": "/static/js/runtime-main.6ad499f6.js.map",
     "static/css/2.d9ad5f5c.chunk.css": "/static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.dd450913.chunk.js": "/static/js/2.dd450913.chunk.js",
-    "static/js/2.dd450913.chunk.js.map": "/static/js/2.dd450913.chunk.js.map",
-    "CNAME": "/CNAME",
+    "static/js/2.04c86d14.chunk.js": "/static/js/2.04c86d14.chunk.js",
+    "static/js/2.04c86d14.chunk.js.map": "/static/js/2.04c86d14.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.efff562a2a7e6a75040ba73af6cd9dd7.js": "/precache-manifest.efff562a2a7e6a75040ba73af6cd9dd7.js",
+    "precache-manifest.de1ca664f3021bcdb3d7fd048d99aaec.js": "/precache-manifest.de1ca664f3021bcdb3d7fd048d99aaec.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.d9ad5f5c.chunk.css.map": "/static/css/2.d9ad5f5c.chunk.css.map",
     "static/css/main.766d7525.chunk.css.map": "/static/css/main.766d7525.chunk.css.map",
-    "static/js/2.dd450913.chunk.js.LICENSE.txt": "/static/js/2.dd450913.chunk.js.LICENSE.txt",
+    "static/js/2.04c86d14.chunk.js.LICENSE.txt": "/static/js/2.04c86d14.chunk.js.LICENSE.txt",
     "static/media/Kesz Ipari Gyártó_logo.jpg": "/static/media/Kesz Ipari Gyártó_logo.96a09e84.jpg",
     "static/media/LOGO_Mercedes.pdf": "/static/media/LOGO_Mercedes.d73a4750.pdf",
     "static/media/T1.jpg": "/static/media/T1.d86c547b.jpg",
@@ -86,7 +85,7 @@
     "static/media/kep5_mobile.jpg": "/static/media/kep5_mobile.b824afcd.jpg",
     "static/media/kep6.jpg": "/static/media/kep6.4ad8fc23.jpg",
     "static/media/kep7.jpg": "/static/media/kep7.232fefc0.jpg",
-    "static/media/kinek.jpg": "/static/media/kinek.eb6a9d3c.jpg",
+    "static/media/kinek.jpg": "/static/media/kinek.da841e80.jpg",
     "static/media/kinek_mobile.jpg": "/static/media/kinek_mobile.f41dc1f5.jpg",
     "static/media/loading.gif": "/static/media/loading.a6e0a35b.gif",
     "static/media/logo.png": "/static/media/logo.e654b2f1.png",
@@ -127,8 +126,8 @@
   "entrypoints": [
     "static/js/runtime-main.6ad499f6.js",
     "static/css/2.d9ad5f5c.chunk.css",
-    "static/js/2.dd450913.chunk.js",
+    "static/js/2.04c86d14.chunk.js",
     "static/css/main.766d7525.chunk.css",
-    "static/js/main.dacc0e18.chunk.js"
+    "static/js/main.c9c449ec.chunk.js"
   ]
 }
