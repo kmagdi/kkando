@@ -24,7 +24,7 @@ export const SphereView = (props) => {
                 showFullscreenCtrl:true,
                 disableKeyboardCtrl:true,
                 uiText:{
-                    loadButtonLabel:`<div class="pnlm-load-button-content" style="background-image:url('${require('./assets/panorama_load.jpg')}');"><p>Kattints ide ${Helper.isVowel(String(props.hely).charAt(0))?('az '+props.hely):('a '+props.hely)} megtekintéséhez</p></div>`
+                    loadButtonLabel:`<div class="pnlm-load-button-content" style="background-image:url('${props.loadImage}');"><p>Kattints ide ${Helper.isVowel(String(props.hely).charAt(0))?('az '+props.hely):('a '+props.hely)} megtekintéséhez</p></div>`
                 }
             }}
         />

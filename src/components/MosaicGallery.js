@@ -10,7 +10,6 @@ export const MosaicGallery = (props) => {
                     <img className="mosaic-image" src={require('./assets/buszke/thumbnail_' + i)} title={(props.titles===undefined)?("mosaicImage"+(index+1)):(props.titles[index])} alt={(props.titles===undefined)?("mosaicImage"+(index+1)):(props.titles[index])} onClick={()=>window.open(require('./assets/buszke/' + i),'_blank')} />
                 </div>
             ))}
-            <p>Még folytatódni fog tovább...</p>
         </div>
     );
 }

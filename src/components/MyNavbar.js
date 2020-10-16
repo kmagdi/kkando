@@ -75,9 +75,9 @@ export const MyNavbar = () => {
                     <Link to="/#buszke"><p className="nav-link link" role="button">Akikre büszkék vagyunk</p></Link>
                     <Link to="/#footer"><p className="nav-link link" role="button">Elérhetőség</p></Link>
                 </Nav>
-                <Nav>
+                {/*<Nav>
                     <a href="http://www.kkando.hu/"><p className="nav-link link active" role="button">Vissza a Kandó oldalára</p></a>
-                </Nav>
+                </Nav>*/}
             </Navbar.Collapse>
         </Navbar>
     );
