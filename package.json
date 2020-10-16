@@ -15,7 +15,7 @@
     "react-bootstrap": "^1.3.0",
     "react-card-flip": "^1.0.11",
     "react-dom": "^16.13.1",
-    "react-ga": "^3.1.2",
+    "react-ga": "^3.2.0",
     "react-howler": "^3.8.0",
     "react-pannellum": "^0.1.15",
     "react-pannellum-sata": "git+https://github.com/sataerik/react-pannellum-sata.git",
