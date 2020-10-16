@@ -99,7 +99,7 @@ export const InfoPanel = (props) => {
                             <p>{props.text}<span className="moretext">{props.moretext.map((i,index)=><React.Fragment key={'moretext'+index}><br/>{i}</React.Fragment>)}</span></p>
                         </Col>
                         <Col className={"info-row-kep info-row-panorama fade-int "+props.id}>
-                            <SphereView id="1" hely="gyakorlat helyszínének" image={props.panoimg} loadImage={props.loadImage} />
+                            <SphereView id={props.index} hely="gyakorlat helyszínének" image={props.panoimg} loadImage={props.loadImage} />
                         </Col>
                     </Row>
                 );
