@@ -5,6 +5,7 @@
 .yt-video{
     display:inline-block;
     margin:0.5rem;
+    max-width:95%;
     width:560px;
     height:315px;
     max-width:100% !important;

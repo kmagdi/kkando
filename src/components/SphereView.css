@@ -13,6 +13,7 @@
     display:inline-block;
     text-align:center;
     position:relative;
+    max-width:95%;
     width:var(--panorama-width);
     margin:0.5rem;
     border-radius:0.75rem;

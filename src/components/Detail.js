@@ -29,10 +29,18 @@ export const Detail=(props)=>{
                 const spl = kepnev.split('.');
                 if(String(spl[spl.length-2]).startsWith('gyakorlat') || nomobile){
                     if(String(spl[spl.length-2]).startsWith('gyakorlat')){
-                        try{
-                            return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
-                        }catch(Exception){
-                            return require('./assets/nopanorama.jpg');
+                        if(spl[spl.length-2] === 'gyakorlat_load'){
+                            try{
+                                return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                            }catch(Exception){
+                                return require('./assets/nopanorama_load.jpg');
+                            }
+                        }else{
+                            try{
+                                return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                            }catch(Exception){
+                                return require('./assets/nopanorama.jpg');
+                            }
                         }
                     }
                     if(nomobile){
