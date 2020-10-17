@@ -93,31 +93,6 @@ export const Detail=(props)=>{
                 </MyParallax>
             );
         }
-        const par2 = images.head;
-        let par2el = null;
-        // if(par2[1]==='vid'){
-        //     par2el = (
-        //         <InfoPanel id="vid2" bold={true} size={6} type="videoBg" bgvid={par2[0]} bgColor={"rgba(255,255,255,0.65)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
-        //     );
-        // }else{
-            //console.log('bgvid2222 is ' + par2[0]);
-            par2el = (
-                //<MyParallax img={par2[0]} amount={0.25} height={'40vh'} sizeToContent={true}>
-                <MyParallax img={par2} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="par2" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title={(props.adatok.videok==='')?null:<>Videók</>} text={(props.adatok.videok==='')?null:<>
-                        {
-                            String(props.adatok.videok).split(' ').map((i,index)=>{
-                                return (
-                                    <React.Fragment key={i}>
-                                        <iframe className="yt-video" src={"https://www.youtube.com/embed" + i.substring(i.lastIndexOf('/'))} frameBorder="0" allow="clipboard-write; encrypted-media" title={'YouTube videó (' + i.substring(i.lastIndexOf('/')+1) + ')'} allowFullScreen></iframe>
-                                    </React.Fragment>
-                                );
-                            })
-                        }
-                    </>} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
-                </MyParallax>
-            );
-        //};
         element = (
             <>
                 {
@@ -141,7 +116,23 @@ export const Detail=(props)=>{
 
                 <InfoPanel id="ismeretek" type="sideBySide" title={getAnswer('ismeretek')[0]} text={getAnswer('ismeretek')[1]} image={images.ismeretek} from={{opacity:0,scaleX:1.1,scaleY:1.1,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out',stagger:{amount:0.2}}} reverse={true} />
 
-                {par2el}
+                <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
+                    <InfoPanel id="par2" bold={true} centered={true} type={(props.adatok.videok!=='')?"centerInfoWide":"centerInfo"} bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title={(props.adatok.interju==='')?((props.adatok.videok==='')?null:<>Videók</>):<>Interjú</>} text={(props.adatok.interju==='')?
+                        ((props.adatok.videok==='')?null:<>
+                            {
+                                String(props.adatok.videok).split(' ').map((i,index)=>{
+                                    return (
+                                        <React.Fragment key={'yt-video-container-'+index}>
+                                            <iframe key={'yt-video-'+index} className="yt-video" src={"https://www.youtube.com/embed" + i.substring(i.lastIndexOf('/'))} frameBorder="0" allow="clipboard-write; encrypted-media" title={'YouTube videó (' + i.substring(i.lastIndexOf('/')+1) + ')'} allowFullScreen></iframe>
+                                        </React.Fragment>
+                                    );
+                                })
+                            }
+                        </>)
+                    :(
+                        <span style={{textAlign:'justify'}}>{props.adatok.interju}</span>
+                    )} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                </MyParallax>
 
                 <InfoPanel id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
@@ -151,11 +142,13 @@ export const Detail=(props)=>{
                             const imidzs = require('./assets/szak/' + props.adatok.kod + '/gyakorlat'+i+'.jpg');
                             console.log(imidzs);
                             return (
-                                <InfoPanel key={imidzs} index={i} id={"gyakorlat"+i} type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]+" #"+i} text="" moretext={["A "+(Helper.isMobile()?'lent':((i%2==0)?'balra':'jobbra'))+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={imidzs} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:(i%2==0)?'-300':'300',ease:'power4.out'}} reverse={(i%2==0)} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                                <InfoPanel key={imidzs} index={i} id={"gyakorlat"+i} type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]+" #"+i} text="" moretext={["A "+(Helper.isMobile()?'lent':((i%2===0)?'balra':'jobbra'))+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={imidzs} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:(i%2===0)?'-300':'300',ease:'power4.out'}} reverse={(i%2===0)} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
                             )
                         }catch(Exception){
                             return null;
                         }
+                    }else{
+                        return null;
                     }
                 })}
 

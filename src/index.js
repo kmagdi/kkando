@@ -4,7 +4,7 @@ import {App} from './App';
 import 'bootstrap/dist/css/bootstrap.min.css';   
 import './index.css';
 import {Helper} from './Helper';
-import ReactGA from 'react-ga';
+//import ReactGA from 'react-ga';
 
 var wasMobile = Helper.isMobile();
 

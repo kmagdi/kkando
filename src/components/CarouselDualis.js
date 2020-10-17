@@ -1,14 +1,10 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import './MyCarousel.css';
 import Truncate from 'react-truncate';
 
 export const CarouselDualis=(props)=>{
-    /*const [activeIndex,setActiveIndex] = useState(0);
-    useRef(()=>{
-        setActiveIndex(props.activeIndex);
-    });*/
     return (
         <Carousel id="dualis" activeIndex={props.activeIndex} className="justify-content-center szakmagaleria" interval={null} prevLabel="Előző partner" nextLabel="Következő partner" onSelect={
             props.onselect
