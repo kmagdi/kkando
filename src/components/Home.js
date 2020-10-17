@@ -20,6 +20,8 @@ export const Home=()=>{
     const[dualLoaded,setDualLoaded]=useState(false)
     const [innovacioCsvData,setInnovacioCsvData]=useState([])
     const[innovacioLoaded,setInnovacioLoaded]=useState(false)
+    
+    const [dualisActiveIndex,setDualisActiveIndex]=useState(0);
 
     // thank w3
     function getCookie(cname) {
@@ -132,10 +134,16 @@ export const Home=()=>{
                     <MyCarousel startIndex={carouselIndex} kepek={carouselImages} />
                 </div>
 
-                <InfoPanel id="sth" className="sidebyside-margins" type="sideBySideLogos" title="Duális szakképző partnereink" text="A Kecskeméti SZC Kandó Kálmán Technikum szorosan együttműködik a duális partnerekkel, így a szakképzésről elmondható, hogy az munkaerő-piaci alapú, kereslet vezérelt szerkezetű. Ez több dologban is megnyilvánul: a beiskolázás a cégek szakképzési igényein alapul, a pályaválasztási programokban a legnagyobb cégek folyamatosan részt vesznek, a képzési program összehangolt, az oktatás folyamatát rendszeres szakmai egyeztetések kisérik." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
+                <InfoPanel onLogoSelect={(i)=>{
+                    setDualisActiveIndex(i);
+                }} id="sth" className="sidebyside-margins" type="sideBySideLogos" title="Duális szakképző partnereink" text="A Kecskeméti SZC Kandó Kálmán Technikum szorosan együttműködik a duális partnerekkel, így a szakképzésről elmondható, hogy az munkaerő-piaci alapú, kereslet vezérelt szerkezetű. Ez több dologban is megnyilvánul: a beiskolázás a cégek szakképzési igényein alapul, a pályaválasztási programokban a legnagyobb cégek folyamatosan részt vesznek, a képzési program összehangolt, az oktatás folyamatát rendszeres szakmai egyeztetések kisérik." image={images.head} from={{opacity:0,x:200,ease:'power4.out',stagger:{amount:0.2}}} to={{opacity:1,x:0,ease:'power4.out'}} />
 
                 <div id="dualis" className="row justify-content-center">
-                    <CarouselDualis kepek={dualImages} />
+                    <CarouselDualis activeIndex={dualisActiveIndex} kepek={dualImages} onselect={
+                        (selIndex,e) => {
+                            setDualisActiveIndex(selIndex);
+                        }
+                    } />
                 </div>
                 
 

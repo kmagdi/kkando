@@ -5,6 +5,7 @@ import gsap from 'gsap';
 import './InfoPanel.css';
 import { SphereView } from './SphereView';
 import { MosaicGallery } from './MosaicGallery';
+import { NavHashLink as Link } from 'react-router-hash-link';
 
 export const InfoPanel = (props) => {
     const handleUndef = (prop,trueval,falseval) => {
@@ -47,6 +48,11 @@ export const InfoPanel = (props) => {
         setPlayed(true);
     }
 
+    const callLogoSelect = (i)=>{
+        //console.log('setting active index to ' + i);
+        props.onLogoSelect(i);
+    };
+
     let element = null;
     const rowClass = "info-row " + handleUndef('className');
     switch(props.type){
@@ -77,12 +83,28 @@ export const InfoPanel = (props) => {
                     <Col className={"info-row-kep fade-int "+props.id+(props.clickable===undefined?'':' info-row-click')} style={{backgroundImage:'url('+(props.image==='szakmaszerkezet'?require('./assets/szakmaszerkezet.jpg'):props.image)+')'}} onClick={(props.clickable===undefined?null:()=>{ window.open(props.image==='szakmaszerkezet'?require('./assets/original_szakmaszerkezet.jpg'):props.image, '_blank') })}>
                         <div className="logo-container">
                             <Row className="">
-                                <Col className="top-row" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU1/logo_128.png')} alt="logo1" /></Col>
-                                <Col className="top-row" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU2/logo_128.png')} alt="logo2" /></Col>
+                                <Col className="top-row" style={{textAlign:'right'}}>
+                                    <Link to="/#dualis">
+                                        <img onClick={()=>callLogoSelect(0)} className="f-logo" src={require('./assets/dualis/DU1/logo_128.png')} alt="logo1" />
+                                    </Link>
+                                </Col>
+                                <Col className="top-row" style={{textAlign:'left'}}>
+                                    <Link to="/#dualis">
+                                        <img onClick={()=>callLogoSelect(1)} className="f-logo" src={require('./assets/dualis/DU2/logo_128.png')} alt="logo2" />
+                                    </Link>
+                                </Col>
                             </Row>
                             <Row>
-                                <Col className="bottom-tow" style={{textAlign:'right'}}><img className="f-logo" src={require('./assets/dualis/DU3/logo_128.png')} alt="logo3" /></Col>
-                                <Col className="bottom-tow" style={{textAlign:'left'}}><img className="f-logo" src={require('./assets/dualis/DU4/logo_128.png')} alt="logo4" /></Col>
+                                <Col className="bottom-tow" style={{textAlign:'right'}}>
+                                    <Link to="/#dualis">
+                                        <img onClick={()=>callLogoSelect(2)} className="f-logo" src={require('./assets/dualis/DU3/logo_128.png')} alt="logo3" />
+                                    </Link>
+                                </Col>
+                                <Col className="bottom-tow" style={{textAlign:'left'}}>
+                                    <Link to="/#dualis">
+                                        <img onClick={()=>callLogoSelect(3)} className="f-logo" src={require('./assets/dualis/DU4/logo_128.png')} alt="logo4" />
+                                    </Link>
+                                </Col>
                             </Row>
                         </div>
                     </Col>

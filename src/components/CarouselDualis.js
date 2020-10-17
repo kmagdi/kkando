@@ -1,14 +1,18 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import { Carousel } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import './MyCarousel.css';
 import Truncate from 'react-truncate';
 
 export const CarouselDualis=(props)=>{
-    //let dualisImages = dualCsvData.map((i)=>([Helper.getMODI(require('./assets/dualis/' + i.kod + '/head.jpg'),require('./assets/dualis/' + i.kod + '/head_mobile.jpg')),i]));
-
+    /*const [activeIndex,setActiveIndex] = useState(0);
+    useRef(()=>{
+        setActiveIndex(props.activeIndex);
+    });*/
     return (
-        <Carousel id="dualis" className="justify-content-center szakmagaleria" interval={null} prevLabel="Előző " nextLabel="Következő ">
+        <Carousel id="dualis" activeIndex={props.activeIndex} className="justify-content-center szakmagaleria" interval={null} prevLabel="Előző partner" nextLabel="Következő partner" onSelect={
+            props.onselect
+        }>
         {
             props.kepek.map(i=>{
                 //const kep = Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'));
