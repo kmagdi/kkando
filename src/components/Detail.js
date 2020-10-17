@@ -142,7 +142,7 @@ export const Detail=(props)=>{
                     )} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
 
-                <InfoPanel id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                <InfoPanel index={1} id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
                 {[2,3,4,5].map((i)=>{
                     if(props.adatok.kod!==undefined){
