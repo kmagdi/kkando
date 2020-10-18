@@ -1,3 +1,5 @@
+import React from 'react';
+
 export class Helper {
     static scrollToTop = () => {
         document.querySelector('html').setAttribute('smooth','false');
@@ -14,4 +16,7 @@ export class Helper {
     static isMobile = () => (window.innerWidth<=991);
     static getMODI = (desktopfile,mobilefile) => (this.isMobile()?mobilefile:desktopfile);
     static isVowel = (x) => /[aáeéiíoóöőuúüűAÁEÉIÍOÓÖŐUÚÜŰ]/.test(String(x).replace('"',''));
+    render(){
+        return <></>;
+    }
 }
