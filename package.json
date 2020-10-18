@@ -18,7 +18,7 @@
     "react-ga": "^3.2.0",
     "react-howler": "^3.8.0",
     "react-pannellum": "^0.1.15",
-    "react-pannellum-sata": "git+https://github.com/sataerik/react-pannellum-sata.git",
+    "react-pannellum-sata": "^0.1.17",
     "react-preload": "^0.6.0",
     "react-responsive-carousel": "^3.2.9",
     "react-router-dom": "^5.2.0",
