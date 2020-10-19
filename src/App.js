@@ -11,7 +11,7 @@ import './App.css'
 const patchnotes = `<!--
     PATCH NOTES:
     - Added some extra styling (mostly for mobile)
-    - Removed the demon script (it made a user feel uneasy after finding several demons in his backyard)
+    - Deleted the demon script (it made a user feel uneasy after finding several demons in his backyard)
     - Fixed the alignment of the cards
     - Nerfed Terjedelmes Csongor (he was simply too terjedelmes)
     - Made the background of the navbar blurry
@@ -19,7 +19,6 @@ const patchnotes = `<!--
 -->`;
 
 export const App=()=>{
-    //console.log("This is the process.env:"+process.env.PUBLIC_URL)  
     return(
         <ParallaxProvider>
             <div id="patch-notes" dangerouslySetInnerHTML={{__html:patchnotes}} />
@@ -27,9 +26,7 @@ export const App=()=>{
                 <MyNavbar/>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    {/* <Route exact path="/kkando" component={Home}/>*/}
                     <Route exact path="/szak/:id" component={Szak} />
-                    {/* <Route path="/kkando/szak/:id" component={Szak} />*/}
                     <Route exact path="/dualis/:id" component={Dualis} />
                     <Route exact path="/innovacio/:id" component={FilterInnovacio} />
                     <Redirect to="/" />
