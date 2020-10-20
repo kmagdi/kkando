@@ -165,6 +165,7 @@ export const Home=()=>{
                     <InfoPanel id="less-be-hozzank" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Nézz be hozzánk!" text={<>
                         <p style={{textAlign:'center'}}><b>Esetleg leírás az általános sulis panorámákról</b></p>
                         <SphereView extraContainer={true} id="1" hely="aula" image={require('./assets/aula.jpg')} loadImage={require('./assets/aula_load.jpg')} />
+                        <SphereView extraContainer={true} id="2" hely="Makerspace műhely" image={require('./assets/makerspace_panorama.jpg')} loadImage={require('./assets/makerspace_panorama_load.jpg')} />
                         {/* <SphereView extraContainer={true} id="2" hely="K udvar" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} /> */}
                         {/* <p style={{textAlign:'center'}}><b>A panorámák ideiglenesen ki lettek véve a tesztelés kedvéért</b></p> */}
                     </>} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
