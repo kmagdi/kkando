@@ -138,7 +138,7 @@ export const Detail=(props)=>{
                             }
                         </>)
                     :(
-                        <span style={{textAlign:'justify'}}>{props.adatok.interju}</span>
+                        <span style={{textAlign:'justify',textShadow:'0 0 5px rgba(255,255,255,1)'}}>{props.adatok.interju}</span>
                     )} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
 
