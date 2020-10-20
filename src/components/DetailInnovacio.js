@@ -1,5 +1,6 @@
 import React, {useEffect} from 'react';
 import { FullscreenBanner } from './FullscreenBanner';
+import { MyParallax } from './MyParallax';
 import {Helper} from '../Helper';
 import Preload from 'react-preload';
 import { InfoPanel } from './InfoPanel';
@@ -48,6 +49,25 @@ export const DetailInnovacio=(props)=>{
                 <InfoPanel id="cim1" type="sideBySide" title={props.adatok.cim1} text={props.adatok.text1} image={images.kep1} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
                 <InfoPanel id="cim2" type="sideBySide" title={props.adatok.cim2} text={props.adatok.text2} image={images.kep2} reverse={true} from={{opacity:0,x:'-300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+
+                {
+                    (props.adatok.ylink===''?null:(
+                        <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
+                            <InfoPanel id="videos" bold={true} centered={true} type={"centerInfoWide"} bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Videók" text={<>
+                                {
+                                    String(props.adatok.ylink).split(' ').map((i,index)=>{
+                                        const vidurl = i.substring(i.lastIndexOf('/'));
+                                        return (
+                                            <React.Fragment key={'yt-video-container-'+index}>
+                                                <iframe key={'yt-video-'+index} className="yt-video" src={"https://www.youtube.com/embed" + vidurl} frameBorder="0" allow="clipboard-write; encrypted-media" title={'YouTube videó (' + i.substring(i.lastIndexOf('/')+1) + ')'} allowFullScreen></iframe>
+                                            </React.Fragment>
+                                        );
+                                    })
+                                }
+                            </>} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                        </MyParallax>
+                    ))
+                }
 
                 <InfoPanel id="cim3" type="sideBySide" title={props.adatok.cim3} text={props.adatok.text3} image={images.kep3} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 

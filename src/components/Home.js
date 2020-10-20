@@ -163,7 +163,7 @@ export const Home=()=>{
                 </div> */}
                 <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
                     <InfoPanel id="less-be-hozzank" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Nézz be hozzánk!" text={<>
-                        <p style={{textAlign:'center'}}><b>Esetleg leírás az általános sulis panorámákról</b></p>
+                        <p style={{textAlign:'center'}}><b>Tekints meg néhány 360 fokos képet az iskoláról</b></p>
                         <SphereView extraContainer={true} id="1" hely="aula" image={require('./assets/aula.jpg')} loadImage={require('./assets/aula_load.jpg')} />
                         <SphereView extraContainer={true} id="2" hely="Makerspace műhely" image={require('./assets/makerspace_panorama.jpg')} loadImage={require('./assets/makerspace_panorama_load.jpg')} />
                         {/* <SphereView extraContainer={true} id="2" hely="K udvar" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} /> */}

@@ -18,7 +18,7 @@ export const CarouselDualis=(props)=>{
                         <Carousel.Caption>
                             <Link to={"/dualis/" + i[1].kod}><h2>{i[1].nev}</h2></Link>
                             <Truncate lines={1} ellipsis={<>...<br /><Link to={"/dualis/" + i[1].kod}><span className="read-more">Tovább</span></Link></>}>
-                                <p>Leírás</p>
+                                {/*<p>Leírás</p>*/}
                             </Truncate>
                         </Carousel.Caption>
                     </Carousel.Item>
