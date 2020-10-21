@@ -1,6 +1,3 @@
-/*:root{
-    --fullh:calc(var(--vh) * 100);
-}*/
 html[smooth=true]{
     scroll-behavior: smooth;
 }

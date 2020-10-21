@@ -2,7 +2,6 @@ import React from 'react';
 import { Carousel } from 'react-bootstrap';
 import {Link} from "react-router-dom";
 import './MyCarousel.css';
-import Truncate from 'react-truncate';
 
 export const CarouselDualis=(props)=>{
     return (
@@ -17,9 +16,7 @@ export const CarouselDualis=(props)=>{
                         <img src={i[0]} alt="kep1" />
                         <Carousel.Caption>
                             <Link to={"/dualis/" + i[1].kod}><h2>{i[1].nev}</h2></Link>
-                            <Truncate lines={1} ellipsis={<>...<br /><Link to={"/dualis/" + i[1].kod}><span className="read-more">Tovább</span></Link></>}>
-                                {/*<p>Leírás</p>*/}
-                            </Truncate>
+                            <Link to={"/dualis/" + i[1].kod}><span className="read-more">Tovább...</span></Link>
                         </Carousel.Caption>
                     </Carousel.Item>
                 );

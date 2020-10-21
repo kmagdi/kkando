@@ -20,9 +20,11 @@ export const Box=(props)=> {
                         </div>
                     </div>
                 </div>
-                <div style={{padding:'1rem'}}>
-                    <div>
-                        {props.adatok}
+                <div style={{width:'100%',height:'100%',padding:'1rem',backgroundImage:'url('+props.elolapImage+')'}}>
+                    <div className="row justify-content-center" style={{height:'100%'}}>
+                        <div className="col align-self-center">
+                            {props.adatok}
+                        </div>
                     </div>
                 </div>
             </ReactCardFlip>

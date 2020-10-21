@@ -118,7 +118,7 @@ export const InfoPanel = (props) => {
                     <Row key={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"")} style={{marginTop:margins2,marginBottom:margins2}}>
                         <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
                             <h2>{props.title}</h2>
-                            <p>{props.text}<span className="moretext">{props.moretext.map((i,index)=><React.Fragment key={'moretext'+index}><br/>{i}</React.Fragment>)}</span></p>
+                            <p>{props.text}<span className="moretext">{props.moretext.map((i,index)=><React.Fragment key={'moretext'+index}>{(props.text===undefined||props.text==='')?null:<br/>}{i}</React.Fragment>)}</span></p>
                         </Col>
                         <Col className={"info-row-kep info-row-panorama fade-int "+props.id}>
                             <SphereView id={props.index} hely="gyakorlat helyszínének" image={props.panoimg} loadImage={props.loadImage} />

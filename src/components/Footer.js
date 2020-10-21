@@ -24,10 +24,10 @@ export const Footer=(props)=> {
                         <p><b>OM azonosító:</b><br/>{props.contactData.omid}</p>        
                     </Col>
                     <Col lg={4} className="footer-col footer-col-second">
-                        <p className="footer-kt"><b>E-mail:</b></p>
-                        <p>{props.contactData.name1} - {props.contactData.email1}</p>
+                        <p><b>E-mail:</b><br/>{props.contactData.email1}</p>
+                        {/* <p>{props.contactData.name1} - {props.contactData.email1}</p>
                         <p>{props.contactData.name2} - {props.contactData.email2}</p>
-                        <p>{props.contactData.name3} - {props.contactData.email3}</p>
+                        <p>{props.contactData.name3} - {props.contactData.email3}</p> */}
                         <p style={{marginBottom:'0px'}}>Copyright &copy; KSZC Kandó 2016-2020. Minden&nbsp;Jog&nbsp;Fenntartva.</p>
                         <p style={{fontSize:'95%'}}>Weboldalt készítette: Kátay Magdolna, Varga Brigitta, Sata Erik</p>
                     </Col>
