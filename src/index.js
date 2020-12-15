@@ -9,7 +9,7 @@ import ReactGA from 'react-ga';
 var wasMobile = Helper.isMobile();
 
 const initScript = ()=>{
-    ReactGA.initialize('G-N56WYXRP46');
+    ReactGA.initialize('UA-185512655-1');
     ReactGA.pageview(window.location.pathname + window.location.search);
     window.addEventListener('resize',()=>{
         if(Helper.isMobile() !== wasMobile){
