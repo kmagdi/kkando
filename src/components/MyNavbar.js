@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from 'react';
 import {Navbar,Nav} from 'react-bootstrap';
-//import {Link} from 'react-router-dom';
 import {NavHashLink as Link} from "react-router-hash-link"
 import './MyNavbar.css'
 import { Helper } from '../Helper';
@@ -34,22 +33,6 @@ export const MyNavbar = () => {
             setNavbarOpacity(opacity);
         });
     },[]);
-    /*const onAppScroll = () => {
-        const opacity = getNavbarOpacity();
-        setNavbarOpacity(opacity);
-    };*/
-    /*const scrollToId = (path, id) => {
-        if(window.location.pathname == '/'){
-            const el = document.getElementById(id);
-            if(el != null){
-                //el.scrollIntoView();
-                window.location = path + '#' + id;
-            }
-        }else{
-            window.location = path + '#' + id;
-        }
-        window.location = path + '#' + id;
-    };*/
 
     return (
         <Navbar style={{
@@ -57,10 +40,8 @@ export const MyNavbar = () => {
             opacity: navbarState,
             display: navbarState===0?"none":"flex"
                 }} collapseOnSelect expand="lg" variant="dark" fixed="top">
-            {/*<Link to="/#home"><Navbar.Brand>*/}
             <Link to="/" onClick={Helper.scrollToTop}>
                 <Navbar.Brand>
-                    {/*<Link to="/">Kandópage</Link>*/}
                     <img src={require('./assets/logo.png')} height="30px" alt="Kandó logo" />
                 </Navbar.Brand>
             </Link>
@@ -75,9 +56,6 @@ export const MyNavbar = () => {
                     <Link to="/#buszke"><p className="nav-link link" role="button">Akikre büszkék vagyunk</p></Link>
                     <Link to="/#footer"><p className="nav-link link" role="button">Elérhetőség</p></Link>
                 </Nav>
-                {/*<Nav>
-                    <a href="http://www.kkando.hu/"><p className="nav-link link active" role="button">Vissza a Kandó oldalára</p></a>
-                </Nav>*/}
             </Navbar.Collapse>
         </Navbar>
     );

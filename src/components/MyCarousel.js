@@ -13,8 +13,6 @@ export const MyCarousel=(props)=>{
                 if(document.querySelector('#'+name) === null){
                     obj.setAttribute('id',name);
                     obj.setAttribute('class','ind-tt');
-                    //i.parentNode.insertBefore(obj,i.previousElementSibling);
-                    //i.before(obj);
                     obj.innerHTML = document.querySelector('.ind .carousel-inner > .carousel-item:nth-child('+(index+1)+') > .carousel-caption h2').innerHTML;
                     i.appendChild(obj);
                 }
@@ -39,10 +37,9 @@ export const MyCarousel=(props)=>{
         addTooltips();
     })
     return (
-        <Carousel/* id="szakok"*/ defaultActiveIndex={parseInt(props.startIndex)} className="justify-content-center szakmagaleria ind" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
+        <Carousel defaultActiveIndex={parseInt(props.startIndex)} className="justify-content-center szakmagaleria ind" interval={null} prevLabel="Előző szak" nextLabel="Következő szak">
         {
             props.kepek.map(i=>{
-                //const kep = Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'));
                 return (
                     <Carousel.Item key={i[1].kod}>
                         <img src={i[0]} alt="kep1" />

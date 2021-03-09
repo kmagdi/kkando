@@ -14,7 +14,6 @@
 }
 @media (max-width: 991px) {
     .react-card-flip-container:active{
-        /*transform:scale(1.05);*/
         transform:scale(1);
     }
 }
@@ -22,17 +21,9 @@
     height:100%;
 }
 .react-card-front, .react-card-back{
-    /* background-color:rgba(0,0,0,0.65); */
     background-size: 100% 100%;
     color:black !important;
-    /* padding:1rem; */
     border-radius: 1rem;
     overflow:hidden;
     box-shadow:0 0 0.75rem rgba(0,0,0,0.75);
-}
-.react-card-front{
-    /* background-image:url('./assets/card-back.png'); */
-}
-.react-card-back{
-    /* background-image:url('./assets/0.jpg'); */
 }

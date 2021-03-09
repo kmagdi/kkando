@@ -10,7 +10,6 @@ export const CarouselDualis=(props)=>{
         }>
         {
             props.kepek.map(i=>{
-                //const kep = Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'));
                 return (
                     <Carousel.Item key={i[1].kod}>
                         <img src={i[0]} alt="kep1" />

@@ -47,15 +47,6 @@ a:hover, .link:hover{
 #top-banner-container{
     margin-bottom:0.5rem;
 }
-#welcome-image-logo{
-    /* width:50vw;
-    height:auto; */
-}
-/* @media (max-width: 991px) {
-    #welcome-image-logo{
-        width:75vw;
-    }
-} */
 .logo-hor{
     height:10rem;
     width:auto;

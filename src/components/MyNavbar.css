@@ -4,7 +4,6 @@
     border-bottom: 1px solid rgba(255,255,255,0.1)
 }
 .navbar-dark{
-    /*background-color: rgba(52, 58, 64, 0.9) !important;*/
     background:linear-gradient(90deg, rgba(52,58,64,0.9) 0%, rgba(52,58,64,1) 100%);
 }
 .navbar-brand {

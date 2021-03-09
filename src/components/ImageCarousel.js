@@ -16,10 +16,8 @@ export const ImageCarousel=(props)=>{
                 .then(text=>{
                     const adatokJSON=csvToJSON(text, ';');
                     const filtered=adatokJSON.filter(obj=>obj.kod===props.kod);
-                    setKepek(filtered[0].kepekszama);
-                    //console.log(kepek);
+                    setKepek(filtered[0]===undefined?0:filtered[0].kepekszama);
                 },[])
-            //setKod(props.kod);
             setLoaded(true);
         }
     //},[]);
@@ -36,7 +34,6 @@ export const ImageCarousel=(props)=>{
     if(kepek > defaultNum){
         for(let i=0;i<(kepek);i++){
             const index = (i+1);
-            // const kep = require('./assets/szak/'+props.kod+'/gallery/'+prefix+index+'.jpg');
             const kep = Helper.isMobile()?('https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/gallery/'+props.kod+'/galleryimg'+index+'.jpg'):('https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/gallery/'+props.kod+'/galleryimg'+index+'.jpg');
             images.push(
                 <Carousel.Item key={"kep"+index}>

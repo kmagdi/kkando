@@ -89,12 +89,10 @@ export const DetailDualis=(props)=>{
         } />;
     }
     return(
-        //(props.adatok.kod===undefined)?null:
         <Preload
             loadingIndicator={(
                 <div style={{width:'100vw',height:'100vh',backgroundColor:'#343a40',color:'white'}}>
                     <div className="kozep">
-                        {/* <h1>Képek betöltése</h1> */}
                         <img src={require('./assets/loading.gif')} alt={"logo"} />
                     </div>
                 </div>

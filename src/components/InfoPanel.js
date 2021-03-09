@@ -9,9 +9,6 @@ import { NavHashLink as Link } from 'react-router-hash-link';
 
 export const InfoPanel = (props) => {
     const handleUndef = (prop,trueval,falseval) => {
-        //const _trueval = (trueval===undefined?prop:trueval);
-        //const _falseval = (falseval===undefined?'':falseval);
-        //return (props[prop]===undefined?_trueval:_falseval);
         const propUndef = props[prop]===undefined;
         if(propUndef){
             if(trueval===undefined){
@@ -35,21 +32,17 @@ export const InfoPanel = (props) => {
         rootMargin:'0px',
         threshold:0.75
     });
-    //const animFrom = props.from===undefined?{opacity:0,y:50,ease:'power4.out'}:props.from;
     const animFrom = handleUndef('from',{opacity:0,y:50,ease:'power4.out'},props.from);
-    //const animTo = props.to===undefined?{opacity:1,y:0,ease:'power4.out',stagger:{amount:0.2}}:props.to;
     const animTo = handleUndef('from',{opacity:1,y:0,ease:'power4.out',stagger:{amount:0.2}},props.to);
     const animIn = (e)=>{
         gsap.fromTo(e,1,animFrom,animTo);
     };
     if(intersection && intersection.isIntersecting && !played){
-        //console.log(intersection.intersectionRatio);
         animIn('.'+props.id);
         setPlayed(true);
     }
 
     const callLogoSelect = (i)=>{
-        //console.log('setting active index to ' + i);
         props.onLogoSelect(i);
     };
 

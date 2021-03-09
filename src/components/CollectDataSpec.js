@@ -20,10 +20,8 @@ class CollectDataSpec extends Component{
             .then(resp=>resp.text())
             .then(text=>{
                 const adatokJSON=csvToJSON(text, ';');
-                //console.log(adatokJSON);
-                //const filtered=adatokJSON.filter((obj,index)=>obj.kod!==undefined&&obj.kod!=='0'&&obj.kod===this.props.id)
                 let filtered = [];
-                /*const _filtered=*/adatokJSON.forEach((obj,index)=>{
+                adatokJSON.forEach((obj,index)=>{
                     if(obj.kod!==undefined&&obj.kod!=='0'&&obj.kod===this.props.id){
                         filtered.push([index,obj]);
                     }

@@ -3,10 +3,9 @@ import ReactCardFlip from 'react-card-flip';
 import './Box.css'
 
 export const Box=(props)=> {
-    //const color = colors[Math.floor(Math.random() * 9)];
     const [isFlipped, setisFlipped] = useState(false);
   
-   const handleClick=()=>{
+    const handleClick=()=>{
       setisFlipped(!isFlipped)
     }
    

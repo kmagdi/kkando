@@ -85,12 +85,10 @@ export const DetailInnovacio=(props)=>{
         } />;
     }
     return(
-        //(props.adatok.kod===undefined)?null:
         <Preload
             loadingIndicator={(
                 <div style={{width:'100vw',height:'100vh',backgroundColor:'#343a40',color:'white'}}>
                     <div className="kozep">
-                        {/* <h1>Képek betöltése</h1> */}
                         <img src={require('./assets/loading.gif')} alt={"logo"} />
                     </div>
                 </div>
@@ -101,18 +99,4 @@ export const DetailInnovacio=(props)=>{
             {element}
         </Preload>
     )
-    /*return(
-        <div>adatok...
-            <div>{props.adatok.kod}</div>
-            <div>{props.adatok.nev}</div>
-            <h1>{props.adatok.cim1}</h1>
-            <div>{props.adatok.text1}</div>
-            <div>{props.adatok.nev}</div>
-            <h1>{props.adatok.cim2}</h1>
-            <div>{props.adatok.text2}</div>
-            <div>{props.adatok.nev}</div>
-            <h1>{props.adatok.cim3}</h1>
-            <div>{props.adatok.text3}</div>
-        </div>
-    )*/
 }

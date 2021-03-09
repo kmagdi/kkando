@@ -59,17 +59,6 @@ export const Detail=(props)=>{
             }
         }
     };
-    /*const kepOV = (vidnev,fallbackImg,nomobile) => {
-        if(props.adatok.kod===undefined){
-            return [null,null];
-        }else{
-            try{
-                return [require('./assets/szak/' + props.adatok.kod + '/' + vidnev),'vid'];
-            }catch(Exception){
-                return [kep(fallbackImg,nomobile),'img'];
-            }
-        }
-    };*/
     const images = {
         head:kep('head.jpg'),
         kinek:kep('kinek.jpg'),
@@ -80,19 +69,6 @@ export const Detail=(props)=>{
         parallax2:kep('parallax2.jpg',true)
     };
     if(!props.failed){
-        // const par1 = kepOV('vid1.mp4','parallax1.jpg');
-        // let par1el = null;
-        // if(par1[1]=='vid'){
-        //     par1el = (
-        //         <InfoPanel id="vid1" bold={true} size={6} type="videoBg" bgvid={par1[0]} bgColor={"rgba(255,255,255,0.65)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
-        //     );
-        // }else{
-        //     par1el = (
-        //         <MyParallax img={par1[0]} amount={0.25} height={'40vh'} sizeToContent={true}>
-        //             <InfoPanel id="par1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
-        //         </MyParallax>
-        //     );
-        // };
         let par1el = null;
         if(props.adatok.kod!==undefined){
             par1el = (
@@ -167,7 +143,6 @@ export const Detail=(props)=>{
         element = <FullscreenBanner title="Ez a szak nem létezik" />;
     }
     return (
-        //(props.adatok.kod===undefined)?null:
         <Preload
             loadingIndicator={(
                 <div style={{width:'100vw',height:'100vh',backgroundColor:'#343a40',color:'white'}}>

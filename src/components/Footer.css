@@ -2,21 +2,14 @@
     --footer-padding:1rem;
 }
 #pre-footer{
-    /*padding-top:1rem;*/
     position:relative;
-    /*min-height:50vh;*/
     text-align:center;
-}
-#pre-footer .parallax-panel{
 }
 #pre-footer .parallax-inner{
     opacity:0.75;
     z-index:-1;
 }
 #pre-footer img:not(.foot-fade){
-    /*position:absolute;
-    bottom:0;
-    left:0;*/
     padding-top:1rem;
     width:100%;
     max-width:991px;
@@ -27,10 +20,6 @@
     background-color:#343a40;
     padding:calc(var(--footer-padding) + 1rem) 2rem 0 2rem;
 }
-/*@media (min-width: 992px) {
-    .footer-col-second p.footer-kt{
-        margin:0 0 calc(var(--footer-padding) / 2) 0 !important;
-    }*/
 .footer-col{
     padding:0 !important;
 }

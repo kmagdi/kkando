@@ -5,20 +5,13 @@ import {Helper} from '../Helper'
  
 export const SphereView = (props) => {
     const thisSceneId = 'panorama'+props.id;
-    // console.log(thisSceneId);
-    // const loadPanorama = (overlay) => {
-    //     //loadScene(thisSceneId);
-    //     console.log(getAllScenes());
-    //     //load();
-    //     //overlay.remove();
-    // };
     const content = (
         <ReactPannellum
             id={thisSceneId}
             sceneId={thisSceneId}
             imageSource={props.image}
             config={{
-                //autoLoad:true,
+                // autoLoad:true,
                 showZoomCtrl:false,
                 mouseZoom:'fullscreenonly',
                 showFullscreenCtrl:true,
@@ -31,9 +24,6 @@ export const SphereView = (props) => {
     )
     return (
         <div key={thisSceneId} id={thisSceneId+'-container'} className={'panorama-container'}>
-            {/* <div className="panorama-overlay" id={thisSceneId+'-overlay'} onClick={(e)=>loadPanorama(e.target)}>
-                <h3>Katt ide tes</h3>
-            </div> */}
             {
                 props.extraContainer===true?
                     <div className="extra-container">

@@ -67,7 +67,7 @@ export const Home=()=>{
                 },[])
             setDualLoaded(true)
         }
-        // innovacios kép betöltés
+        // Innovacio kép betöltés
         if(!innovacioLoaded){
             const url="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/innovacio.csv"
             fetch(url)           
@@ -79,7 +79,6 @@ export const Home=()=>{
                 },[])
             setInnovacioLoaded(true)
         }
-        //document.cookie = 'prevSzak=0';
     });
 
     const images = {
@@ -90,7 +89,6 @@ export const Home=()=>{
         logo: require('./assets/logo.png'),
         makerspace: Helper.getMODI(require('./assets/makerspace.jpg'),require('./assets/makerspace_mobile.jpg'))
     };
-    //console.log(Object.values(images).concat(csvData.map((i)=>('./assets/' + i.kod + '.jpg'))));
     let carouselImages = csvData.map((i)=>{
         try{
             return [Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'),require('./assets/missing.jpg')),i];
@@ -105,7 +103,6 @@ export const Home=()=>{
             loadingIndicator={(
                 <div style={{width:'100vw',height:'100vh',backgroundColor:'#343a40',color:'white'}}>
                     <div className="kozep">
-                        {/* <h1>Képek betöltése</h1> */}
                         <img src={require('./assets/loading.gif')} alt={"logo"} />
                     </div>
                 </div>
@@ -145,30 +142,20 @@ export const Home=()=>{
                         }
                     } />
                 </div>
-                
-
-                {/* <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="else1" bold={true} type="centerInfo" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Something" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus risus diam, euismod non orci ut, ornare varius eros. Cras pellentesque, sapien in consequat accumsan, nunc quam pulvinar nulla, sodales rhoncus diam mi vitae tellus. Nunc vulputate ligula nisl, id dignissim turpis vulputate sed. Aliquam tincidunt porttitor odio sed vulputate. Aliquam sit amet maximus mi, a fringilla urna. Ut quis sem a mauris facilisis rhoncus." from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
-                </MyParallax> */}
 
                 <div id="innovacio" style={{margin:'0 0 2rem 0'}}>
                     <h2 style={{textAlign:'center',margin:'2rem 0 0 0'}}>Innovációk:</h2>
                     <Innovacio kepek={innovacioImages} />
                 </div>
 
-                {/* <div className={'panorama-container-container'}>
-                    <h2>Ezeknek is kelleni fog majd egy külön szekció:</h2>
-                    <SphereView id="1" image={Helper.getMODI(require('./assets/pano1.jpg'),require('./assets/pano1.jpg'))} />
-                    <SphereView id="2" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} />
-                </div> */}
                 <MyParallax img={images.head} amount={0.25} height={'40vh'} sizeToContent={true}>
-                    <InfoPanel id="less-be-hozzank" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Nézz be hozzánk!" text={<>
-                        <p style={{textAlign:'center'}}><b>Tekints meg néhány 360 fokos képet az iskoláról</b></p>
-                        <SphereView extraContainer={true} id="1" hely="aula" image={require('./assets/aula.jpg')} loadImage={require('./assets/aula_load.jpg')} />
-                        <SphereView extraContainer={true} id="2" hely="Makerspace műhely" image={require('./assets/makerspace_panorama.jpg')} loadImage={require('./assets/makerspace_panorama_load.jpg')} />
-                        {/* <SphereView extraContainer={true} id="2" hely="K udvar" image={Helper.getMODI(require('./assets/pano2.jpg'),require('./assets/pano2.jpg'))} /> */}
-                        {/* <p style={{textAlign:'center'}}><b>A panorámák ideiglenesen ki lettek véve a tesztelés kedvéért</b></p> */}
-                    </>} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
+                    <InfoPanel id="less-be-hozzank" bold={true} centered={true} type="centerInfoWide" bgColor={"rgba(255,255,255,0.5)"} nomargin={true} height={'40vh'} title="Nézz be hozzánk!" text={
+                        <>
+                            <p style={{textAlign:'center'}}><b>Tekints meg néhány 360 fokos képet az iskoláról</b></p>
+                            <SphereView extraContainer={true} id="1" hely="aula" image={require('./assets/aula.jpg')} loadImage={require('./assets/aula_load.jpg')} />
+                            <SphereView extraContainer={true} id="2" hely="Makerspace műhely" image={require('./assets/makerspace_panorama.jpg')} loadImage={require('./assets/makerspace_panorama_load.jpg')} />
+                        </>
+                    } from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
 
                 <Buszke></Buszke>
