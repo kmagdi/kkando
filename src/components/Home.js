@@ -89,9 +89,11 @@ export const Home=()=>{
         logo: require('./assets/logo.png'),
         makerspace: Helper.getMODI(require('./assets/makerspace.jpg'),require('./assets/makerspace_mobile.jpg'))
     };
+    let urlPhotoCarousel="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/szak/carousel/"
     let carouselImages = csvData.map((i)=>{
         try{
-            return [Helper.getMODI(require('./assets/' + i.kod + '.jpg'),require('./assets/' + i.kod + '_mobile.jpg'),require('./assets/missing.jpg')),i];
+            //console.log(urlPhotoCarousel+ i.kod + '.jpg')
+            return [Helper.getMODI(urlPhotoCarousel+ i.kod + '.jpg',urlPhotoCarousel + i.kod + '_mobile.jpg',require('./assets/missing.jpg')),i];
         }catch(Exception){
             return [require('./assets/missing.jpg'),i];
         }

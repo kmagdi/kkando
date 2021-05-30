@@ -21,6 +21,7 @@ export const Detail=(props)=>{
     const addLinks = (str) => {
         return String(str).split(' ').map((i)=>(i.startsWith('http'))?<><br/><a className="darklink" href={i} target="_blank" rel="noopener noreferrer">Kattints ide a részletek megtekintéséhez...</a></>:<>{i} </>);
     };
+    const urlPhotoSzak="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/szak/"
     const kep = (kepnev,nomobile) => {
         if(props.adatok.kod===undefined){
             return null;
@@ -31,28 +32,28 @@ export const Detail=(props)=>{
                     if(String(spl[spl.length-2]).startsWith('gyakorlat')){
                         if(spl[spl.length-2] === 'gyakorlat_load'){
                             try{
-                                return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                                return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
                             }catch(Exception){
                                 return require('./assets/nopanorama_load.jpg');
                             }
                         }else{
                             try{
-                                return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                                return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
                             }catch(Exception){
                                 return require('./assets/nopanorama.jpg');
                             }
                         }
                     }
                     if(nomobile){
-                        return require('./assets/szak/' + props.adatok.kod + '/' + kepnev);
+                        return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
                     }
                 }else{
                     spl[spl.length-2] += '_mobile';
-                    return Helper.getMODI(require('./assets/szak/' + props.adatok.kod + '/' + kepnev),require('./assets/szak/' + props.adatok.kod + '/' + spl.join('.')));
+                    return Helper.getMODI(urlPhotoSzak + props.adatok.kod + '/' + kepnev,urlPhotoSzak + props.adatok.kod + '/' + spl.join('.'));
                 }
             }catch(Exception){
                 try{
-                    return require('./assets/szak/' + props.adatok.kod + '/' + kepnev)
+                    return urlPhotoSzak + props.adatok.kod + '/' + kepnev
                 }catch(Exception){
                     return require('./assets/eszt.jpg');
                 }
