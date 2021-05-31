@@ -21,42 +21,26 @@ export const Detail=(props)=>{
     const addLinks = (str) => {
         return String(str).split(' ').map((i)=>(i.startsWith('http'))?<><br/><a className="darklink" href={i} target="_blank" rel="noopener noreferrer">Kattints ide a részletek megtekintéséhez...</a></>:<>{i} </>);
     };
-    const urlPhotoSzak="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/szak/"
+    const urlPhotoSzak = "https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/szak/";
     const kep = (kepnev,nomobile) => {
         if(props.adatok.kod===undefined){
             return null;
         }else{
-            try{
-                const spl = kepnev.split('.');
-                if(String(spl[spl.length-2]).startsWith('gyakorlat') || nomobile){
-                    if(String(spl[spl.length-2]).startsWith('gyakorlat')){
-                        if(spl[spl.length-2] === 'gyakorlat_load'){
-                            try{
-                                return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
-                            }catch(Exception){
-                                return require('./assets/nopanorama_load.jpg');
-                            }
-                        }else{
-                            try{
-                                return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
-                            }catch(Exception){
-                                return require('./assets/nopanorama.jpg');
-                            }
-                        }
-                    }
-                    if(nomobile){
+            const spl = kepnev.split('.');
+            if(String(spl[spl.length-2]).startsWith('gyakorlat') || nomobile){
+                if(String(spl[spl.length-2]).startsWith('gyakorlat')){
+                    if(spl[spl.length-2] === 'gyakorlat_load'){
+                        return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
+                    }else{
                         return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
                     }
-                }else{
-                    spl[spl.length-2] += '_mobile';
-                    return Helper.getMODI(urlPhotoSzak + props.adatok.kod + '/' + kepnev,urlPhotoSzak + props.adatok.kod + '/' + spl.join('.'));
                 }
-            }catch(Exception){
-                try{
-                    return urlPhotoSzak + props.adatok.kod + '/' + kepnev
-                }catch(Exception){
-                    return require('./assets/eszt.jpg');
+                if(nomobile){
+                    return urlPhotoSzak + props.adatok.kod + '/' + kepnev;
                 }
+            }else{
+                spl[spl.length-2] += '_mobile';
+                return Helper.getMODI(urlPhotoSzak + props.adatok.kod + '/' + kepnev,urlPhotoSzak + props.adatok.kod + '/' + spl.join('.'));
             }
         }
     };
@@ -65,9 +49,7 @@ export const Detail=(props)=>{
         kinek:kep('kinek.jpg'),
         mitcsinal:kep('mitcsinal.jpg'),
         munkakor:kep('munkakor.jpg'),
-        ismeretek:kep('ismeretek.jpg'),
-        parallax1:kep('parallax1.jpg',true),
-        parallax2:kep('parallax2.jpg',true)
+        ismeretek:kep('ismeretek.jpg')
     };
     if(!props.failed){
         let par1el = null;
@@ -121,10 +103,10 @@ export const Detail=(props)=>{
 
                 <InfoPanel index={1} id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
 
-                {[2,3,4,5].map((i)=>{
+                {[2,3].map((i)=>{
                     if(props.adatok.kod!==undefined){
                         try{
-                            const imidzs = require('./assets/szak/' + props.adatok.kod + '/gyakorlat'+i+'.jpg');
+                            const imidzs = urlPhotoSzak + props.adatok.kod + '/gyakorlat'+i+'.jpg';
                             console.log(imidzs);
                             return (
                                 <InfoPanel key={imidzs} index={i} id={"gyakorlat"+i} type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]+" #"+i} text="" moretext={["A "+(Helper.isMobile()?'lent':((i%2===0)?'balra':'jobbra'))+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={imidzs} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:(i%2===0)?'-300':'300',ease:'power4.out'}} reverse={(i%2===0)} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
