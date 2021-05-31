@@ -7,6 +7,11 @@ import CollectData from './CollectData';
 import { MyParallax } from './MyParallax';
 import { ImageCarousel } from './ImageCarousel';
 import Preload from 'react-preload';
+import checkIfImageExists from './ceckIfImageExists'
+
+
+
+
 
 export const Detail=(props)=>{
     Helper.scrollToTop();
@@ -21,6 +26,7 @@ export const Detail=(props)=>{
     const addLinks = (str) => {
         return String(str).split(' ').map((i)=>(i.startsWith('http'))?<><br/><a className="darklink" href={i} target="_blank" rel="noopener noreferrer">Kattints ide a részletek megtekintéséhez...</a></>:<>{i} </>);
     };
+
     const urlPhotoSzak="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/szak/"
     const kep = (kepnev,nomobile) => {
         if(props.adatok.kod===undefined){
@@ -124,13 +130,24 @@ export const Detail=(props)=>{
                 {[2,3,4,5].map((i)=>{
                     if(props.adatok.kod!==undefined){
                         try{
-                            const imidzs = require('./assets/szak/' + props.adatok.kod + '/gyakorlat'+i+'.jpg');
+                            const imidzs = urlPhotoSzak+ props.adatok.kod + '/gyakorlat'+i+'.jpg';
                             console.log(imidzs);
-                            return (
-                                <InfoPanel key={imidzs} index={i} id={"gyakorlat"+i} type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]+" #"+i} text="" moretext={["A "+(Helper.isMobile()?'lent':((i%2===0)?'balra':'jobbra'))+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={imidzs} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:(i%2===0)?'-300':'300',ease:'power4.out'}} reverse={(i%2===0)} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
-                            )
+                            checkIfImageExists(imidzs, (exists) => {
+                                if (exists) {
+                                    // Success code
+                                    console.log('létezik:',imidzs)
+                                    return (
+                                        <InfoPanel key={imidzs} index={i} id={"gyakorlat"+i} type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]+" #"+i} text="" moretext={["A "+(Helper.isMobile()?'lent':((i%2===0)?'balra':'jobbra'))+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={imidzs} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:(i%2===0)?'-300':'300',ease:'power4.out'}} reverse={(i%2===0)} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                                    )
+                                }else{
+                                    console.log('nem létezik:',imidzs)
+                                    return null;
+                                }
+                              });
+
+                            
                         }catch(Exception){
-                            return null;
+                            return null
                         }
                     }else{
                         return null;

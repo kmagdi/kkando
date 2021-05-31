@@ -67,6 +67,7 @@ export const InfoPanel = (props) => {
             const margins2 = handleUndef('margin','',props.margin+'rem auto');
             const titleExists2 = props.title!==undefined;
             const textExists2 = props.text!==undefined;
+            const urlLogoDualis="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/dualis/"
             element = (
                 <Row key={props.id} id={props.id} ref={sectionRef} className={rowClass + " sidebyside" + (props.reverse===true?" reverse-order":"") + ((titleExists2&&textExists2)?'':' eq-sep')} style={{marginTop:margins2,marginBottom:margins2}}>
                     <Col lg={5} className={"info-row-szoveg align-self-center fade-int "+props.id}>
@@ -78,24 +79,24 @@ export const InfoPanel = (props) => {
                             <Row className="">
                                 <Col className="top-row" style={{textAlign:'right'}}>
                                     <Link to="/#dualis">
-                                        <img onClick={()=>callLogoSelect(0)} className="f-logo" src={require('./assets/dualis/DU1/logo_128.png')} alt="logo1" />
+                                        <img onClick={()=>callLogoSelect(0)} className="f-logo" src={urlLogoDualis+'DU1/logo_128.png'} alt="logo1" />
                                     </Link>
                                 </Col>
                                 <Col className="top-row" style={{textAlign:'left'}}>
                                     <Link to="/#dualis">
-                                        <img onClick={()=>callLogoSelect(1)} className="f-logo" src={require('./assets/dualis/DU2/logo_128.png')} alt="logo2" />
+                                        <img onClick={()=>callLogoSelect(1)} className="f-logo" src={urlLogoDualis+'DU2/logo_128.png'} alt="logo2" />
                                     </Link>
                                 </Col>
                             </Row>
                             <Row>
                                 <Col className="bottom-tow" style={{textAlign:'right'}}>
                                     <Link to="/#dualis">
-                                        <img onClick={()=>callLogoSelect(2)} className="f-logo" src={require('./assets/dualis/DU3/logo_128.png')} alt="logo3" />
+                                        <img onClick={()=>callLogoSelect(2)} className="f-logo" src={urlLogoDualis+'DU3/logo_128.png'} alt="logo3" />
                                     </Link>
                                 </Col>
                                 <Col className="bottom-tow" style={{textAlign:'left'}}>
                                     <Link to="/#dualis">
-                                        <img onClick={()=>callLogoSelect(3)} className="f-logo" src={require('./assets/dualis/DU4/logo_128.png')} alt="logo4" />
+                                        <img onClick={()=>callLogoSelect(3)} className="f-logo" src={urlLogoDualis+'DU4/logo_128.png'} alt="logo4" />
                                     </Link>
                                 </Col>
                             </Row>
