@@ -1,4 +1,4 @@
-function checkIfImageExists(url, callback) {
+export function checkIfImageExists(url, callback) {
     const img = new Image();
   
     img.src = url;

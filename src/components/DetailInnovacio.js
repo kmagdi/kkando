@@ -13,6 +13,7 @@ export const DetailInnovacio=(props)=>{
         Helper.scrollToTop();
     },[]);
     let element = null;
+    const urlPhoto="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/innovacio/"
     const kep = (kepnev,nomobile) => {
         if(props.adatok.kod===undefined){
             return null;
@@ -20,14 +21,14 @@ export const DetailInnovacio=(props)=>{
             try{
                 const spl = kepnev.split('.');
                 if(nomobile){
-                    return require('./assets/innovacio/' + props.adatok.kod + '/' + kepnev);
+                    return urlPhoto + props.adatok.kod + '/' + kepnev;
                 }else{
                     spl[spl.length-2] += '_mobile';
-                    return Helper.getMODI(require('./assets/innovacio/' + props.adatok.kod + '/' + kepnev),require('./assets/innovacio/' + props.adatok.kod + '/' + spl.join('.')));
+                    return Helper.getMODI(urlPhoto + props.adatok.kod + '/' + kepnev,urlPhoto + props.adatok.kod + '/' + spl.join('.'));
                 }
             }catch(Exception){
                 try{
-                    return require('./assets/innovacio/' + props.adatok.kod + '/' + kepnev)
+                    return urlPhoto + props.adatok.kod + '/' + kepnev
                 }catch(Exception){
                     return require('./assets/eszt.jpg');
                 }
