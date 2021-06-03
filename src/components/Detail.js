@@ -105,10 +105,14 @@ export const Detail=(props)=>{
                         <span style={{textAlign:'justify',textShadow:'0 0 5px rgba(255,255,255,1)'}}>{props.adatok.interju}</span>
                     )} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
-               
-                {console.log('létezik a kép?',kep('gyakorlat.jpg'),doesFileExist(kep('gyakorlat.jpg')))}
              
-                {doesFileExist(kep('gyakorlat.jpg')) && <InfoPanel index={1} id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />}
+                {
+                    doesFileExist(kep('gyakorlat.jpg'))?(
+                        <InfoPanel index={1} id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                    ):(
+                        <InfoPanel id="gyakorlat" type="sideBySide" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} image={Helper.getMODI(require('./assets/head.jpg'),require('./assets/head_mobile.jpg'))} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+                    )
+                }
 
                 {[2,3,4,5].map((i)=>{
                     if(props.adatok.kod!==undefined){
