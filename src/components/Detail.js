@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import { FullscreenBanner } from './FullscreenBanner';
 import './Details.css';
 import {Helper} from '../Helper';
@@ -7,9 +7,11 @@ import CollectData from './CollectData';
 import { MyParallax } from './MyParallax';
 import { ImageCarousel } from './ImageCarousel';
 import Preload from 'react-preload';
-import {checkIfImageExists} from './ceckIfImageExists'
+import doesFileExist from './doesFileExist'
 
 export const Detail=(props)=>{
+    const [van,setVan]=useState('')
+
     Helper.scrollToTop();
     document.cookie = "prevSzak="+props.carouselIndex;
     useEffect(()=>{
@@ -61,6 +63,8 @@ export const Detail=(props)=>{
                 </MyParallax>
             );
         }
+        
+
         element = (
             <>
                 {
@@ -101,31 +105,16 @@ export const Detail=(props)=>{
                         <span style={{textAlign:'justify',textShadow:'0 0 5px rgba(255,255,255,1)'}}>{props.adatok.interju}</span>
                     )} from={{opacity:0,scaleX:0.5,scaleY:0.5,ease:'power4.out'}} to={{opacity:1,scaleX:1.0,scaleY:1.0,ease:'power4.out'}} />
                 </MyParallax>
-
-                <InfoPanel index={1} id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
+               
+                {console.log('létezik a kép?',kep('gyakorlat.jpg'),doesFileExist(kep('gyakorlat.jpg')))}
+             
+                {doesFileExist(kep('gyakorlat.jpg')) && <InfoPanel index={1} id="gyakorlat" type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]} text={addLinks(getAnswer('gyakorlat')[1])} moretext={["A "+(Helper.isMobile()?'lent':'jobbra')+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={kep('gyakorlat.jpg')} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:'300',ease:'power4.out'}} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />}
 
                 {[2,3,4,5].map((i)=>{
                     if(props.adatok.kod!==undefined){
-                        try{
-                            const imidzs = urlPhotoSzak + props.adatok.kod + '/gyakorlat'+i+'.jpg';
-                            console.log('imidzs:',imidzs);
-                            checkIfImageExists(imidzs, (exists) => {
-                                if (exists) {
-                                    // Success code
-                                    console.log('létezik:',imidzs)
-                                    return (
-                                        <InfoPanel key={imidzs} index={i} id={"gyakorlat"+i} type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]+" #"+i} text="" moretext={["A "+(Helper.isMobile()?'lent':((i%2===0)?'balra':'jobbra'))+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={imidzs} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:(i%2===0)?'-300':'300',ease:'power4.out'}} reverse={(i%2===0)} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />
-                                    )
-                                }else{
-                                    console.log('nem létezik:',imidzs)
-                                    return null;
-                                }
-                              });
-
-                            
-                        }catch(Exception){
-                            return null
-                        }
+                        const imidzs = urlPhotoSzak + props.adatok.kod + '/gyakorlat'+i+'.jpg';
+                        console.log('imidzs:',imidzs);
+                        return(doesFileExist(imidzs) && <InfoPanel key={imidzs} index={i} id={"gyakorlat"+i} type="sideBySidePanorama" title={getAnswer('gyakorlat')[0]+" #"+i} text="" moretext={["A "+(Helper.isMobile()?'lent':((i%2===0)?'balra':'jobbra'))+" található ablakban tudod megtekinteni a gyakorlat helyszínét"]} panoimg={imidzs} loadImage={kep('gyakorlat_load.jpg')} from={{opacity:0,x:(i%2===0)?'-300':'300',ease:'power4.out'}} reverse={(i%2===0)} to={{opacity:1,x:'0',ease:'power4.out',stagger:{amount:0.2}}} />)
                     }else{
                         return null;
                     }
