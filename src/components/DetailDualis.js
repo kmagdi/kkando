@@ -13,6 +13,7 @@ export const DetailDualis=(props)=>{
         Helper.scrollToTop();
     },[]);
     let element = null;
+    let urlPhoto="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/dualis/"
     const kep = (kepnev,nomobile) => {
         if(props.adatok.kod===undefined){
             return null;
@@ -20,14 +21,14 @@ export const DetailDualis=(props)=>{
             try{
                 const spl = kepnev.split('.');
                 if(nomobile){
-                    return require('./assets/dualis/' + props.adatok.kod + '/' + kepnev);
+                    return urlPhoto + props.adatok.kod + '/' + kepnev;
                 }else{
                     spl[spl.length-2] += '_mobile';
-                    return Helper.getMODI(require('./assets/dualis/' + props.adatok.kod + '/' + kepnev),require('./assets/dualis/' + props.adatok.kod + '/' + spl.join('.')));
+                    return Helper.getMODI(urlPhoto + props.adatok.kod + '/' + kepnev,urlPhoto + props.adatok.kod + '/' + spl.join('.'));
                 }
             }catch(Exception){
                 try{
-                    return require('./assets/dualis/' + props.adatok.kod + '/' + kepnev)
+                    return urlPhoto + props.adatok.kod + '/' + kepnev
                 }catch(Exception){
                     return require('./assets/eszt.jpg');
                 }

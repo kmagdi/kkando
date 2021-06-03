@@ -98,8 +98,10 @@ export const Home=()=>{
             return [require('./assets/missing.jpg'),i];
         }
     });
-    let dualImages = dualCsvData.map((i)=>([Helper.getMODI(require('./assets/dualis/' + i.kod + '/head.jpg'),require('./assets/dualis/' + i.kod + '/head_mobile.jpg')),i]));
-    let innovacioImages=innovacioCsvData.map((i)=>([Helper.getMODI(require('./assets/innovacio/' + i.kod + '/head.jpg'),require('./assets/innovacio/' + i.kod + '/head_mobile.jpg')),i]));
+    let urlPhotoDualis="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/dualis/"
+    let urlPhotoInnovacio="https://raw.githubusercontent.com/kmagdi/KSZC-Data/master/innovacio/"
+    let dualImages = dualCsvData.map((i)=>([Helper.getMODI(urlPhotoDualis + i.kod + '/head.jpg',urlPhotoDualis + i.kod + '/head_mobile.jpg'),i]));
+    let innovacioImages=innovacioCsvData.map((i)=>([Helper.getMODI(urlPhotoInnovacio + i.kod + '/head.jpg',urlPhotoInnovacio + i.kod + '/head_mobile.jpg'),i]));
     return(
         <Preload
             loadingIndicator={(
